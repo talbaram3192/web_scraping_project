@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 import requests
 import os
 from selenium import webdriver
@@ -9,11 +8,17 @@ import csv
 PATH = 'C:\Program Files\chromedriver.exe'
 COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
            'Winner- singles', 'Winner- doubles', 'Winner- team']
+START_YEAR = 1877
 
 def read_urls():
     """ read all relevant URLS from the ATP website and return a list of them """
+    url_base = 'https://www.atptour.com/en/scores/results-archive?year='
     urls = list()
-    urls.append('https://www.atptour.com/en/scores/results-archive?year=2020')
+    cur_year = int(time.strftime("%Y"))
+    year = START_YEAR
+    while year <= cur_year:   # get all url pages from 1877
+        urls.append(url_base+str(year))
+        year += 1
     return urls
 
 def extract_urls(urls):
@@ -26,7 +31,7 @@ def extract_urls(urls):
 
     for url in urls:
         year = url.split('=')[1]
-        print(year)
+        print(f"scraping results from year {year}..")
         driver = webdriver.Chrome(PATH)
         driver.get(url)
         table = driver.find_element_by_id('scoresResultsArchive')
@@ -75,16 +80,15 @@ def extract_urls(urls):
 
 
         csv_data.close()
-        data = open('tournaments_data.csv', 'r')
-        print(data.readlines())
-        data.close()
-        driver.close()
+        # data = open('tournaments_data.csv', 'r')   # check csv file
+        # print(data.readlines())
+        # data.close()
+        driver.close()   # close our driver after finishing scraping the website
 
 
 def main():
     urls = read_urls()
     extract_urls(urls)
-
 
 
 if __name__ == '__main__':
