@@ -14,9 +14,9 @@ def read_urls():
     """ read all relevant URLS from the ATP website and return a list of them """
     url_base = 'https://www.atptour.com/en/scores/results-archive?year='
     urls = list()
-    cur_year = int(time.strftime("%Y"))
+    cur_year = int(time.strftime("%Y"))  # current year
     year = START_YEAR
-    while year <= cur_year:   # get all url pages from 1877
+    while year <= cur_year:            # get all url pages from 1877
         urls.append(url_base+str(year))
         year += 1
     return urls
@@ -57,20 +57,30 @@ def extract_urls(urls):
 
             td_winners = i.find_elements_by_class_name('tourney-details')[3] #winners
             winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
-            if len(winners) == 1:
-                winners_team = winners[0].text   # if its a 'team tournament'- save only the team winner
-                winner_singles = None
-                winners_doubles = None
-
-            elif len(winners) == 2:               # if its a 'regular tournament'- save only the singles and
-                winner_singles = winners[0].text  # doubles winners
-                winners_doubles = winners[1].text
+            if len(winners) == 0:
+                winner_singles = None       # if there aren't any winners (tournament didn't happen yet or
+                winners_doubles = None      # got canceled)- don't save any winners
                 winners_team = None
-
-            else:                                # if there aren't any winners (tournament didnt happen yet or
-                winner_singles = None            # got canceled)- don't save any winners
-                winners_doubles = None
-                winners_team = None
+            elif len(winners) == 1:         # one winner- either singles, doubles or team
+                if winners[0].text[:3] == 'SGL':
+                    winner_singles = winners[0].text[5:]
+                    winners_doubles = None
+                    winners_team = None
+                elif winners[0].text[:3] == 'DBL':
+                    winner_singles = None
+                    winners_doubles = winners[0].text[5:]
+                    winners_team = None
+                else:
+                    winner_singles = None
+                    winners_doubles = None
+                    winners_team = winners[0].text[6:]
+            else:                      # len=3. two winners- singles and doubles (there are no tournaments that include
+                    for winner in winners:   # singles, doubles and team winners)
+                        if winner.text[:3] == 'SGL':
+                            winner_singles = winner.text[5:]
+                        else:
+                            winners_doubles = winner.text[5:]
+                    winners_team = None
 
 
             new_row = [year, name, location, dates, draw_singles, draw_doubles, surface, prize_money,
