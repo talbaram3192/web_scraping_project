@@ -5,10 +5,12 @@ from selenium.webdriver.common.keys import Keys
 import time
 import csv
 
+
 PATH = 'C:\Program Files\chromedriver.exe'
 COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
            'Winner- singles', 'Winner- doubles', 'Winner- team']
 START_YEAR = 1877
+
 
 def read_urls():
     """ read all relevant URLS from the ATP website and return a list of them """
