@@ -36,7 +36,7 @@ def extract_url_result(webelement_atp):
         return 'NA'
 
 
-def create_csv(name, columns):
+def create_csv(name, columns=COLUMNS):
     """
     create a csv name_<dateoftoday>.csv
     """
@@ -48,11 +48,10 @@ def create_csv(name, columns):
     return filename
 
 
-def general_tournament_data(url, name='tournament', test=True):
+def general_tournament_data(url, filename, name='tournament', test=True):
     """
     Extract general information about tournament of a particular year from ATP
     """
-    filename = create_csv(name, COLUMNS)  # create csv file
     driver = webdriver.Chrome(PATH)
     driver.get(url)
     year = url.split('=')[1]
