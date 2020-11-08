@@ -108,9 +108,9 @@ def scores_tournament_data(atp_info, name='tournament_scores', test=False):
 
 def extract_scores(path= PATH_CSV, name='tournament_scores'):
     # Get urls and some other information from tournament csv file
-    atp_infos = get_urls(path)[900:]
+    atp_infos = get_urls(path)[3930:]
     # Extract data from atp selected urls and write them in a csv
-    # 180 + 80 + 639 + 2757 +
+    # 180 + 80 + 639 + 2757 + 273
 
     atp_table = []
     for i, atp_info in enumerate(atp_infos):
