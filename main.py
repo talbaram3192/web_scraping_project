@@ -6,22 +6,22 @@ import time
 import csv
 import datetime
 import sys
+import argparse
+import re
 
 
 PATH = 'C:\Program Files\chromedriver.exe'
 COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
-           'Winner- singles', 'Winner- doubles', 'Winner- team']
-START_YEAR = 2020
+           'Winner- singles', 'Winner- doubles', 'Winner- team', 'Tournament url']
 PLAYERS = list()   # list that will contain the winners profile links
 
 
-def read_urls():
+def read_urls(start_year, finish_year):
     """ read all relevant URLS from the ATP website and return a list of them """
     url_base = 'https://www.atptour.com/en/scores/results-archive?year='
     urls = list()
-    cur_year = int(time.strftime("%Y"))  # current year
-    year = START_YEAR
-    while year <= cur_year:            # get all url pages from 1877
+    year = start_year         # get all URL pages starting from the chosen year
+    while year <= finish_year:  # stop collecting URLS when reaching chosen 'finish_year'
         urls.append(url_base+str(year))
         year += 1
     return urls
@@ -121,7 +121,7 @@ def get_players_info():
         driver.close()
 
 
-def general_tournament_data(url, filename):
+def general_tournament_data(url, filename, filter):
     """
     Extract general information about tournament of a particular year from ATP
     """
@@ -137,93 +137,118 @@ def general_tournament_data(url, filename):
         csv_data = open(filename, 'a')  # open our csv file
         writer = csv.writer(csv_data)
 
-        td_content = i.find_element_by_class_name('title-content')  # basic details- name, location and dates
-        name = td_content.find_element_by_class_name('tourney-title').text  # tournament's name
-        location = td_content.find_element_by_class_name('tourney-location').text  # tournament's location
-        dates = td_content.find_element_by_class_name('tourney-dates').text  # tournament's dates
+        try:    #find which type of tournament it is- 250, 500, 1000, grand slam, finals?
+            td_class = i.find_element_by_class_name('tourney-badge-wrapper')
+            tourn_type = td_class.find_element_by_tag_name('img').get_attribute('src')
+            new_tourn_type = tourn_type.split('_')[1].split('.')[0]
+        except:
+            new_tourn_type = None
+            pass
 
-        td_draw = i.find_elements_by_class_name('tourney-details')[0]  # number of participants in the draw
-        draw_singles = td_draw.find_elements_by_tag_name('span')[0].text  # singles- draw
-        draw_doubles = td_draw.find_elements_by_tag_name('span')[1].text  # doubles- draw
+        if filter == new_tourn_type or 'all':
+            td_content = i.find_element_by_class_name('title-content')  # basic details- name, location and dates
+            name = td_content.find_element_by_class_name('tourney-title').text  # tournament's name
+            location = td_content.find_element_by_class_name('tourney-location').text  # tournament's location
+            dates = td_content.find_element_by_class_name('tourney-dates').text  # tournament's dates
 
-        surface = i.find_elements_by_class_name('tourney-details')[1].text  # surface type
+            td_draw = i.find_elements_by_class_name('tourney-details')[0]  # number of participants in the draw
+            draw_singles = td_draw.find_elements_by_tag_name('span')[0].text  # singles- draw
+            draw_doubles = td_draw.find_elements_by_tag_name('span')[1].text  # doubles- draw
 
-        prize_money = i.find_elements_by_class_name('tourney-details')[2].text  # prize money
+            surface = i.find_elements_by_class_name('tourney-details')[1].text  # surface type
 
-        td_winners = i.find_elements_by_class_name('tourney-details')[3]  # winners
-        winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
-        url_tournament = extract_url_result(i)
+            prize_money = i.find_elements_by_class_name('tourney-details')[2].text  # prize money
 
-        if len(winners) == 0:
-            winner_singles = None  # if there aren't any winners (tournament didn't happen yet or
-            winners_doubles = None  # got canceled)- don't save any winners
-            winners_team = None
-        elif len(winners) == 1:  # one winner- either singles, doubles or team
-            if winners[0].text[:3] == 'SGL':
-                winner_singles = winners[0].text[5:]
-                winners_doubles = None
+            td_winners = i.find_elements_by_class_name('tourney-details')[3]  # winners
+            winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
+            url_tournament = extract_url_result(i)
+
+            if len(winners) == 0:
+                winner_singles = None  # if there aren't any winners (tournament didn't happen yet or
+                winners_doubles = None  # got canceled)- don't save any winners
                 winners_team = None
-                try:  # get players links to profiles
-                    winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
-                    if winner_profile not in PLAYERS:
-                        PLAYERS.append(winner_profile)
-                except:
-                    pass   # link doesn't exist
-
-            elif winners[0].text[:3] == 'DBL':
-                winner_singles = None
-                winners_doubles = winners[0].text[5:]
-                winners_team = None
-
-                try:     # get players links to profiles
-                    a_tags = winners[0].find_element_by_tag_name('a')
-                    for a in a_tags:
-                        if a.get_attribute('href') not in PLAYERS:
-                            PLAYERS.append(a.get_attribute('href'))
-                except:
-                    pass  # links don't exist
-            else:
-                winner_singles = None
-                winners_doubles = None
-                winners_team = winners[0].text[6:]   # teams dont have profiles so there's no links to add
-                                                     # in this case
-
-        else:  # len=3. two types of winners- singles and doubles (there are no tournaments that include
-            for winner in winners:  # singles, doubles and team winners)
-                if winner.text[:3] == 'SGL':
-                    winner_singles = winner.text[5:]
-                    try:   # get players links to profiles
-                        winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
+            elif len(winners) == 1:  # one winner- either singles, doubles or team
+                if winners[0].text[:3] == 'SGL':
+                    winner_singles = winners[0].text[5:]
+                    winners_doubles = None
+                    winners_team = None
+                    try:  # get players links to profiles
+                        winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
                         if winner_profile not in PLAYERS:
                             PLAYERS.append(winner_profile)
                     except:
                         pass   # link doesn't exist
-                else:
-                    winners_doubles = winner.text[5:]
-                    try:   # get players links to profiles
-                        a_tags = winner.find_elements_by_tag_name('a')
+
+                elif winners[0].text[:3] == 'DBL':
+                    winner_singles = None
+                    winners_doubles = winners[0].text[5:]
+                    winners_team = None
+
+                    try:     # get players links to profiles
+                        a_tags = winners[0].find_element_by_tag_name('a')
                         for a in a_tags:
                             if a.get_attribute('href') not in PLAYERS:
                                 PLAYERS.append(a.get_attribute('href'))
                     except:
                         pass  # links don't exist
+                else:
+                    winner_singles = None
+                    winners_doubles = None
+                    winners_team = winners[0].text[6:]   # teams dont have profiles so there's no links to add
+                                                         # in this case
 
-            winners_team = None
+            else:  # len=3. two types of winners- singles and doubles (there are no tournaments that include
+                for winner in winners:  # singles, doubles and team winners)
+                    if winner.text[:3] == 'SGL':
+                        winner_singles = winner.text[5:]
+                        try:   # get players links to profiles
+                            winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
+                            if winner_profile not in PLAYERS:
+                                PLAYERS.append(winner_profile)
+                        except:
+                            pass   # link doesn't exist
+                    else:
+                        winners_doubles = winner.text[5:]
+                        try:   # get players links to profiles
+                            a_tags = winner.find_elements_by_tag_name('a')
+                            for a in a_tags:
+                                if a.get_attribute('href') not in PLAYERS:
+                                    PLAYERS.append(a.get_attribute('href'))
+                        except:
+                            pass  # links don't exist
 
-        new_row = [year, name, location, dates, draw_singles, draw_doubles, surface, prize_money,
-                   winner_singles, winners_doubles, winners_team, url_tournament]
+                winners_team = None
 
-        writer.writerow(new_row)
+            new_row = [year, new_tourn_type, name, location, dates, draw_singles, draw_doubles, surface, prize_money,
+                       winner_singles, winners_doubles, winners_team]
+
+            writer.writerow(new_row)
 
     csv_data.close()
     driver.close()
 
 
 def main():
-    urls = read_urls()
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('start_year', type=int, help="The script will start scraping from this year")
+    parser.add_argument('end_year', type=int, help="The script will finish scraping at this year")
+    parser.add_argument('filter', choices=['all', '250', '500', '1000', 'grandslam'],
+                        help="Filter for the search: "
+                             "all- search all tournaments. "
+                             "250- search only atp250 tournaments. "
+                             "500- search only atp500 tournaments. "
+                             "1000- search only atp1000 tournaments. "
+                             "grand_slam- search only grand slam tournaments")
+
+    args = parser.parse_args()
+
+    urls = read_urls(args.start_year, args.end_year)  #get all tournament's URLs between specified years
+
     filename = create_csv('my_csv')
     for url in urls:
-        general_tournament_data(url, filename)
+        general_tournament_data(url, filename, args.filter)  #scrap tournament's details based on given filters
 
     get_players_info()
 
