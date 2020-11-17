@@ -4,10 +4,11 @@ from selenium import webdriver, common
 from selenium.webdriver.common.keys import Keys
 import time
 import csv
-import datetime
 import sys
 import argparse
 import re
+import players_profile
+from datetime import datetime
 
 
 PATH = 'C:\Program Files\chromedriver.exe'
@@ -38,131 +39,46 @@ def extract_url_result(webelement_atp):
         return 'NA'
 
 
-def create_csv(name):
-    """
-    create a csv name_<dateoftoday>.csv
-    """
-    today = datetime.date.today().strftime('%d%m%Y')
-    filename = name + " tournaments_data_" + today + '.csv'
-    with open(filename, 'w') as csv_data:
-        writer = csv.writer(csv_data)
-        writer.writerow(COLUMNS)
-    return filename
-
-
-def get_players_info():
-    """ Get players information from their profiles """
-    for url in PLAYERS:
-        driver = webdriver.Chrome(PATH)
-        driver.get(url)
-        try:
-            first = driver.find_element_by_class_name('first-name').text
-            print(first)
-        except:
-            first = 'NA'
-            pass
-        try:
-            last = driver.find_element_by_class_name('last-name').text
-            print(last)
-        except:
-            last = 'NA'
-            pass
-        try:
-            ranking_type = driver.find_element_by_class_name('hero-rank-label').text  # ranking type
-            print(ranking_type)
-        except:
-            ranking_type = 'NA'
-            pass
-        try:
-            ranking = driver.find_element_by_class_name('data-number').text # ranking
-            print(ranking)
-        except:
-            ranking = 'NA'
-            pass
-        try:
-            country = driver.find_element_by_class_name('player-flag-code').text # country
-            print(country)
-        except:
-            country = 'NA'
-            pass
-        try:
-            date_birth = driver.find_element_by_class_name('table-birthday').text.strip('()')  # date of birth
-            print(date_birth)
-        except:
-            date_birth = 'NA'
-            pass
-        try:
-            turned_pro = driver.find_elements_by_class_name('table-big-value')[1].text # turned pro
-            print(turned_pro)
-        except:
-            turned_pro = 'NA'
-            pass
-        try:
-            weight = driver.find_element_by_class_name('table-weight-lbs').text  # weight
-            print(weight)
-        except:
-            weight = 'NA'
-            pass
-        try:
-            height = driver.find_element_by_class_name('table-height-ft').text  # height
-            print(height)
-        except:
-            height = 'NA'
-            pass
-        try:
-            total_prize_money = driver.find_elements_by_class_name('stat-value')[8].text.split()[0] # total prize money
-            print(total_prize_money)
-        except:
-            total_prize_money = 'NA'
-            pass
-
-        print()
-        print()
-        driver.close()
-
-
-def general_tournament_data(url, filename, filter):
+def general_tournament_data(url, filter):
     """
     Extract general information about tournament of a particular year from ATP
     """
     driver = webdriver.Chrome(PATH)
     driver.get(url)
-    year = url.split('=')[1]
+    year = int(url.split('=')[1])
     print(f"scraping results from year {year}..")
     table = driver.find_element_by_id('scoresResultsArchive')
     tbody = table.find_element_by_tag_name('tbody')
     tr = tbody.find_elements_by_tag_name('tr')
     for i in tr:  # each 'tr' tag holds the relevant information regarding each tournament in the URL
 
-        csv_data = open(filename, 'a')  # open our csv file
-        writer = csv.writer(csv_data)
-
         try:    #find which type of tournament it is- 250, 500, 1000, grand slam, finals?
             td_class = i.find_element_by_class_name('tourney-badge-wrapper')
             tourn_type = td_class.find_element_by_tag_name('img').get_attribute('src')
             new_tourn_type = tourn_type.split('_')[1].split('.')[0]
-        except:
-            new_tourn_type = None
+        except common.exceptions.NoSuchElementException:
+            new_tourn_type = 'NA'
             pass
 
-        if filter == new_tourn_type or 'all':
+        if filter == new_tourn_type or filter == 'all':
             td_content = i.find_element_by_class_name('title-content')  # basic details- name, location and dates
             name = td_content.find_element_by_class_name('tourney-title').text  # tournament's name
             location = td_content.find_element_by_class_name('tourney-location').text  # tournament's location
             dates = td_content.find_element_by_class_name('tourney-dates').text  # tournament's dates
 
             td_draw = i.find_elements_by_class_name('tourney-details')[0]  # number of participants in the draw
-            draw_singles = td_draw.find_elements_by_tag_name('span')[0].text  # singles- draw
-            draw_doubles = td_draw.find_elements_by_tag_name('span')[1].text  # doubles- draw
+            draw_singles = int(td_draw.find_elements_by_tag_name('span')[0].text)  # singles- draw
+            draw_doubles = int(td_draw.find_elements_by_tag_name('span')[1].text)  # doubles- draw
 
             surface = i.find_elements_by_class_name('tourney-details')[1].text  # surface type
 
-            prize_money = i.find_elements_by_class_name('tourney-details')[2].text  # prize money
+            prize_money = int(i.find_elements_by_class_name('tourney-details')[2].text)  # prize money
 
             td_winners = i.find_elements_by_class_name('tourney-details')[3]  # winners
             winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
             url_tournament = extract_url_result(i)
 
+            # get the tournament winners:
             if len(winners) == 0:
                 winner_singles = None  # if there aren't any winners (tournament didn't happen yet or
                 winners_doubles = None  # got canceled)- don't save any winners
@@ -174,10 +90,12 @@ def general_tournament_data(url, filename, filter):
                     winners_team = None
                     try:  # get players links to profiles
                         winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
-                        if winner_profile not in PLAYERS:
+                        if winner_profile not in PLAYERS:       #add only players that weren't added already
                             PLAYERS.append(winner_profile)
-                    except:
+                    except common.exceptions.NoSuchElementException:
                         pass   # link doesn't exist
+                    except IndexError:
+                        pass
 
                 elif winners[0].text[:3] == 'DBL':
                     winner_singles = None
@@ -185,12 +103,15 @@ def general_tournament_data(url, filename, filter):
                     winners_team = None
 
                     try:     # get players links to profiles
-                        a_tags = winners[0].find_element_by_tag_name('a')
+                        a_tags = winners[0].find_elements_by_tag_name('a')
                         for a in a_tags:
                             if a.get_attribute('href') not in PLAYERS:
                                 PLAYERS.append(a.get_attribute('href'))
-                    except:
-                        pass  # links don't exist
+
+                    except common.exceptions.NoSuchElementException:
+                        pass  # link doesn't exist
+                    except IndexError:
+                        pass
                 else:
                     winner_singles = None
                     winners_doubles = None
@@ -205,8 +126,10 @@ def general_tournament_data(url, filename, filter):
                             winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
                             if winner_profile not in PLAYERS:
                                 PLAYERS.append(winner_profile)
-                        except:
-                            pass   # link doesn't exist
+                        except common.exceptions.NoSuchElementException:
+                            pass  # link doesn't exist
+                        except IndexError:
+                            pass
                     else:
                         winners_doubles = winner.text[5:]
                         try:   # get players links to profiles
@@ -214,17 +137,17 @@ def general_tournament_data(url, filename, filter):
                             for a in a_tags:
                                 if a.get_attribute('href') not in PLAYERS:
                                     PLAYERS.append(a.get_attribute('href'))
-                        except:
-                            pass  # links don't exist
+                        except common.exceptions.NoSuchElementException:
+                            pass  # link doesn't exist
+                        except IndexError:
+                            pass
 
                 winners_team = None
 
-            new_row = [year, new_tourn_type, name, location, dates, draw_singles, draw_doubles, surface, prize_money,
-                       winner_singles, winners_doubles, winners_team]
 
-            writer.writerow(new_row)
+            print(year,new_tourn_type,name,location,dates,draw_singles,draw_doubles,surface
+                  ,prize_money,winner_singles,winners_doubles,winners_team)
 
-    csv_data.close()
     driver.close()
 
 
@@ -246,11 +169,9 @@ def main():
 
     urls = read_urls(args.start_year, args.end_year)  #get all tournament's URLs between specified years
 
-    filename = create_csv('my_csv')
     for url in urls:
-        general_tournament_data(url, filename, args.filter)  #scrap tournament's details based on given filters
-
-    get_players_info()
+        general_tournament_data(url, args.filter)     #scrape tournament's details based on given filters
+    players_profile.get_players_info(PLAYERS)
 
 
 if __name__ == '__main__':
