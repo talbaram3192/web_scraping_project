@@ -3,51 +3,53 @@ import main
 from selenium import webdriver, common
 
 
-def get_players_info(players):
+def get_players_info(player_url):
     """ Get players information from their profiles """
-    for url in players:
-        driver = webdriver.Chrome(main.PATH)
-        driver.get(url)
-        try:
-            first = driver.find_element_by_class_name('first-name').text
-            print(first)
 
-            last = driver.find_element_by_class_name('last-name').text
-            print(last)
+    # TODO: add to DB- make sure data types are correct and change accordingly (prize money- int, weight,height- float)
 
-            ranking_sgl = driver.find_elements_by_class_name('stat-value')[0].get_attribute('data-singles')  # current ranking- singles
-            print(ranking_sgl)
-            ranking_dbl = driver.find_elements_by_class_name('stat-value')[0].get_attribute('data-doubles')  # current ranking- doubles
-            print(ranking_dbl)
+    driver = webdriver.Chrome(main.PATH)
+    driver.get(player_url)
+    try:
+        first = driver.find_element_by_class_name('first-name').text
+        print(first)
 
-            career_high_sgl = driver.find_elements_by_class_name('stat-value')[5].get_attribute('data-singles') # career high ranking- singles
-            print(career_high_sgl)
-            career_high_dbl = driver.find_elements_by_class_name('stat-value')[5].get_attribute('data-doubles')  # career high ranking- doubles
-            print(career_high_dbl)
+        last = driver.find_element_by_class_name('last-name').text
+        print(last)
 
-            country = driver.find_element_by_class_name('player-flag-code').text # country
-            print(country)
+        ranking_sgl = driver.find_elements_by_class_name('stat-value')[0].get_attribute('data-singles')  # current ranking- singles
+        print(ranking_sgl)
+        ranking_dbl = driver.find_elements_by_class_name('stat-value')[0].get_attribute('data-doubles')  # current ranking- doubles
+        print(ranking_dbl)
 
-            date_birth = driver.find_element_by_class_name('table-birthday').text.strip('()')  # date of birth
-            print(date_birth)
+        career_high_sgl = driver.find_elements_by_class_name('stat-value')[5].get_attribute('data-singles') # career high ranking- singles
+        print(career_high_sgl)
+        career_high_dbl = driver.find_elements_by_class_name('stat-value')[5].get_attribute('data-doubles')  # career high ranking- doubles
+        print(career_high_dbl)
 
-            turned_pro = driver.find_elements_by_class_name('table-big-value')[1].text # turned pro
-            print(turned_pro)
+        country = driver.find_element_by_class_name('player-flag-code').text # country
+        print(country)
 
-            weight = driver.find_element_by_class_name('table-weight-lbs').text  # weight
-            print(weight)
+        date_birth = driver.find_element_by_class_name('table-birthday').text.strip('()')  # date of birth
+        print(date_birth)
 
-            height = driver.find_element_by_class_name('table-height-ft').text  # height
-            print(height)
+        turned_pro = driver.find_elements_by_class_name('table-big-value')[1].text # turned pro
+        print(turned_pro)
 
-            total_prize_money = driver.find_elements_by_class_name('stat-value')[8].text.split()[0] # total prize money
-            print(total_prize_money)
+        weight = driver.find_element_by_class_name('table-weight-lbs').text  # weight
+        print(weight)
 
-        except IndexError:
-            pass
-        except common.exceptions.NoSuchElementException:
-            pass
-        except:
-            pass
+        height = driver.find_element_by_class_name('table-height-ft').text  # height
+        print(height)
 
-        driver.close()
+        total_prize_money = driver.find_elements_by_class_name('stat-value')[8].text.split()[0] # total prize money
+        print(total_prize_money)
+
+    except IndexError:
+        pass
+    except common.exceptions.NoSuchElementException:
+        pass
+    except:
+        pass
+
+    driver.close()

@@ -9,12 +9,16 @@ import argparse
 import re
 import players_profile
 from datetime import datetime
+import mysql.connector
+
+CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455'
+                              , db='web_scraping_project')
 
 
 PATH = 'C:\Program Files\chromedriver.exe'
-COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
-           'Winner- singles', 'Winner- doubles', 'Winner- team', 'Tournament url']
-PLAYERS = list()   # list that will contain the winners profile links
+# COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
+#            'Winner- singles', 'Winner- doubles', 'Winner- team', 'Tournament url']
+# PLAYERS = list()
 
 
 def read_urls(start_year, finish_year):
@@ -50,6 +54,7 @@ def general_tournament_data(url, filter):
     table = driver.find_element_by_id('scoresResultsArchive')
     tbody = table.find_element_by_tag_name('tbody')
     tr = tbody.find_elements_by_tag_name('tr')
+
     for i in tr:  # each 'tr' tag holds the relevant information regarding each tournament in the URL
 
         try:    #find which type of tournament it is- 250, 500, 1000, grand slam, finals?
@@ -67,12 +72,12 @@ def general_tournament_data(url, filter):
             dates = td_content.find_element_by_class_name('tourney-dates').text  # tournament's dates
 
             td_draw = i.find_elements_by_class_name('tourney-details')[0]  # number of participants in the draw
-            draw_singles = int(td_draw.find_elements_by_tag_name('span')[0].text)  # singles- draw
+            draw_singles = int(td_draw.find_elements_by_tag_name('span')[0].text) # singles- draw
             draw_doubles = int(td_draw.find_elements_by_tag_name('span')[1].text)  # doubles- draw
 
             surface = i.find_elements_by_class_name('tourney-details')[1].text  # surface type
 
-            prize_money = int(i.find_elements_by_class_name('tourney-details')[2].text)  # prize money
+            prize_money = int(i.find_elements_by_class_name('tourney-details')[2].text[1:].replace(',', ''))  # prize money
 
             td_winners = i.find_elements_by_class_name('tourney-details')[3]  # winners
             winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
@@ -90,8 +95,8 @@ def general_tournament_data(url, filter):
                     winners_team = None
                     try:  # get players links to profiles
                         winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
-                        if winner_profile not in PLAYERS:       #add only players that weren't added already
-                            PLAYERS.append(winner_profile)
+
+                        players_profile.get_players_info(winner_profile)
                     except common.exceptions.NoSuchElementException:
                         pass   # link doesn't exist
                     except IndexError:
@@ -105,8 +110,7 @@ def general_tournament_data(url, filter):
                     try:     # get players links to profiles
                         a_tags = winners[0].find_elements_by_tag_name('a')
                         for a in a_tags:
-                            if a.get_attribute('href') not in PLAYERS:
-                                PLAYERS.append(a.get_attribute('href'))
+                            players_profile.get_players_info(a.get_attribute('href'))
 
                     except common.exceptions.NoSuchElementException:
                         pass  # link doesn't exist
@@ -117,6 +121,12 @@ def general_tournament_data(url, filter):
                     winners_doubles = None
                     winners_team = winners[0].text[6:]   # teams dont have profiles so there's no links to add
                                                          # in this case
+                    # TODO: add team to teams db
+                    # TODO: organize the exeptions normally
+                    # TODO: delete 'None' when not needed..
+                    # TODO: edit tournaments date's
+                    # TODO: add logging
+                    # TODO: add tour finals
 
             else:  # len=3. two types of winners- singles and doubles (there are no tournaments that include
                 for winner in winners:  # singles, doubles and team winners)
@@ -124,8 +134,8 @@ def general_tournament_data(url, filter):
                         winner_singles = winner.text[5:]
                         try:   # get players links to profiles
                             winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
-                            if winner_profile not in PLAYERS:
-                                PLAYERS.append(winner_profile)
+
+                            players_profile.get_players_info(winner_profile)
                         except common.exceptions.NoSuchElementException:
                             pass  # link doesn't exist
                         except IndexError:
@@ -135,8 +145,8 @@ def general_tournament_data(url, filter):
                         try:   # get players links to profiles
                             a_tags = winner.find_elements_by_tag_name('a')
                             for a in a_tags:
-                                if a.get_attribute('href') not in PLAYERS:
-                                    PLAYERS.append(a.get_attribute('href'))
+
+                                players_profile.get_players_info(a.get_attribute('href'))
                         except common.exceptions.NoSuchElementException:
                             pass  # link doesn't exist
                         except IndexError:
@@ -145,8 +155,20 @@ def general_tournament_data(url, filter):
                 winners_team = None
 
 
-            print(year,new_tourn_type,name,location,dates,draw_singles,draw_doubles,surface
-                  ,prize_money,winner_singles,winners_doubles,winners_team)
+            # print(year,new_tourn_type,name,location,dates,draw_singles,draw_doubles,surface
+            #       ,prize_money,winner_singles,winners_doubles,winners_team)
+
+            cursor = CON.cursor()
+            cursor.execute("select name from tournaments where name = %s ", [name]) # check if tournament exist in DB,
+            tour_name = cursor.fetchall()    # tournaments have unique names.
+            if len(tour_name) == 0:
+                cursor.execute(''' insert into tournaments (year,type,name,location,date,SGL_draw,
+                DBL_draw, surface, prize_money) values(%s,%s,%s,%s,%s,%s,%s,%s,%s) ''', [year, new_tourn_type,
+                                                                                          name, location, dates,
+                                                                                          draw_singles, draw_doubles,
+                                                                                          surface, prize_money])
+
+                CON.commit()
 
     driver.close()
 
@@ -171,7 +193,6 @@ def main():
 
     for url in urls:
         general_tournament_data(url, args.filter)     #scrape tournament's details based on given filters
-    players_profile.get_players_info(PLAYERS)
 
 
 if __name__ == '__main__':
