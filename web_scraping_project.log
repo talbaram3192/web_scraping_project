@@ -1,0 +1,9 @@
+2020-11-24 23:32:04,144-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:50-Scraping results from page https://www.atptour.com/en/scores/results-archive?year=1999
+2020-11-24 23:32:04,166-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-24 23:32:04,222-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-24 23:32:04,289-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-24 23:32:04,413-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-24 23:32:04,530-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-24 23:32:04,567-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-24 23:32:11,661-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/fabrice-santoro/s424/overview successfully!!
+2020-11-24 23:32:18,654-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/max-mirnyi/m595/overview successfully!!

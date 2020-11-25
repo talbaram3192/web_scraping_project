@@ -6,21 +6,21 @@ from selenium import webdriver, common
 def get_players_info(player_url):
     """ Get players information from their profiles """
 
-    driver = webdriver.Chrome(main.PATH)
-    driver.get(player_url)
+    #TODO upload to champions table
+    # TODO add logging
+
+    first = player_url.split('/')[5].split('-')[0]
+    last = player_url.split('/')[5].split('-')[1]
 
     # check if player exists in the DB
-    first = driver.find_element_by_class_name('first-name').text
-    print(first)
-
-    last = driver.find_element_by_class_name('last-name').text
-    print(last)
-
     cursor = main.CON.cursor()
     cursor.execute("select * from players where first_name = %s "
                    "and last_name = %s ", [first, last])
     check_exist = cursor.fetchall()
     if len(check_exist) == 0 and first != 'NA':  # if player doesnt exist in DB but has details in the website
+
+        driver = webdriver.Chrome(main.PATH)
+        driver.get(player_url)
 
         try:
             ranking_sgl = int(driver.find_elements_by_class_name('stat-value')[0].get_attribute('data-singles'))  # current ranking- singles
@@ -76,7 +76,4 @@ def get_players_info(player_url):
                         total_prize_money, country, date_birth])
 
         main.CON.commit()
-
-        driver.close()
-    else:
         driver.close()

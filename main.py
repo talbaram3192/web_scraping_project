@@ -1,17 +1,17 @@
-import requests
 from selenium import webdriver, common
 import argparse
 import players_profile
 import mysql.connector
+import logging
 
-CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455'
-                              , db='web_scraping_project')
+# configuration
+CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455', db='web_scraping_project')
 
+logging.basicConfig(filename='web_scraping_project.log',
+                    format='%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s',
+                    level=logging.INFO)
 
 PATH = 'C:\Program Files\chromedriver.exe'
-# COLUMNS = ['Year', 'Name', 'Location', 'Dates', 'Draw- singles', 'Draw- doubles', 'Surface', 'Prize money',
-#            'Winner- singles', 'Winner- doubles', 'Winner- team', 'Tournament url']
-# PLAYERS = list()
 
 
 def read_urls(start_year, finish_year):
@@ -47,6 +47,7 @@ def general_tournament_data(url, filter):
     table = driver.find_element_by_id('scoresResultsArchive')
     tbody = table.find_element_by_tag_name('tbody')
     tr = tbody.find_elements_by_tag_name('tr')
+    logging.info(f'Scraping results from year {url}. scraping {filter} tournaments.')
 
     for i in tr:  # each 'tr' tag holds the relevant information regarding each tournament in the URL
 
@@ -56,6 +57,7 @@ def general_tournament_data(url, filter):
             new_tourn_type = tourn_type.split('_')[1].split('.')[0]
         except common.exceptions.NoSuchElementException:
             new_tourn_type = 'NA'
+            logging.warning("Couldn't find tournament's type")
 
         # check if tournament exists in DB
 
@@ -67,6 +69,7 @@ def general_tournament_data(url, filter):
         check_exist = cursor.fetchall()
         if len(check_exist) == 0:   # if tournament doesnt exist
             if filter == new_tourn_type or filter == 'all':
+                logging.info(f'Scraping tournament of type: {new_tourn_type}')
 
                 location = td_content.find_element_by_class_name('tourney-location').text  # tournament's location
                 dates = td_content.find_element_by_class_name('tourney-dates').text  # tournament's dates
@@ -85,6 +88,7 @@ def general_tournament_data(url, filter):
                         prize_money = int(i.find_elements_by_class_name('tourney-details')[2].text[2:].replace(',', ''))
                 except Exception:
                     prize_money = None
+                    logging.error("couldn't get tournament's prize money")
 
                 td_winners = i.find_elements_by_class_name('tourney-details')[3]  # winners
                 winners = td_winners.find_elements_by_class_name('tourney-detail-winner')
@@ -96,33 +100,35 @@ def general_tournament_data(url, filter):
                         try:  # get players links to profiles
                             winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
                             players_profile.get_players_info(winner_profile)
+                            logging.info(f"Scraped winner's profile- {winner_profile} successfully!!")
                         except common.exceptions.NoSuchElementException:
-                            pass   # link doesn't exist
+                            logging.error("couldn't get winner's profile")   # link doesn't exist
                         except IndexError:
-                            pass
+                            logging.error("couldn't get winner's profile")
                     elif winners[0].text[:3] == 'DBL':
                         try:     # get players links to profiles
                             a_tags = winners[0].find_elements_by_tag_name('a')
                             for a in a_tags:
                                 players_profile.get_players_info(a.get_attribute('href'))
+                                logging.info(f"Scraped winner's profile- {a.get_attribute('href')} successfully!!")
                         except common.exceptions.NoSuchElementException:
-                            pass  # link doesn't exist
+                            logging.error("couldn't get winner's profile")  # link doesn't exist
                         except IndexError:
-                            pass
+                            logging.error("couldn't get winner's profile")
                     else:
                         try:
                             winners_team = winners[0].text[6:]   # teams dont have profiles so there's no links to add
+                            logging.info(f"Scraped team's profile- {winners_team} successfully!!")
                         except common.exceptions.NoSuchElementException:
-                            pass  # link doesn't exist
+                            logging.error("couldn't get team's profile")  # link doesn't exist
                         except IndexError:
-                            pass
-                                                             # in this case
-                        # TODO: add team to teams db
-                        # TODO: organize the exeptions normally
-                        # TODO: delete 'None' when not needed..
-                        # TODO: edit tournaments date's
-                        # TODO: add logging
-                        # TODO: add tour finals
+                            logging.error("couldn't get team's profile")
+
+                        # TODO add team to teams db- connect to 'champions' table
+                        # TODO add tour finals as option in the beginning
+                        # TODO config file
+                        # TODO divide into another page..??
+
 
                 else:  # len=3. two types of winners- singles and doubles (there are no tournaments that include
                     for winner in winners:  # singles, doubles and team winners)
@@ -130,27 +136,40 @@ def general_tournament_data(url, filter):
                             try:   # get players links to profiles
                                 winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
                                 players_profile.get_players_info(winner_profile)
+                                logging.info(f"Scraped winner's profile- {winner_profile} successfully!!")
                             except common.exceptions.NoSuchElementException:
-                                pass  # link doesn't exist
+                                logging.error("couldn't get winner's profile")  # link doesn't exist
                             except IndexError:
-                                pass
+                                logging.error("couldn't get winner's profile")
                         else:
                             try:   # get players links to profiles
                                 a_tags = winner.find_elements_by_tag_name('a')
                                 for a in a_tags:
                                     players_profile.get_players_info(a.get_attribute('href'))
+                                    logging.info(f"Scraped winner's profile- {a.get_attribute('href')} successfully!!")
                             except common.exceptions.NoSuchElementException:
-                                pass  # link doesn't exist
+                                logging.error("couldn't get winner's profile")  # link doesn't exist
                             except IndexError:
-                                pass
+                                logging.error("couldn't get winner's profile")
+                try:
+                    cursor.execute(''' insert into tournaments (year,type,name,location,date,SGL_draw,
+                        DBL_draw, surface, prize_money) values(%s,%s,%s,%s,%s,%s,%s,%s,%s) ''', [year, new_tourn_type,
+                                                                                                  name, location, dates,
+                                                                                                  draw_singles,
+                                                                                                 draw_doubles,
+                                                                                                 surface, prize_money])
+                    logging.info(f"Scraped tournament {name} - {year} and updated DB successfully!")
+                except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+                    logging.error(f'Error: {e}')
 
-                cursor.execute(''' insert into tournaments (year,type,name,location,date,SGL_draw,
-                    DBL_draw, surface, prize_money) values(%s,%s,%s,%s,%s,%s,%s,%s,%s) ''', [year, new_tourn_type,
-                                                                                              name, location, dates,
-                                                                                              draw_singles, draw_doubles,                                                                        surface, prize_money])
                 CON.commit()
 
+        else:
+            logging.debug(f'''This tournament: {name} - {year} was already scraped before, and is '
+                            already located in the DB''')
+
     driver.close()
+    logging.debug(f'Finished scraping {url}')
 
 
 def main():
@@ -172,8 +191,9 @@ def main():
     urls = read_urls(args.start_year, args.end_year)  #get all tournament's URLs between specified years
 
     for url in urls:
+        logging.debug('Started scraping')
         general_tournament_data(url, args.filter)     #scrape tournament's details based on given filters
 
-
+    logging.debug('Finished Scraping')
 if __name__ == '__main__':
     main()

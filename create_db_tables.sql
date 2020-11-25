@@ -20,7 +20,6 @@ country varchar(25),
 birth date
 );
 
-
 create table teams(
 team_id int auto_increment primary key,
 name varchar(25)
@@ -29,8 +28,8 @@ name varchar(25)
 create table tournaments(
 tournament_id int auto_increment primary key,
 year int,
-type varchar(20),
-name varchar(30),
+type varchar(35),
+name varchar(50),
 location varchar(40),
 date date,
 SGL_draw int,
