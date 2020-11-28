@@ -44,6 +44,7 @@ tournament_id int,
 score varchar(30),
 round varchar(25),
 foreign key (tournament_id) references tournaments(tournament_id)
+on delete cascade
 );
 
 create table games_players(
@@ -51,19 +52,23 @@ player_id int,
 game_id int,
 team_id int,
 won boolean,
-foreign key (player_id) references players(player_id),
-foreign key (game_id) references games(game_id)
+foreign key (player_id) references players(player_id) on delete cascade,
+foreign key (team_id) references teams(team_id) on delete cascade,
+foreign key (game_id) references games(game_id) on delete cascade
 );
+
 
 create table champions(
 player_id int,
 team_id int,
 tournament_id int,
 type varchar(10),
-foreign key (player_id) references players(player_id),
-foreign key (team_id) references teams(team_id),
-foreign key (tournament_id) references tournaments(tournament_id)
+foreign key (player_id) references players(player_id) on delete cascade,
+foreign key (team_id) references teams(team_id) on delete cascade,
+foreign key (tournament_id) references tournaments(tournament_id) on delete cascade
 );
+
+
 
 show tables;
 

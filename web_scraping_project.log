@@ -7,3 +7,242 @@
 2020-11-24 23:32:04,567-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
 2020-11-24 23:32:11,661-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/fabrice-santoro/s424/overview successfully!!
 2020-11-24 23:32:18,654-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/max-mirnyi/m595/overview successfully!!
+2020-11-27 22:34:24,854-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:50-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1970. scraping all tournaments.
+2020-11-27 22:34:24,874-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:34:25,235-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:34:36,805-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/tony-roche/r073/overview successfully!!
+2020-11-27 22:34:36,965-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Australian Round Robin - 1970 and updated DB successfully!
+2020-11-27 22:34:37,010-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:34:37,086-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:34:37,325-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/john-newcombe/n044/overview successfully!!
+2020-11-27 22:34:37,540-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Melbourne - 1970 and updated DB successfully!
+2020-11-27 22:34:37,607-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: grandslam
+2020-11-27 22:34:45,772-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/arthur-ashe/a063/overview successfully!!
+2020-11-27 22:34:52,699-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/robert-lutz/l045/overview successfully!!
+2020-11-27 22:34:59,181-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/stan-smith/s060/overview successfully!!
+2020-11-27 22:34:59,211-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Australian Open - 1970 and updated DB successfully!
+2020-11-27 22:34:59,244-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:34:59,274-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:15,226-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/roger-taylor/t050/overview successfully!!
+2020-11-27 22:35:15,239-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Auckland - 1970 and updated DB successfully!
+2020-11-27 22:35:15,270-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:15,323-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:15,537-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/stan-smith/s060/overview successfully!!
+2020-11-27 22:35:15,539-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Omaha - 1970 and updated DB successfully!
+2020-11-27 22:35:15,560-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:15,590-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:22,634-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/rod-laver/l058/overview successfully!!
+2020-11-27 22:35:29,184-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/ilie-nastase/n008/overview successfully!!
+2020-11-27 22:35:35,510-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/ion-tiriac/t040/overview successfully!!
+2020-11-27 22:35:35,648-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Philadelphia - 1970 and updated DB successfully!
+2020-11-27 22:35:35,717-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:35,798-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:36,079-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/manuel-santana/s245/overview successfully!!
+2020-11-27 22:35:36,096-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament New York - 1970 and updated DB successfully!
+2020-11-27 22:35:36,121-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:36,156-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:43,076-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/ken-rosewall/r075/overview successfully!!
+2020-11-27 22:35:43,183-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Hollywood - 1970 and updated DB successfully!
+2020-11-27 22:35:43,205-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:43,243-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:43,485-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/arthur-ashe/a063/overview successfully!!
+2020-11-27 22:35:43,500-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Richmond - 1970 and updated DB successfully!
+2020-11-27 22:35:43,524-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:43,558-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:43,789-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/ilie-nastase/n008/overview successfully!!
+2020-11-27 22:35:43,795-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Salisbury - 1970 and updated DB successfully!
+2020-11-27 22:35:43,818-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:43,861-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:44,083-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/ken-rosewall/r075/overview successfully!!
+2020-11-27 22:35:44,088-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Corpus Christi - 1970 and updated DB successfully!
+2020-11-27 22:35:44,111-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:44,143-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:50,874-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/cliff-richey/r071/overview successfully!!
+2020-11-27 22:35:51,145-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Macon - 1970 and updated DB successfully!
+2020-11-27 22:35:51,171-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:51,206-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:57,753-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/dennis-ralston/r064/overview successfully!!
+2020-11-27 22:35:57,755-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Los Angeles-1 - 1970 and updated DB successfully!
+2020-11-27 22:35:57,786-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:57,857-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:35:58,077-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/stan-smith/s060/overview successfully!!
+2020-11-27 22:35:58,082-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Hampton - 1970 and updated DB successfully!
+2020-11-27 22:35:58,106-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:35:58,141-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:16,932-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/marty-riessen/r055/overview successfully!!
+2020-11-27 22:36:17,057-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament London-1 - 1970 and updated DB successfully!
+2020-11-27 22:36:17,109-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:17,146-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:17,353-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament WCT Aetna World Cup - 1970 and updated DB successfully!
+2020-11-27 22:36:17,378-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:17,411-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:17,565-ERROR-FILE:main.py-FUNC:general_tournament_data-LINE:91-couldn't get tournament's prize money
+2020-11-27 22:36:24,459-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/tom-gorman/g078/overview successfully!!
+2020-11-27 22:36:24,460-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Caracas - 1970 and updated DB successfully!
+2020-11-27 22:36:24,484-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:24,522-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:24,724-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/rod-laver/l058/overview successfully!!
+2020-11-27 22:36:24,730-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Sydney - 1970 and updated DB successfully!
+2020-11-27 22:36:24,766-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:24,796-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:31,718-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/zeljko-franulovic/f074/overview successfully!!
+2020-11-27 22:36:31,729-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Barranquilla - 1970 and updated DB successfully!
+2020-11-27 22:36:31,758-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:31,791-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:38,640-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/gerald-battrick/b124/overview successfully!!
+2020-11-27 22:36:38,642-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Curacao - 1970 and updated DB successfully!
+2020-11-27 22:36:38,668-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:38,709-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:38,935-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/rod-laver/l058/overview successfully!!
+2020-11-27 22:36:38,942-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Johannesburg - 1970 and updated DB successfully!
+2020-11-27 22:36:38,965-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:39,000-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:39,222-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/arthur-ashe/a063/overview successfully!!
+2020-11-27 22:36:39,224-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Jacksonville - 1970 and updated DB successfully!
+2020-11-27 22:36:39,248-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:39,281-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:39,504-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/arthur-ashe/a063/overview successfully!!
+2020-11-27 22:36:39,510-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament San Juan - 1970 and updated DB successfully!
+2020-11-27 22:36:39,534-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:39,567-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:46,144-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/bob-hewitt/h058/overview successfully!!
+2020-11-27 22:36:46,147-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Durban - 1970 and updated DB successfully!
+2020-11-27 22:36:46,186-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:46,231-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:52,612-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/jan-kodes/k049/overview successfully!!
+2020-11-27 22:36:52,614-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament St. Petersburg - 1970 and updated DB successfully!
+2020-11-27 22:36:52,638-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:52,680-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:59,535-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/christian-kuhnke/k138/overview successfully!!
+2020-11-27 22:36:59,643-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Kingston - 1970 and updated DB successfully!
+2020-11-27 22:36:59,712-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:36:59,750-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:36:59,994-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/zeljko-franulovic/f074/overview successfully!!
+2020-11-27 22:37:00,034-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/marty-riessen/r055/overview successfully!!
+2020-11-27 22:37:00,050-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/roger-taylor/t050/overview successfully!!
+2020-11-27 22:37:00,055-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Monte Carlo - 1970 and updated DB successfully!
+2020-11-27 22:37:00,081-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:37:00,114-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:37:00,327-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/cliff-richey/r071/overview successfully!!
+2020-11-27 22:37:00,333-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Charlotte - 1970 and updated DB successfully!
+2020-11-27 22:37:00,365-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:37:00,396-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:37:00,602-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:139-Scraped winner's profile- https://www.atptour.com/en/players/ilie-nastase/n008/overview successfully!!
+2020-11-27 22:37:00,642-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/ilie-nastase/n008/overview successfully!!
+2020-11-27 22:37:00,653-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:149-Scraped winner's profile- https://www.atptour.com/en/players/ion-tiriac/t040/overview successfully!!
+2020-11-27 22:37:00,660-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Rome - 1970 and updated DB successfully!
+2020-11-27 22:37:00,693-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:37:00,725-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:37:08,039-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/clark-graebner/g079/overview successfully!!
+2020-11-27 22:37:08,040-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Houston - 1970 and updated DB successfully!
+2020-11-27 22:37:08,072-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:37:08,107-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:37:33,368-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:103-Scraped winner's profile- https://www.atptour.com/en/players/andres-gimeno/g075/overview successfully!!
+2020-11-27 22:37:33,369-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:161-Scraped tournament Dallas - 1970 and updated DB successfully!
+2020-11-27 22:37:33,410-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:60-Couldn't find tournament's type
+2020-11-27 22:37:33,455-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:72-Scraping tournament of type: NA
+2020-11-27 22:47:07,730-INFO-FILE:main.py-FUNC:main-LINE:195-Started scraping!
+2020-11-27 22:47:14,462-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:51-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1971. scraping all tournaments.
+2020-11-27 22:47:14,491-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:61-Couldn't find tournament's type
+2020-11-27 22:47:14,737-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:73-Scraping tournament of type: NA
+2020-11-27 22:48:59,700-INFO-FILE:main.py-FUNC:main-LINE:195-Started scraping!
+2020-11-27 22:49:05,418-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:51-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1971. scraping all tournaments.
+2020-11-27 22:49:05,447-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:61-Couldn't find tournament's type
+2020-11-27 22:49:05,713-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:73-Scraping tournament of type: NA
+2020-11-27 22:50:02,813-INFO-FILE:main.py-FUNC:main-LINE:195-Started scraping!
+2020-11-27 22:50:08,401-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:51-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1971. scraping all tournaments.
+2020-11-27 22:50:08,422-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:61-Couldn't find tournament's type
+2020-11-27 22:50:08,551-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:73-Scraping tournament of type: NA
+2020-11-27 22:50:16,250-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:140-Scraped winner's profile- https://www.atptour.com/en/players/phil-dent/d074/overview successfully!!
+2020-11-27 22:50:23,002-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:150-Scraped winner's profile- https://www.atptour.com/en/players/john-alexander/a014/overview successfully!!
+2020-11-27 22:50:23,021-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:150-Scraped winner's profile- https://www.atptour.com/en/players/phil-dent/d074/overview successfully!!
+2020-11-27 22:50:23,131-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:162-Scraped tournament Sydney - 1971 and updated DB successfully!
+2020-11-27 22:50:23,159-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:61-Couldn't find tournament's type
+2020-11-27 22:50:23,189-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:73-Scraping tournament of type: NA
+2020-11-27 23:44:20,104-INFO-FILE:main.py-FUNC:main-LINE:186-Started scraping!
+2020-11-27 23:44:26,727-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:42-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1984. scraping grandslam tournaments.
+2020-11-27 23:44:26,750-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:26,811-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:26,863-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:26,920-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,025-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,073-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,124-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,177-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,229-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,278-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,335-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,381-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,430-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,478-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,530-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,579-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,632-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,684-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,739-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,792-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,843-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,896-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:27,949-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:28,001-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:28,058-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:28,149-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:64-Scraping tournament of type: grandslam
+2020-11-27 23:44:28,368-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:131-Scraped winner's profile- https://www.atptour.com/en/players/ivan-lendl/l018/overview successfully!!
+2020-11-27 23:44:28,399-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:23-Scraping henri leconte
+2020-11-27 23:44:35,346-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:88-Added player into the DB successfully!
+2020-11-27 23:44:35,415-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/henri-leconte/l014/overview successfully!!
+2020-11-27 23:44:35,433-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/yannick-noah/n022/overview successfully!!
+2020-11-27 23:44:35,461-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:153-Scraped tournament Roland Garros - 1984 and updated DB successfully!
+2020-11-27 23:44:35,487-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:35,543-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:35,631-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:64-Scraping tournament of type: grandslam
+2020-11-27 23:44:35,820-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:131-Scraped winner's profile- https://www.atptour.com/en/players/john-mcenroe/m047/overview successfully!!
+2020-11-27 23:44:35,848-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:23-Scraping peter fleming
+2020-11-27 23:44:42,327-WARNING-FILE:players_profile.py-FUNC:get_players_info-LINE:61-couldn't find the date the player turned pro..
+2020-11-27 23:44:42,436-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:88-Added player into the DB successfully!
+2020-11-27 23:44:42,531-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/peter-fleming/f030/overview successfully!!
+2020-11-27 23:44:42,546-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/john-mcenroe/m047/overview successfully!!
+2020-11-27 23:44:42,547-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:153-Scraped tournament Wimbledon - 1984 and updated DB successfully!
+2020-11-27 23:44:42,583-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,643-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,693-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,743-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,797-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,848-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,903-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:42,953-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,007-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,055-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,103-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,150-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,201-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,248-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,297-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:43,391-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:64-Scraping tournament of type: grandslam
+2020-11-27 23:44:43,584-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:131-Scraped winner's profile- https://www.atptour.com/en/players/john-mcenroe/m047/overview successfully!!
+2020-11-27 23:44:43,610-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:23-Scraping john fitzgerald
+2020-11-27 23:44:50,384-INFO-FILE:players_profile.py-FUNC:get_players_info-LINE:88-Added player into the DB successfully!
+2020-11-27 23:44:50,435-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/john-fitzgerald/f028/overview successfully!!
+2020-11-27 23:44:50,451-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:141-Scraped winner's profile- https://www.atptour.com/en/players/tomas-smid/s058/overview successfully!!
+2020-11-27 23:44:50,452-INFO-FILE:main.py-FUNC:general_tournament_data-LINE:153-Scraped tournament US Open - 1984 and updated DB successfully!
+2020-11-27 23:44:50,483-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,542-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,597-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,653-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,709-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,761-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,816-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,874-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,936-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:50,991-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,048-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,101-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,158-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,213-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,275-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,332-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,392-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,448-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,508-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,567-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
+2020-11-27 23:44:51,633-WARNING-FILE:main.py-FUNC:general_tournament_data-LINE:52-Couldn't find tournament's type
