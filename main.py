@@ -185,5 +185,7 @@ def main():
         general_tournament_data(url, args.filter)     #scrape tournament's details based on given filters
 
     config.logging.info('Finished Scraping successfully!')
+
+
 if __name__ == '__main__':
     main()
