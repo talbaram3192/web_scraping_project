@@ -87,11 +87,12 @@ def general_tournament_data(url, filter):
                 url_tournament = extract_url_result(i)
 
                 # get the tournament winners:
+                winners_list = list()
                 if len(winners) == 1:  # one winner- either singles, doubles or team
                     if winners[0].text[:3] == 'SGL':
                         try:  # get players links to profiles
                             winner_profile = winners[0].find_element_by_tag_name('a').get_attribute('href')
-                            players_profile.get_players_info(winner_profile)
+                            winners_list.append(players_profile.get_players_info(winner_profile))
                             config.logging.info(f"Scraped winner's profile- {winner_profile} successfully!!")
                         except common.exceptions.NoSuchElementException:
                             config.logging.error("couldn't get winner's profile")   # link doesn't exist
@@ -101,7 +102,7 @@ def general_tournament_data(url, filter):
                         try:     # get players links to profiles
                             a_tags = winners[0].find_elements_by_tag_name('a')
                             for a in a_tags:
-                                players_profile.get_players_info(a.get_attribute('href'))
+                                winners_list.append(players_profile.get_players_info(a.get_attribute('href')))
                                 config.logging.info(f"Scraped winner's profile- {a.get_attribute('href')} successfully!!")
                         except common.exceptions.NoSuchElementException:
                             config.logging.error("couldn't get winner's profile")  # link doesn't exist
@@ -109,16 +110,17 @@ def general_tournament_data(url, filter):
                             config.logging.error("couldn't get winner's profile")
                     else:
                         try:
-                            winners_team = winners[0].text[6:]   # teams dont have profiles so there's no links to add
+                            winners_team = winners[0].text[6:]   # teams don't have profiles so there's no links to add
                             config.logging.info(f"Scraped team's profile- {winners_team} successfully!!")
                         except common.exceptions.NoSuchElementException:
                             config.logging.error("couldn't get team's profile")  # link doesn't exist
                         except IndexError:
                             config.logging.error("couldn't get team's profile")
 
-                        # TODO add team to teams db- connect to 'champions' table
-                        # TODO add tour finals as option in the beginning
+                        # TODO add team to teams db and to winners_list..
+                        # TODO add tour finals as option in the beginning..??
                         # TODO divide into another page..??
+                        # TODO add type of winner to champions
 
 
                 else:  # len=3. two types of winners- singles and doubles (there are no tournaments that include
@@ -126,7 +128,7 @@ def general_tournament_data(url, filter):
                         if winner.text[:3] == 'SGL':
                             try:   # get players links to profiles
                                 winner_profile = winner.find_element_by_tag_name('a').get_attribute('href')
-                                players_profile.get_players_info(winner_profile)
+                                winners_list.append(players_profile.get_players_info(winner_profile))
                                 config.logging.info(f"Scraped winner's profile- {winner_profile} successfully!!")
                             except common.exceptions.NoSuchElementException:
                                 config.logging.error("couldn't get winner's profile")  # link doesn't exist
@@ -136,12 +138,13 @@ def general_tournament_data(url, filter):
                             try:   # get players links to profiles
                                 a_tags = winner.find_elements_by_tag_name('a')
                                 for a in a_tags:
-                                    players_profile.get_players_info(a.get_attribute('href'))
+                                    winners_list.append(players_profile.get_players_info(a.get_attribute('href')))
                                     config.logging.info(f"Scraped winner's profile- {a.get_attribute('href')} successfully!!")
                             except common.exceptions.NoSuchElementException:
                                 config.logging.error("couldn't get winner's profile")  # link doesn't exist
                             except IndexError:
                                 config.logging.error("couldn't get winner's profile")
+
                 try:
                     cursor.execute(''' insert into tournaments (year,type,name,location,date,SGL_draw,
                         DBL_draw, surface, prize_money) values(%s,%s,%s,%s,%s,%s,%s,%s,%s) ''', [year, new_tourn_type,
@@ -150,8 +153,24 @@ def general_tournament_data(url, filter):
                                                                                                  draw_doubles,
                                                                                                  surface, prize_money])
                     config.logging.info(f"Scraped tournament {name} - {year} and updated DB successfully!")
+
+                    # enter tournament and winner to 'champions' table
+                    cursor.execute("select tournament_id from tournaments where name = %s and"
+                                   " year = %s", [name, year])
+                    tourn_id = cursor.fetchall()
+                    for winner in winners_list:
+                        try:
+                            cursor.execute(''' insert into champions(winner_id, tournament_id)
+                                            values(%s, %s)''', [winner[0][0], tourn_id[0][0]])
+                            config.logging.info(f'Inserted champions to tournament- {name} successfully!')
+
+                        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+                            config.logging.error(f'Error when trying to insert champions to'
+                                                 f' tournament- {name}: {e}')
+
                 except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
-                    config.logging.error(f'Error: {e}')
+                    config.logging.error(f'Error when trying to insert tournament- {name}: {e}')
+
                 config.CON.commit()
 
         else:

@@ -59,15 +59,13 @@ foreign key (game_id) references games(game_id) on delete cascade
 
 
 create table champions(
-player_id int,
-team_id int,
+winner_id int,
 tournament_id int,
 type varchar(10),
 foreign key (player_id) references players(player_id) on delete cascade,
 foreign key (team_id) references teams(team_id) on delete cascade,
 foreign key (tournament_id) references tournaments(tournament_id) on delete cascade
 );
-
 
 
 show tables;

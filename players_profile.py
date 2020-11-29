@@ -7,17 +7,16 @@ import mysql.connector
 def get_players_info(player_url):
     """ Get players information from their profiles """
 
-    #TODO upload to champions table
 
     first = player_url.split('/')[5].split('-')[0]
     last = player_url.split('/')[5].split('-')[1]
 
     # check if player exists in the DB
     cursor = config.CON.cursor()
-    cursor.execute("select * from players where first_name = %s "
+    cursor.execute("select player_id from players where first_name = %s "
                    "and last_name = %s ", [first, last])
     check_exist = cursor.fetchall()
-    if len(check_exist) == 0 and first != 'NA':  # if player doesnt exist in DB but has details in the website
+    if len(check_exist) == 0:  # if player doesnt exist in DB but has details in the website
         config.logging.info(f"Scraping {first} {last}")
 
         driver = webdriver.Chrome(config.PATH)
@@ -66,7 +65,7 @@ def get_players_info(player_url):
         except Exception:
             weight = None
             height = None
-            config.logging.warning("couldn't find player's height\weight country..")
+            config.logging.warning("couldn't find player's height\weight..")
         try:
             total_prize_money = int(driver.find_elements_by_class_name('stat-value')[8].text.split()[0][1:].replace(',', '')) # total prize money
             print(total_prize_money)
@@ -85,7 +84,22 @@ def get_players_info(player_url):
                             total_prize_money, country, date_birth])
             config.logging.info(f"Added {first} {last} into the DB")
             config.CON.commit()
-        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
-            config.logging.error(f"Failed to enter player's details into the DB- {e}")
 
-        driver.close()
+            cursor.execute("select player_id from players where first_name = %s and last_name = %s ",
+                           [first, last])
+            player_id = cursor.fetchall()
+            driver.close()
+            return player_id
+
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f"Failed to enter player {first} {last} details into the DB- {e}")
+            driver.close()
+            return None
+
+    else:
+        return check_exist
+
+
+
+
+
