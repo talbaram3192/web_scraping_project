@@ -17,14 +17,18 @@ MYSQL_PARAMS.
 To use this scraper you must have :
 * ChromeDriver installed. 
 If not, go to https://chromedriver.chromium.org/getting-started.
-* MySQL server installed. If not, go to https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
+* MySQL server installed. If not, go to https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/.
+* Can download relevant dependencies using existing ruquirements.txt file:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-From the folder containing ATP scraper, for instance to scrap atp tournament data between
+From the folder containing ATP scraper, for instance to scrape atp500 tournaments between
 2010 and 2015 :
 
-    python main.py 2010 2015 atp 
+    python main.py 2010 2015 500 
     
 Scraper usage :
 
