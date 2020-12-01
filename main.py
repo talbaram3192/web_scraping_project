@@ -3,16 +3,13 @@ import argparse
 import players_profile
 import mysql.connector
 import logging
+from config import *
 
 # configuration
-CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455', db='web_scraping_project')
-
+CON = mysql.connector.connect(MYSQL_PARAMS)
 logging.basicConfig(filename='web_scraping_project.log',
                     format='%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s',
                     level=logging.INFO)
-
-PATH = 'C:\Program Files\chromedriver.exe'
-
 
 def read_urls(start_year, finish_year):
     """ read all relevant URLS from the ATP website and return a list of them """

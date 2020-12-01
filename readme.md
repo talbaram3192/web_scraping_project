@@ -9,6 +9,8 @@ ATP Scraper is a Python program for scraping data from the ATP website, https://
     ```bash
     mysql -u root -p -t < create_db_tables.sql
     ```
+3. Adapt the 'config.py' to your environment. Put your chromedriver.exe or bin path to PATH. Put your sql parameters in 
+MYSQL_PARAMS.
    
 ## Requirement
 
