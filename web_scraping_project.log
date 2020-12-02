@@ -935,3 +935,152 @@
 2020-12-02 15:01:17,484-INFO-FILE:<ipython-input-88-92044c082248>-FUNC:tournament_data-LINE:83-Scraping tournament of type: all
 2020-12-02 15:01:17,689-INFO-FILE:<ipython-input-88-92044c082248>-FUNC:tournament_data-LINE:83-Scraping tournament of type: all
 2020-12-02 15:01:17,895-INFO-FILE:<ipython-input-88-92044c082248>-FUNC:tournament_data-LINE:83-Scraping tournament of type: all
+2020-12-02 17:51:58,138-INFO-FILE:atpScrapper.py-FUNC:tournament_data-LINE:117-Scraping tournament of type: url
+2020-12-02 18:20:43,273-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:21:44,023-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:53,343-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:53,551-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Doha - None and updated DB successfully!
+2020-12-02 18:35:53,792-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:54,075-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Chennai - None and updated DB successfully!
+2020-12-02 18:35:54,199-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:54,442-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Adelaide - None and updated DB successfully!
+2020-12-02 18:35:54,550-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:54,756-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Auckland - None and updated DB successfully!
+2020-12-02 18:35:54,862-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:55,038-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Sydney - None and updated DB successfully!
+2020-12-02 18:35:55,131-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:55,305-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Australian Open - None and updated DB successfully!
+2020-12-02 18:35:55,389-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:55,547-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Dubai - None and updated DB successfully!
+2020-12-02 18:35:55,631-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:55,799-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Marseille - None and updated DB successfully!
+2020-12-02 18:35:55,914-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:56,068-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament San Jose - None and updated DB successfully!
+2020-12-02 18:35:56,155-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:56,316-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Rotterdam - None and updated DB successfully!
+2020-12-02 18:35:56,411-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:56,577-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Memphis - None and updated DB successfully!
+2020-12-02 18:35:56,664-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:56,823-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament London-1 - None and updated DB successfully!
+2020-12-02 18:35:56,909-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:57,092-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Mexico City - None and updated DB successfully!
+2020-12-02 18:35:57,182-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:57,398-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Santiago - None and updated DB successfully!
+2020-12-02 18:35:57,483-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:57,645-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Copenhagen - None and updated DB successfully!
+2020-12-02 18:35:57,735-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:57,905-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Delray Beach - None and updated DB successfully!
+2020-12-02 18:35:57,996-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:58,165-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Bogota - None and updated DB successfully!
+2020-12-02 18:35:58,253-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:58,419-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Scottsdale - None and updated DB successfully!
+2020-12-02 18:35:58,508-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:58,674-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Indian Wells - None and updated DB successfully!
+2020-12-02 18:35:58,780-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:58,949-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Miami - None and updated DB successfully!
+2020-12-02 18:35:59,047-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:59,212-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Estoril - None and updated DB successfully!
+2020-12-02 18:35:59,300-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:59,469-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Atlanta - None and updated DB successfully!
+2020-12-02 18:35:59,564-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:59,730-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Casablanca - None and updated DB successfully!
+2020-12-02 18:35:59,833-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:35:59,998-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Monte Carlo - None and updated DB successfully!
+2020-12-02 18:36:00,106-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:00,282-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Barcelona - None and updated DB successfully!
+2020-12-02 18:36:00,374-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:00,546-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Mallorca - None and updated DB successfully!
+2020-12-02 18:36:00,655-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:00,841-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Munich - None and updated DB successfully!
+2020-12-02 18:36:00,946-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:01,149-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Orlando - None and updated DB successfully!
+2020-12-02 18:36:01,257-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:01,441-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Rome - None and updated DB successfully!
+2020-12-02 18:36:01,545-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:01,745-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Hamburg - None and updated DB successfully!
+2020-12-02 18:36:01,846-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:02,099-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament World Team Cup - None and updated DB successfully!
+2020-12-02 18:36:02,199-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:02,387-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament St. Polten - None and updated DB successfully!
+2020-12-02 18:36:02,494-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:02,674-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Roland Garros - None and updated DB successfully!
+2020-12-02 18:36:02,782-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:02,956-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Halle - None and updated DB successfully!
+2020-12-02 18:36:03,047-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:03,224-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament London / Queen's Club - None and updated DB successfully!
+2020-12-02 18:36:03,317-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:03,497-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament 's-Hertogenbosch - None and updated DB successfully!
+2020-12-02 18:36:03,595-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:03,783-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Nottingham - None and updated DB successfully!
+2020-12-02 18:36:03,876-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:04,053-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Wimbledon - None and updated DB successfully!
+2020-12-02 18:36:04,149-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:04,329-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Gstaad - None and updated DB successfully!
+2020-12-02 18:36:04,427-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:04,610-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Bastad - None and updated DB successfully!
+2020-12-02 18:36:04,719-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:04,902-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Newport - None and updated DB successfully!
+2020-12-02 18:36:05,002-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:05,184-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Stuttgart-1 - None and updated DB successfully!
+2020-12-02 18:36:05,278-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:05,458-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Amsterdam - None and updated DB successfully!
+2020-12-02 18:36:05,554-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:05,744-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Umag - None and updated DB successfully!
+2020-12-02 18:36:05,844-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:06,040-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Kitzbuhel - None and updated DB successfully!
+2020-12-02 18:36:06,139-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:06,327-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Los Angeles - None and updated DB successfully!
+2020-12-02 18:36:06,425-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:06,605-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament San Marino - None and updated DB successfully!
+2020-12-02 18:36:06,708-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:06,898-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Canada - None and updated DB successfully!
+2020-12-02 18:36:06,997-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:07,195-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Cincinnati - None and updated DB successfully!
+2020-12-02 18:36:07,291-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:07,490-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Indianapolis - None and updated DB successfully!
+2020-12-02 18:36:07,609-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:07,851-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Washington - None and updated DB successfully!
+2020-12-02 18:36:07,966-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:08,179-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Long Island - None and updated DB successfully!
+2020-12-02 18:36:08,289-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:08,505-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament US Open - None and updated DB successfully!
+2020-12-02 18:36:08,622-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:08,837-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Tashkent - None and updated DB successfully!
+2020-12-02 18:36:08,961-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:09,182-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Bucharest - None and updated DB successfully!
+2020-12-02 18:36:09,291-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:09,394-ERROR-FILE:AtpScrapper.py-FUNC:_set_tournament_detail-LINE:74-couldn't get tournament's prize money
+2020-12-02 18:36:09,490-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Sydney Olympics - None and updated DB successfully!
+2020-12-02 18:36:09,592-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:09,789-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Palermo - None and updated DB successfully!
+2020-12-02 18:36:09,889-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:10,083-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Hong Kong - None and updated DB successfully!
+2020-12-02 18:36:10,190-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:10,385-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Tokyo - None and updated DB successfully!
+2020-12-02 18:36:10,510-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:10,709-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Vienna - None and updated DB successfully!
+2020-12-02 18:36:10,826-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:11,023-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Toulouse - None and updated DB successfully!
+2020-12-02 18:36:11,124-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:11,326-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Shanghai - None and updated DB successfully!
+2020-12-02 18:36:11,428-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:11,635-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Basel - None and updated DB successfully!
+2020-12-02 18:36:11,756-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:11,952-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Moscow - None and updated DB successfully!
+2020-12-02 18:36:12,053-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:12,256-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Stuttgart - None and updated DB successfully!
+2020-12-02 18:36:12,370-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:12,575-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Lyon - None and updated DB successfully!
+2020-12-02 18:36:12,681-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:12,889-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament St. Petersburg - None and updated DB successfully!
+2020-12-02 18:36:13,005-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:13,212-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament ATP Masters 1000 Paris - None and updated DB successfully!
+2020-12-02 18:36:13,321-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:13,523-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Stockholm - None and updated DB successfully!
+2020-12-02 18:36:13,646-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:13,853-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Brighton - None and updated DB successfully!
+2020-12-02 18:36:13,991-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:14,217-INFO-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:108-Scraped tournament Tennis Masters Cup - None and updated DB successfully!
+2020-12-02 18:36:14,322-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:137-Scraping tournament of type: url
+2020-12-02 18:36:14,491-ERROR-FILE:AtpScrapper.py-FUNC:_save_into_database-LINE:110-Error when trying to insert tournament- ATP Tour World Doubles Championship: 1406 (22001): Data too long for column 'name' at row 1
+2020-12-02 18:36:14,544-INFO-FILE:AtpScrapper.py-FUNC:tournament_data-LINE:143-Finished scraping https://www.atptour.com/en/scores/results-archive?year=2000&tournamentType=url

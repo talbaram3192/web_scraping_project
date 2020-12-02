@@ -35,7 +35,9 @@ date date,
 SGL_draw int,
 DBL_draw int,
 surface varchar(20),
-prize_money int
+prize_money int,
+single_winner varchar(40),
+double_winner varchar(40)
 );
 
 create table games(

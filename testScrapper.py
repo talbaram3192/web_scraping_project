@@ -1,10 +1,10 @@
-from atpScrapper import atpScrapper
+from AtpScrapper import AtpScrapper, read_urls
 
-def get_tournament_tr():
-    url = 'https://www.atptour.com/en/scores/results-archive?year=2000'
-    x = atpScrapper()
-    driver = x._connexion(url)
-
+filtre = 'url'
+start_year = 2000
+end_year = 2001
+urls = read_urls(start_year, end_year, filtre)
+x = AtpScrapper(filtre)
 
 
 
