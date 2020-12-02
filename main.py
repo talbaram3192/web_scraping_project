@@ -5,7 +5,7 @@ import mysql.connector
 import config
 
 
-def read_urls(start_year, finish_year):
+def read_urls(start_year, finish_year, filter):
     """ read all relevant URLS from the ATP website and return a list of them """
     url_base = 'https://www.atptour.com/en/scores/results-archive?year='
     urls = list()
@@ -186,21 +186,24 @@ def main():
 
     parser.add_argument('start_year', type=int, help="The script will start scraping from this year")
     parser.add_argument('end_year', type=int, help="The script will finish scraping at this year")
-    parser.add_argument('filter', choices=['all', '250', '500', '1000', 'grandslam'],
+    parser.add_argument('filter', choices=['all', 'atpgs', 'gs', 'atp', '1000', "ch", "fu", "XXI"],
                         help="Filter for the search: "
-                             "all- search all tournaments. "
-                             "250- search only atp250 tournaments. "
-                             "500- search only atp500 tournaments. "
-                             "1000- search only atp1000 tournaments. "
-                             "grand_slam- search only grand slam tournaments")
+                        "all- search all tournaments. "
+                        "atpgs- ATP Tour & Grand Slams "
+                        "gs - Grand Slams"
+                        "atp- search only atp tournaments. "
+                        "1000- atp1000. "
+                        "ch - ATP Challenger Tour"
+                        "fu - ITF Future"
+                        "XXI - XXI")
 
     args = parser.parse_args()
 
-    urls = read_urls(args.start_year, args.end_year)  #get all tournament's URLs between specified years
+    urls = read_urls(args.start_year, args.end_year, args.filter)  # get all tournament's URLs between specified years
 
     for url in urls:
         config.logging.info('Started scraping!')
-        general_tournament_data(url, args.filter)     #scrape tournament's details based on given filters
+        general_tournament_data(url, args.filter)     # scrape tournament's details based on given filters
 
     config.logging.info('Finished Scraping successfully!')
 
