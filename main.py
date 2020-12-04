@@ -7,13 +7,13 @@ def main():
     # parser
     parser = scrapper_parser()
     args = parser.parse_args()
-
-    urls = read_urls(args.start_year, args.end_year, args.filter)  # get all tournament's URLs between specified years
+    print("filter {}".format(args.filter))
     scrapper = AtpScrapper(args.filter)
+    urls = read_urls(args.start_year, args.end_year, args.filter)  # get all tournament's URLs between specified years
     # General Tournament Scrapper
     for url in urls:
         config.logging.info('Started scraping!')
-        scrapper.tournament_data(url, score=args.score, players=args.players)     # scrape tournament's details based on given filters
+        scrapper.tournament_data(url, score=args.score, players=args.player, test=False)     # scrape tournament's details based on given filters
 
     config.logging.info('Finished Scraping successfully!')
 

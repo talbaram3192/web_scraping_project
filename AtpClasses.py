@@ -5,57 +5,60 @@ import re
 
 
 class AtpScores:
-    def __init__(self):
+    def __init__(self, url_scores):
         self._driver = None
-        self.url = None
+        self.url = url_scores
         self.score = None
         self.winner = None
         self.loser = None
         self.round = None
         self.url_winner = None
         self.url_loser = None
+        self.url_detail = None
+        self._KO_count = 0
 
-    def scores_tournament_data(self, atp_info):
+    def _set_round(self, selenium_object):
+        """ Scrap data about the score from selenium object ('head')"""
+        try :
+            self.round = selenium_object.find_element_by_tag_name('th').text
+        except common.exceptions.NoSuchElementException:
+            self.round = None
+
+    def _set_scores_info(self, selenium_object):
+        try:
+            self.winner = selenium_object.find_elements_by_class_name('day-table-name')[0].text
+            self.url_winner = selenium_object.find_elements_by_class_name('day-table-name')[0] \
+                .find_element_by_tag_name('a').get_attribute('href')
+            self.loser = selenium_object.find_elements_by_class_name('day-table-name')[1].text
+            self.url_loser = selenium_object.find_elements_by_class_name('day-table-name')[1] \
+                .find_element_by_tag_name('a').get_attribute('href')
+            self.score = selenium_object.find_element_by_class_name('day-table-score').text
+            self.url_detail = selenium_object.find_element_by_class_name('day-table-button') \
+                .find_element_by_tag_name('a').get_attribute('href')
+        except common.exceptions.NoSuchElementException:
+            self.winner = self.url_winner = self.loser = self.url_loser = self.score = self.url_detail = None
+
+    def scores_tournament_data(self, test=False):
         """
         Extract general information about tournament of a particular year from ATP
         """
         atp_table = []
         # start_time = time.time()
-        name, year, url = atp_info[0], atp_info[1], atp_info[2]
-        driver = webdriver.Chrome(PATH)
-        driver.get(url)
-        # Count the number of KOs
-        KO_count = 0
+        driver = webdriver.Chrome(config.PATH)
+        driver.get(self.url)
+        self._driver = driver
+        table = self._driver.find_element_by_class_name('day-table')
+        tbody = table.find_elements_by_tag_name('tbody')
+        thead = table.find_elements_by_tag_name('thead')
+        for head, body in zip(thead, tbody):
+            self._set_round(head)
+            tr_l = body.find_elements_by_tag_name('tr')
 
-        try:
-            table = driver.find_element_by_class_name('day-table')
-            tbody = table.find_elements_by_tag_name('tbody')
-            thead = table.find_elements_by_tag_name('thead')
-            for head, body in zip(thead, tbody):
-                winner = winner_url = loser = loser_url = score = url_detail = url_check = None
-                rounds = head.find_element_by_tag_name('th').text
-                tr_l = body.find_elements_by_tag_name('tr')
-                for tr in tr_l:
-                    winner = tr.find_elements_by_class_name('day-table-name')[0].text
-                    winner_url = tr.find_elements_by_class_name('day-table-name')[0] \
-                        .find_element_by_tag_name('a').get_attribute('href')
-                    loser = tr.find_elements_by_class_name('day-table-name')[1].text
-                    loser_url = tr.find_elements_by_class_name('day-table-name')[1] \
-                        .find_element_by_tag_name('a').get_attribute('href')
-                    score = tr.find_element_by_class_name('day-table-score').text
-                    url_detail = tr.find_element_by_class_name('day-table-button') \
-                        .find_element_by_tag_name('a').get_attribute('href')
-                    url_check = 'OK'
-                    new_row = [name, year, url, rounds, loser, winner, score, url_detail,
-                               winner_url, loser_url, url_check]
-                    # We write the new line into the csv
-                    writer.writerow(new_row)
-        except common.exceptions.NoSuchElementException:
-            url_check = 'KO'
-            KO_count += 1
-            writer.writerow([name, year, url, None, None, None, None, None, None, url_check])
-
-    driver.close()
+            for tr in tr_l:
+                self._set_scores_info(tr)
+                if test: break
+        # Close driver
+        self._driver.close()
 
 
 class AtpPlayer:
@@ -74,6 +77,35 @@ class AtpPlayer:
         self.total_prize_money = None
         self.player_url = player_url
         self._driver = None
+        self.id = None
+
+    def get_from_table(self):
+        """ Get player id from the player table."""
+        cursor = config.CON.cursor()
+        cursor.execute("select player_id from players where first_name = %s "
+                       "and last_name = %s ", [self.firstname, self.lastname])
+        self.id = cursor.fetchall()[0][0]
+        cursor.close()
+
+    def save_into_table(self):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into players (first_name,last_name,ranking_DBL,ranking_SGL,
+                        career_high_DBL,career_high_SGL,turned_pro, weight,height, total_prize_money, country, birth)
+                        values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ''',
+                           [self.firstname, self.lastname,
+                            self.ranking_dbl, self.ranking_sgl, self.career_high_dbl,
+                            self.career_high_sgl, self.turned_pro, self.weight, self.height,
+                            self.total_prize_money, self.country, self.date_birth])
+            config.logging.info(f"Added {self.firstname} {self.lastname} into the DB")
+            self.id = cursor.lastrowid
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(
+                f"Failed to enter player {self.firstname} {self.lastname} details into the DB- {e}")
+            print( f"Failed to enter player {self.firstname} {self.lastname} details into the DB- {e}")
+            self.id = None
+        cursor.close()
 
     def check_player_exist(self):
         """ Check if players information exist in db. """
@@ -88,16 +120,17 @@ class AtpPlayer:
         check_exist = cursor.fetchall()
         if len(check_exist)>0: # Player exists in db
             config.logging.info(f"{self.firstname} {self.lastname} already exists in players table.")
+            print(f"{self.firstname} {self.lastname} already exists in players table.")
             return True
 
     def _set_player_ranking(self):
         try:
             self.ranking_sgl = int(self._driver.find_elements_by_class_name('stat-value')[0].get_attribute(
                 'data-singles'))  # current ranking- singles
-            print(self.ranking_sgl)
+           # print(self.ranking_sgl)
             self.ranking_dbl = int(self._driver.find_elements_by_class_name('stat-value')[0].get_attribute(
                 'data-doubles'))  # current ranking- doubles
-            print(self.ranking_dbl)
+           # print(self.ranking_dbl)
         except Exception:
             ranking_sgl = None
             ranking_dbl = None
@@ -167,6 +200,7 @@ class AtpPlayer:
         driver.get(self.player_url)
         self._driver = driver
 
+        print("Getting info about {} {}".format(self.firstname, self.lastname))
         self._set_player_ranking() # Player ranking
         self._set_player_highest_ranking() # Player highest ranking
         self._set_player_country() # Player country
@@ -194,8 +228,14 @@ class AtpScrapper:
         self.single_winner = None
         self.double_winner = None
         self._driver = None
-        self._url_single_winner = None
+        self._url_winner = list()
         self.players = None
+        self.id = None
+        self.type = None
+
+    def reset(self, new_tourn_type):
+        """ Reset the object """
+        self.__init__(new_tourn_type)
 
     def _connexion(self, url):
         """ return a selenium object containing the page of the input url."""
@@ -249,69 +289,82 @@ class AtpScrapper:
     def _set_winner(self, selenium_object):
         """ Set winner from selenium object - (tourney-detail-winner)"""
         winners = selenium_object.find_elements_by_class_name('tourney-detail-winner') # winners
+        self._url_winner = []
         # get the tournament winners:
         for winner in winners:
             if 'SGL: ' in winner.text:
                 self.single_winner = winner.text.split(': ')[1]
-                self._url_single_winner = winner.find_element_by_tag_name('a').get_attribute('href')
+                self._url_winner.append((winner.find_element_by_tag_name('a').get_attribute('href'), 'SGL'))
             elif 'DBL: ' in winner.text:
                 self.double_winner = winner.text.split(': ')[1]
+                self._url_winner.append((winner.find_elements_by_tag_name('a')[0].get_attribute('href'), 'DBL'))
+                self._url_winner.append((winner.find_elements_by_tag_name('a')[1].get_attribute('href'), 'DBL'))
+                self.type = 'DBL'
 
-    def _save_into_database(self, player=None):
-        """Save tournament information in tournament table inside web_scraping_project"""
+    def _save_into_table_champion(self, player):
         cursor = config.CON.cursor()
-        idplayer = 'NA'
-        if player is not None: check_exist = player.check_player_exist()
-        if (self.players == 'winners') & (check_exist is None): # player is not in DB
-            try:
-                cursor.execute(''' insert into players (first_name,last_name,ranking_DBL,ranking_SGL,
-                career_high_DBL,career_high_SGL,turned_pro, weight,height, total_prize_money, country, birth)
-                values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ''',
-                               [player.firstname, player.lastname,
-                                player.ranking_dbl, player.ranking_sgl, player.career_high_dbl,
-                                player.career_high_sgl, player.turned_pro, player.weight, player.height,
-                                player.total_prize_money, player.country, player.date_birth])
-                config.logging.info(f"Added {player.firstname} {player.lastname} into the DB")
-                idplayer = cursor.lastrowid
-                config.CON.commit()
-            except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
-                config.logging.error(f"Failed to enter player {player.firstname} {player.lastname} details into the DB- {e}")
-        elif (self.players == 'winners') & (check_exist):  # Player is already in db
-            cursor.execute("select player_id from players where first_name = %s "
-                           "and last_name = %s ", [player.firstname, player.lastname])
-            idplayer = cursor.fetchall()[0][0]
-            # print('idplayer' : idplayer)
+        try:
+            cursor.execute(''' insert into champions (player_id,tournament_id,type) 
+                            values(%s,%s,%s)''',
+                           [player.id, self.id,
+                            self.type])
+            self.id = cursor.lastrowid
+            config.logging.info(f"Updated champions table successfully!")
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f'Error when trying to update champions for - {self.name}: {e}')
+        config.CON.commit()
+        cursor.close()
+
+    def _save_into_table(self):
+        """  Save tournament information into the tournament table"""
+        cursor = config.CON.cursor()
         try:
             cursor.execute(''' insert into tournaments (year,type,name,location,date,SGL_draw,
-                DBL_draw, surface, prize_money, single_winner, double_winner, winner_single_id) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ''',
+                DBL_draw, surface, prize_money) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)''',
                            [self.year, self.new_tourn_type,
                             self.name, self.location, self.dates,
                             self.draw_singles,
                             self.draw_doubles,
-                            self.surface, self.prize_money,
-                            self.single_winner, self.double_winner,
-                            idplayer])
+                            self.surface, self.prize_money])
+            self.id = cursor.lastrowid
             config.logging.info(f"Scraped tournament {self.name} - {self.year} and updated DB successfully!")
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f'Error when trying to insert tournament- {self.name}: {e}')
-
         config.CON.commit()
         cursor.close()
+
+    def _save_into_database(self, player=None):
+        """Save all information scrapped in the database."""
+        check_exist = True
+        # Save tournament information
+        if not self._check_tournament_exist():
+            self._save_into_table()
+        # Save player information
+        if player is not None: check_exist = player.check_player_exist()
+        if (self.players == 'winners') & (check_exist is None): # player is not in DB
+            player.save_into_table()
+            self._save_into_table_champion(player)
+        elif (self.players == 'winners') & (check_exist): # Player is already in db
+            player.get_from_table()
+            self._save_into_table_champion(player)
 
     def _check_tournament_exist(self):
         """ check if tournament exists in DB  """
 
         cursor = config.CON.cursor()
-        cursor.execute("select * from tournaments where name = %s "
+        cursor.execute("select tournament_id from tournaments where name = %s "
                        "and year = %s ", [self.name, self.year])  # check if tournament exist in DB,
         check_exist = cursor.fetchall()
         cursor.close()
         if len(check_exist) > 0:  # if tournament does exist
             config.logging.info(f'''This tournament: {self.name} - {self.year} was already scraped before, and is '
                                         already located in the DB''')
+            self.id = check_exist[0][0]
+            print(f'''This tournament: {self.name} - {self.year} was already scraped before, and is '
+                                        already located in the DB''')
             return True
 
-    def tournament_data(self, url, score=None, players=None):
+    def tournament_data(self, url, score=None, players=None, test=False):
         """Go through the url page, get information on each tournament and save them in tournament table inside
         web_scraping_project db
         url - url to scrap
@@ -320,28 +373,30 @@ class AtpScrapper:
                   if 'all' scrap information about each player of the tournament
                 """
         player = None
+        self.reset(self.new_tourn_type)
         self.players = players
         self._connexion(url)
         table = self._driver.find_element_by_id('scoresResultsArchive')
         tr = table.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
         # config.logging.info(f'Scraping results from year {url}. scraping {filter} tournaments.')
-        for i in tr:  # each 'tr' tag holds the relevant information regarding each tournament in the URL
+        for count,i in enumerate(tr):  # each 'tr' tag holds the relevant information regarding each tournament in the URL
+            print("{:.2f} done for the year {}".format(count/len(tr), self.year))
             if self.new_tourn_type is None:
                 self._set_tournament_type(i)  # Tournament Type
             self._set_tournament_title_content(i)  # Set name, location, dates from title-content
             # Check if tournament exists in db:
-            if self._check_tournament_exist():
-                break
+            if self._check_tournament_exist(): continue
             config.logging.info(f'Scraping tournament of type: {self.new_tourn_type}')
             self._set_tournament_detail(i)  # Set draw, single, double, surface and prize_money
             self._set_url_scores(i) # Set url of tournament scores WE DON'T USE IT YET
 
             self._set_winner(i) # Set winner_single, and winner_double, if they exist
             if players == 'winners':
-                player = AtpPlayer(self._url_single_winner).get_player_info()
-                # Scrap winners information
-
-            self._save_into_database(player=player)
+                for url in self._url_winner:  # len()=1 : One single winner, =3 : Single and double winners ...
+                    self.type = url[1]
+                    player = AtpPlayer(url[0]).get_player_info()
+                    self._save_into_database(player=player)
+            # if test: break
         self._driver.close()
         config.logging.info(f'Finished scraping {url}')
 

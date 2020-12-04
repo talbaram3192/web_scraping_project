@@ -3,11 +3,11 @@ import argparse
 
 def read_urls(start_year, finish_year, filter):
     """ read all relevant URLS from the ATP website and return a list of them """
-    url_base = 'https://www.atptour.com/en/scores/results-archive?year='
+    url_base = 'https://www.atptour.com/en/scores/results-archive?year={}&tournamentType={}'
     urls = list()
     year = start_year         # get all URL pages starting from the chosen year
     while year <= finish_year:  # stop collecting URLS when reaching chosen 'finish_year'
-        urls.append(url_base+str(year))
+        urls.append(url_base.format(year, filter))
         year += 1
     return urls
 
@@ -32,7 +32,7 @@ def scrapper_parser():
                              "XXI - XXI")
     parser.add_argument("-p", "--player", choices=['winners', 'all'],
                         help="Scrap winners information")
-    parser.add_argument("-s", "--scores", help="Scrap scores of each match in a tournament",
+    parser.add_argument("-s", "--score", help="Scrap scores of each match in a tournament",
                         action='store_true')
     return parser
 
