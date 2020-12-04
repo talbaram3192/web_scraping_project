@@ -30,9 +30,10 @@ def scrapper_parser():
                              "ch - ATP Challenger Tour"
                              "fu - ITF Future"
                              "XXI - XXI")
-    parser.add_argument("-p", "--player", choices=['winners', 'all'],
+    parser.add_argument("-w", "--winners", action='store_true',
                         help="Scrap winners information")
-    parser.add_argument("-s", "--score", help="Scrap scores of each match in a tournament",
+    parser.add_argument("-s", "--score", help="Scrap scores of each match in a tournament and information about each"
+                                              "player",
                         action='store_true')
     return parser
 

@@ -13,7 +13,7 @@ def main():
     # General Tournament Scrapper
     for url in urls:
         config.logging.info('Started scraping!')
-        scrapper.tournament_data(url, score=args.score, players=args.player, test=False)     # scrape tournament's details based on given filters
+        scrapper.tournament_data(url, score=args.score, winner=args.winners, test=False)     # scrape tournament's details based on given filters
 
     config.logging.info('Finished Scraping successfully!')
 
