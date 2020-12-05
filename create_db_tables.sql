@@ -4,6 +4,12 @@ show databases;
 
 use web_scraping_project;
 
+SET SQL_SAFE_UPDATES = 0;
+
+-- select * from champions;
+
+-- delete from teams;
+
 create table players(
 player_id int auto_increment primary key,
 first_name varchar(25),
@@ -61,13 +67,17 @@ foreign key (game_id) references games(game_id) on delete cascade
 
 
 create table champions(
-winner_id int,
+player_id int,
+team_id int,
 tournament_id int,
 type varchar(10),
 foreign key (player_id) references players(player_id) on delete cascade,
 foreign key (team_id) references teams(team_id) on delete cascade,
 foreign key (tournament_id) references tournaments(tournament_id) on delete cascade
 );
+
+-- alter table champions add team_id int;
+-- alter table champions add foreign key (team_id) references teams (team_id);
 
 
 show tables;

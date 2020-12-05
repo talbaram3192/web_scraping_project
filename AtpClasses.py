@@ -63,7 +63,7 @@ class AtpScores:
                             self.round])
             config.logging.info(f"Added Score from round {self.round} of {self._tournament.name} "
                                 f"between {self.winner} and {self.loser} into the DB")
-            self.id = cursor.lastrowid
+            # self.id = cursor.lastrowid
             config.CON.commit()
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add score from round {self.round} of {self._tournament.name} "
@@ -113,7 +113,7 @@ class AtpScores:
             tr_l = body.find_elements_by_tag_name('tr')
 
             for tr in tr_l:
-                self.reset( )
+                self.reset()
                 self._set_scores_info(tr)
                 print(f"Scrapping {self.round} between {self.winner} and {self.loser}")
                 # Save into games
@@ -126,6 +126,64 @@ class AtpScores:
                 if test: break
         # Close driver
         self._driver.close()
+
+
+class AtpTeam:
+    def __init__(self, team_name):
+        self.id = None
+        self.name = team_name
+
+    def get_from_table(self):
+        """ Get team id from the teams table."""
+        cursor = config.CON.cursor()
+        cursor.execute("select team_id from teams where name = %s ", [self.name])
+        self.id = cursor.fetchall()[0][0]
+        config.logging.info(f'Got id of team {self.name}')
+        cursor.close()
+
+    def save_into_table(self):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into teams (name) values (%s) ''',
+                           [self.name])
+            config.logging.info(f"Added {self.name} into the DB")
+            self.id = cursor.lastrowid
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(
+                f"Failed to enter team {self.name} details into the DB- {e}")
+            self.id = None
+        cursor.close()
+
+    def check_champ_exists(self, tourn_id):
+        cursor = config.CON.cursor()
+        cursor.execute("select team_id from champions where team_id = %s "
+                       "and tournament_id = %s ", [self.id, tourn_id])
+        check_exists = cursor.fetchall()
+
+        if len(check_exists) > 0:
+            config.logging.info(f'Tournament {tourn_id} and winner {self.name} already exist in DB')
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
+
+    def check_exist(self):
+        """ Check if team exists in db. """
+
+        # check if player exists in the DB
+        cursor = config.CON.cursor()
+        cursor.execute("select team_id from teams where name = %s ", [self.name])
+        check_exist = cursor.fetchall()
+        if len(check_exist) > 0:  # Team exists in db
+            config.logging.info(f"Team {self.name} already exists in teams table.")
+            self.id = check_exist[0][0]
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
 
 
 class AtpPlayer:
@@ -171,9 +229,24 @@ class AtpPlayer:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(
                 f"Failed to enter player {self.firstname} {self.lastname} details into the DB- {e}")
-            print( f"Failed to enter player {self.firstname} {self.lastname} details into the DB- {e}")
+            print(f"Failed to enter player {self.firstname} {self.lastname} details into the DB- {e}")
             self.id = None
         cursor.close()
+
+    def check_champ_exists(self, tourn_id):
+        cursor = config.CON.cursor()
+        cursor.execute("select player_id from champions where player_id = %s "
+                       "and tournament_id = %s ", [self.id, tourn_id])
+        check_exists = cursor.fetchall()
+
+        if len(check_exists) > 0:
+            config.logging.info(f'Tournament {tourn_id} and player {self.firstname} already exists in DB')
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
+
 
     def check_player_exist(self):
         """ Check if players information exist in db. """
@@ -190,7 +263,6 @@ class AtpPlayer:
         # print(f"check -- {check_exist[0][0]} -----")
         if len(check_exist)>0: # Player exists in db
             config.logging.info(f"{self.firstname} {self.lastname} already exists in players table.")
-            print(f"{self.firstname} {self.lastname} already exists in players table.")
             self.id = check_exist[0][0]
             cursor.close()
             return True
@@ -302,6 +374,7 @@ class AtpScrapper:
         self.url_score = None
         self.single_winner = None
         self.double_winner = None
+        self.team_winner = None
         self._driver = None
         self._url_winner = list()
         self.players = None
@@ -321,6 +394,7 @@ class AtpScrapper:
         self.url_score = None
         self.single_winner = None
         self.double_winner = None
+        self.team_winner = None
         self._url_winner = list()
         self.id = None
         self.type = None
@@ -388,20 +462,46 @@ class AtpScrapper:
                 self._url_winner.append((winner.find_elements_by_tag_name('a')[0].get_attribute('href'), 'DBL'))
                 self._url_winner.append((winner.find_elements_by_tag_name('a')[1].get_attribute('href'), 'DBL'))
                 self.type = 'DBL'
+            else:  # In case of team winner
+                self.team_winner = winner.text.split(': ')[1]
+                self.type = 'Team'
 
-    def _save_into_table_champion(self, player):
+    def _save_into_table_champion(self, player=None, team=None):
         cursor = config.CON.cursor()
-        try:
-            cursor.execute(''' insert into champions (player_id,tournament_id,type) 
-                            values(%s,%s,%s)''',
-                           [player.id, self.id,
-                            self.type])
-            self.id = cursor.lastrowid
-            config.logging.info(f"Updated champions table successfully!")
-        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
-            config.logging.error(f'Error when trying to update champions for - {self.name}: {e}')
-        config.CON.commit()
-        cursor.close()
+        if player:
+            champ_exists = player.check_champ_exists(self.id)
+            if not champ_exists:
+                try:
+                    cursor.execute(''' insert into champions (player_id,tournament_id,team_id,type) 
+                                    values(%s,%s,%s,%s)''',
+                                   [player.id, self.id, None,
+                                    self.type])
+                    # self.id = cursor.lastrowid
+                    config.logging.info(f"Updated champions table successfully!")
+                except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+                    config.logging.error(f'Error when trying to update champions for - {self.name}: {e}')
+            else:
+                config.logging.info(f'Player {player.firstname} {player.lastname} '
+                                    f'already saved as the winner of tournament {self.name}.')
+            config.CON.commit()
+            cursor.close()
+
+        elif team:
+            champ_exists = team.check_champ_exists(self.id)
+            if not champ_exists:
+                try:
+                    cursor.execute(''' insert into champions (team_id,tournament_id,player_id,type) 
+                                    values(%s,%s,%s,%s)''',
+                                   [team.id, self.id, None,
+                                    self.type])
+                    # self.id = cursor.lastrowid
+                    config.logging.info(f"Updated champions table successfully!")
+                except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+                    config.logging.error(f'Error when trying to update champions for - {self.name}: {e}')
+            else:
+                config.logging.info(f'Team {team.name} already saved as the winner in tournament {self.name}.')
+            config.CON.commit()
+            cursor.close()
 
     def _save_into_table(self):
         """  Save tournament information into the tournament table"""
@@ -421,20 +521,29 @@ class AtpScrapper:
         config.CON.commit()
         cursor.close()
 
-    def _save_into_database(self, player=None):
+    def _save_into_database(self, player=None, team=None):
         """Save all information scrapped in the database."""
-        check_exist = player.check_player_exist()
-        # Save player information
-        if (self.players) & (check_exist is False):  # player is not in DB
-            player.save_into_table()
-            self._save_into_table_champion(player)
-        elif (self.players) & (check_exist):  # Player is already in db
-            player.get_from_table()
-            self._save_into_table_champion(player)
+        if player:
+            check_exist = player.check_player_exist()
+            # Save player information
+            if (self.players) & (check_exist is False):  # player is not in DB
+                player.save_into_table()
+                self._save_into_table_champion(player=player)
+            elif (self.players) & (check_exist):  # Player is already in db
+                player.get_from_table()
+                self._save_into_table_champion(player=player)
+        elif team:
+            check_exist = team.check_exist()
+            # Save Team's information
+            if (self.players) & (check_exist is False):  # Team is not in DB
+                team.save_into_table()
+                self._save_into_table_champion(team=team)
+            elif (self.players) & (check_exist):  # Team is already in db
+                team.get_from_table()
+                self._save_into_table_champion(team=team)
 
     def _check_tournament_exist(self):
         """ check if tournament exists in DB  """
-
         cursor = config.CON.cursor()
         cursor.execute("select tournament_id from tournaments where name = %s "
                        "and year = %s ", [self.name, self.year])  # check if tournament exist in DB,
@@ -462,10 +571,10 @@ class AtpScrapper:
         self._connexion(url)
         table = self._driver.find_element_by_id('scoresResultsArchive')
         tr = table.find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
-        # config.logging.info(f'Scraping results from year {url}. scraping {filter} tournaments.')
-        for count,i in enumerate(tr):  # each 'tr' tag holds the relevant information regarding each tournament in the URL
+        config.logging.info(f'Scraping results from year {url}. scraping {filter} tournaments.')
+        for count, i in enumerate(tr):  # each 'tr' tag holds the relevant information regarding each tournament in the URL
             self.reset()
-            print("{:.2f} done for the year {}".format(count/len(tr), self.year))
+            # print("{:.2f} done for the year {}".format(count/len(tr), self.year))
             if self.new_tourn_type is None:
                 self._set_tournament_type(i)  # Tournament Type
             self._set_tournament_title_content(i)  # Set name, location, dates from title-content
@@ -478,13 +587,16 @@ class AtpScrapper:
             if not self._check_tournament_exist():
                 self._save_into_table()
             if winner:
-                for url in self._url_winner:  # len()=1 : One single winner, =3 : Single and double winners ...
-                    self.type = url[1]
-                    player = AtpPlayer(url[0]).get_player_info()
-                    print(f"New player {player.lastname} {player.firstname}")
-                    print(f"urls list ---- {self._url_winner}")
-                    self._save_into_database(player=player)
-            print('score: {}'.format(score))
+                if self.type == 'Team':  # In case of team winner- there will be only team winner and no singles/ doubles
+                    team = AtpTeam(self.team_winner)
+                    self._save_into_database(team=team)
+                else:
+                    for url in self._url_winner:  # len()=1 : One single winner, =3 : Single and double winners ...
+                        self.type = url[1]
+                        player = AtpPlayer(url[0]).get_player_info()
+                        print(f"New player {player.lastname} {player.firstname}")
+                        print(f"urls list ---- {self._url_winner}")
+                        self._save_into_database(player=player)
             if score:
                 atpscore = AtpScores(self)
                 atpscore.scores_tournament_data()
