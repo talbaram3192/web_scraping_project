@@ -50,12 +50,24 @@ class AtpScores:
         except common.exceptions.NoSuchElementException:
             self.winner = self.url_winner = self.loser = self.url_loser = self.score = self.url_detail = None
 
-    def _check_game_exist(self): pass
+    def _check_game_exist(self):
+        cursor = config.CON.cursor()
+        cursor.execute(''' SELECT game_id FROM games 
+                        WHERE tournament_id = %s AND round = %s ''',
+                       [self._tournament.id, self.round])
+        check_exists = cursor.fetchall()
+        if len(check_exists) > 0:
+            config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
 
     def _save_into_games(self):
         cursor = config.CON.cursor()
         try:
-            print(self._tournament.id)
+            # print(self._tournament.id)
 
             cursor.execute(''' insert into games (tournament_id,score,round)
                                 values(%s,%s,%s)''',
@@ -63,7 +75,7 @@ class AtpScores:
                             self.round])
             config.logging.info(f"Added Score from round {self.round} of {self._tournament.name} "
                                 f"between {self.winner} and {self.loser} into the DB")
-            # self.id = cursor.lastrowid
+            self.id = cursor.lastrowid
             config.CON.commit()
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add score from round {self.round} of {self._tournament.name} "
@@ -83,8 +95,8 @@ class AtpScores:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add new row in games_players player_id:{player.id}, game_id:{self.id}"
                                  f" into the games_players table")
-            print([player.id, self.id,
-                            self._win])
+           # print([player.id, self.id,
+           #                 self._win])
         cursor.close()
 
     def _save_into_database(self, player):
@@ -117,6 +129,7 @@ class AtpScores:
                 self._set_scores_info(tr)
                 print(f"Scrapping {self.round} between {self.winner} and {self.loser}")
                 # Save into games
+                if self._check_game_exist(): break
                 self._save_into_games()
                 # Save into games_players and players
                 for url_player in self.url_players:
@@ -207,7 +220,7 @@ class AtpPlayer:
     def get_from_table(self):
         """ Get player id from the player table."""
         cursor = config.CON.cursor()
-        print((self.firstname, self.lastname))
+       # print((self.firstname, self.lastname))
         cursor.execute("select player_id from players where first_name = %s "
                        "and last_name = %s ", [self.firstname, self.lastname])
         self.id = cursor.fetchall()[0][0]

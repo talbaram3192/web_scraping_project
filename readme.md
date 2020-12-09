@@ -18,27 +18,32 @@ To use this scraper you must have :
 * ChromeDriver installed. 
 If not, go to https://chromedriver.chromium.org/getting-started.
 * MySQL server installed. If not, go to https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/.
-* Can download relevant dependencies using existing ruquirements.txt file:
+* Can download relevant dependencies using existing requirement.txt file:
     ```bash
     pip install -r requirements.txt
     ```
 
 ## Usage
 
-From the folder containing ATP scraper, for instance to scrape atp500 tournaments between
-2010 and 2015 :
+From the folder containing ATP scraper, for instance to scrape atpgs tournaments between
+2010 and 2015 with winners information  :
 
-    python main.py 2010 2015 500 
+    python main.py 2010 2015 -w
     
 Scraper usage :
 
-    python main.py start_year end_year filter
+    python main.py start_year end_year filter --winner --score
     
 
 Where filter is the type of tournament to scrap. It can take :
-* all - search all tournaments.
-* 250 - search only atp250 tournaments.
-* 500 - search only atp500 tournaments.
-* 1000 - search only atp1000 tournaments.
-* grandslam - search only grand slam tournaments.
+* atpgs - ATP Tour & Grand Slams. (default)
+* gs - Grand Slams.
+* atp - search only atp tournaments.
+* 1000 - atp1000.
+* ch - ATP Challenger Tour.
+* fu - ITF Future.
+* XXI - XXI.
 
+With options:
+* - w : scrap winners information.
+* -s : scrap score of each match in tournament and information about each player.

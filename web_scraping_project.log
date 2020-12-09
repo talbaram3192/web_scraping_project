@@ -89,3 +89,267 @@
 2020-12-04 22:32:31,199-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
 2020-12-04 22:32:31,303-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
 2020-12-04 22:32:31,526-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Montpellier - 2020 and updated DB successfully!
+2020-12-09 18:48:49,958-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 18:49:05,443-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:574-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 18:49:05,544-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:49:05,877-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Brisbane - 2018 and updated DB successfully!
+2020-12-09 18:49:12,374-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added nick kyrgios into the DB
+2020-12-09 18:49:12,411-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:19,914-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added henri kontinen into the DB
+2020-12-09 18:49:19,939-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:27,497-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added john peers into the DB
+2020-12-09 18:49:27,519-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:27,608-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:49:27,792-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Doha - 2018 and updated DB successfully!
+2020-12-09 18:49:34,006-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added gael monfils into the DB
+2020-12-09 18:49:34,026-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:41,378-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added oliver marach into the DB
+2020-12-09 18:49:41,396-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:48,131-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added mate pavic into the DB
+2020-12-09 18:49:48,148-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:48,225-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:49:48,412-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Pune - 2018 and updated DB successfully!
+2020-12-09 18:49:48,421-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-gilles simon already exists in players table.
+2020-12-09 18:49:48,422-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-gilles simon already exists in players table.
+2020-12-09 18:49:48,425-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:54,344-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added robin haase into the DB
+2020-12-09 18:49:54,369-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:49:59,948-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added matwe middelkoop into the DB
+2020-12-09 18:49:59,960-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:50:00,046-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:50:00,232-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Sydney - 2018 and updated DB successfully!
+2020-12-09 18:50:07,615-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added daniil medvedev into the DB
+2020-12-09 18:50:07,635-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:480-Updated champions table successfully!
+2020-12-09 18:50:30,670-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 18:50:36,362-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:574-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2019&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 18:50:36,440-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:50:36,628-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Doha - 2019 and updated DB successfully!
+2020-12-09 18:50:42,843-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Finals of Doha between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 18:50:50,141-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added roberto bautista into the DB
+2020-12-09 18:50:50,167-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5920, game_id:None between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 18:50:57,010-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added tomas berdych into the DB
+2020-12-09 18:50:57,026-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5921, game_id:None between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 18:50:57,213-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Doha between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 18:50:57,225-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:50:57,226-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:50:57,227-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5920, game_id:None between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 18:51:03,253-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added novak djokovic into the DB
+2020-12-09 18:51:03,302-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5922, game_id:None between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 18:51:03,530-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Doha between Tomas Berdych and Marco Cecchinato into the DB
+2020-12-09 18:51:03,538-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:51:03,539-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:51:03,540-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5921, game_id:None between Tomas Berdych and Marco Cecchinato into the DB
+2020-12-09 18:51:10,982-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added marco cecchinato into the DB
+2020-12-09 18:51:11,000-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5923, game_id:None between Tomas Berdych and Marco Cecchinato into the DB
+2020-12-09 18:51:11,183-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Doha between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 18:51:11,191-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-novak djokovic already exists in players table.
+2020-12-09 18:51:11,193-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-novak djokovic already exists in players table.
+2020-12-09 18:51:11,202-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5922, game_id:None between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 18:51:19,460-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added nikoloz basilashvili into the DB
+2020-12-09 18:51:19,478-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5924, game_id:None between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 18:51:19,659-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Doha between Marco Cecchinato and Dusan Lajovic into the DB
+2020-12-09 18:51:19,667-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-marco cecchinato already exists in players table.
+2020-12-09 18:51:19,667-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-marco cecchinato already exists in players table.
+2020-12-09 18:51:19,668-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5923, game_id:None between Marco Cecchinato and Dusan Lajovic into the DB
+2020-12-09 18:51:27,130-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added dusan lajovic into the DB
+2020-12-09 18:51:27,149-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5925, game_id:None between Marco Cecchinato and Dusan Lajovic into the DB
+2020-12-09 18:51:27,307-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Doha between Roberto Bautista Agut and Stan Wawrinka into the DB
+2020-12-09 18:51:27,315-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:51:27,316-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:51:27,317-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5920, game_id:None between Roberto Bautista Agut and Stan Wawrinka into the DB
+2020-12-09 18:51:35,506-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added stan wawrinka into the DB
+2020-12-09 18:51:35,524-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5926, game_id:None between Roberto Bautista Agut and Stan Wawrinka into the DB
+2020-12-09 18:51:35,674-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Doha between Tomas Berdych and Pierre-Hugues Herbert into the DB
+2020-12-09 18:51:35,681-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:51:35,682-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:51:35,682-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5921, game_id:None between Tomas Berdych and Pierre-Hugues Herbert into the DB
+2020-12-09 18:51:44,296-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added pierre hugues into the DB
+2020-12-09 18:51:44,365-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5927, game_id:None between Tomas Berdych and Pierre-Hugues Herbert into the DB
+2020-12-09 18:51:44,699-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 18:51:44,709-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-novak djokovic already exists in players table.
+2020-12-09 18:51:44,710-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-novak djokovic already exists in players table.
+2020-12-09 18:51:44,711-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5922, game_id:None between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 18:51:51,881-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added marton fucsovics into the DB
+2020-12-09 18:51:51,897-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5928, game_id:None between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 18:51:52,043-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Marco Cecchinato and Guido Pella into the DB
+2020-12-09 18:51:52,050-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-marco cecchinato already exists in players table.
+2020-12-09 18:51:52,050-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-marco cecchinato already exists in players table.
+2020-12-09 18:51:52,051-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5923, game_id:None between Marco Cecchinato and Guido Pella into the DB
+2020-12-09 18:51:59,528-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added guido pella into the DB
+2020-12-09 18:51:59,555-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5929, game_id:None between Marco Cecchinato and Guido Pella into the DB
+2020-12-09 18:51:59,861-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Nikoloz Basilashvili and Andrey Rublev into the DB
+2020-12-09 18:51:59,868-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-nikoloz basilashvili already exists in players table.
+2020-12-09 18:51:59,868-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-nikoloz basilashvili already exists in players table.
+2020-12-09 18:51:59,869-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5924, game_id:None between Nikoloz Basilashvili and Andrey Rublev into the DB
+2020-12-09 18:52:06,565-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added andrey rublev into the DB
+2020-12-09 18:52:06,583-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5930, game_id:None between Nikoloz Basilashvili and Andrey Rublev into the DB
+2020-12-09 18:52:06,723-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Roberto Bautista Agut and Guillermo Garcia-Lopez into the DB
+2020-12-09 18:52:06,731-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:52:06,732-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-roberto bautista already exists in players table.
+2020-12-09 18:52:06,733-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5920, game_id:None between Roberto Bautista Agut and Guillermo Garcia-Lopez into the DB
+2020-12-09 18:52:13,609-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added guillermo garcia into the DB
+2020-12-09 18:52:13,624-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5931, game_id:None between Roberto Bautista Agut and Guillermo Garcia-Lopez into the DB
+2020-12-09 18:52:13,791-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Tomas Berdych and Fernando Verdasco into the DB
+2020-12-09 18:52:13,797-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:52:13,797-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-tomas berdych already exists in players table.
+2020-12-09 18:52:13,798-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5921, game_id:None between Tomas Berdych and Fernando Verdasco into the DB
+2020-12-09 18:52:21,115-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added fernando verdasco into the DB
+2020-12-09 18:52:21,137-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5932, game_id:None between Tomas Berdych and Fernando Verdasco into the DB
+2020-12-09 18:52:21,274-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Pierre-Hugues Herbert and Maximilian Marterer into the DB
+2020-12-09 18:52:21,283-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-pierre hugues already exists in players table.
+2020-12-09 18:52:21,283-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-pierre hugues already exists in players table.
+2020-12-09 18:52:21,284-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5927, game_id:None between Pierre-Hugues Herbert and Maximilian Marterer into the DB
+2020-12-09 18:52:28,100-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added maximilian marterer into the DB
+2020-12-09 18:52:28,115-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5933, game_id:None between Pierre-Hugues Herbert and Maximilian Marterer into the DB
+2020-12-09 18:52:28,309-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Round Of 16 of Doha between Dusan Lajovic and Ricardas Berankis into the DB
+2020-12-09 18:52:28,317-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-dusan lajovic already exists in players table.
+2020-12-09 18:52:28,321-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-dusan lajovic already exists in players table.
+2020-12-09 18:52:28,325-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5925, game_id:None between Dusan Lajovic and Ricardas Berankis into the DB
+2020-12-09 18:59:31,420-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 18:59:37,845-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:574-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 18:59:37,922-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 18:59:38,119-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:518-Scraped tournament Adelaide - 1990 and updated DB successfully!
+2020-12-09 18:59:44,401-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Finals of Adelaide between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 18:59:50,884-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added thomas muster into the DB
+2020-12-09 18:59:50,910-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5934, game_id:None between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 18:59:57,433-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added jimmy arias into the DB
+2020-12-09 18:59:57,449-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5935, game_id:None between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 18:59:57,618-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Adelaide between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 18:59:57,625-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 18:59:57,625-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 18:59:57,626-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5934, game_id:None between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 19:00:04,942-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added sergi bruguera into the DB
+2020-12-09 19:00:04,960-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5936, game_id:None between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 19:00:05,104-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Adelaide between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:00:05,110-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:00:05,111-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:00:05,112-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5935, game_id:None between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:00:11,972-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added jean philippe into the DB
+2020-12-09 19:00:11,985-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5937, game_id:None between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:00:12,156-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Adelaide between Sergi Bruguera and Michael Stich into the DB
+2020-12-09 19:00:12,162-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:00:12,162-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:00:12,163-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5936, game_id:None between Sergi Bruguera and Michael Stich into the DB
+2020-12-09 19:02:57,696-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 19:03:02,583-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:574-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 19:03:02,650-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:582-Scraping tournament of type: atpgs
+2020-12-09 19:03:02,868-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:553-This tournament: Adelaide - 1990 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 19:03:07,481-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Finals of Adelaide between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 19:03:07,497-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:07,500-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:07,504-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5934, game_id:5549 between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 19:03:07,513-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:07,517-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:07,521-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5935, game_id:5549 between Thomas Muster and Jimmy Arias into the DB
+2020-12-09 19:03:07,780-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Adelaide between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 19:03:07,788-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:07,788-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:07,793-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5934, game_id:5550 between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 19:03:07,800-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:03:07,801-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:03:07,802-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5936, game_id:5550 between Thomas Muster and Sergi Bruguera into the DB
+2020-12-09 19:03:07,946-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Semi-Finals of Adelaide between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:03:07,952-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:07,952-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:07,953-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5935, game_id:5551 between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:03:07,959-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jean philippe already exists in players table.
+2020-12-09 19:03:07,959-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jean philippe already exists in players table.
+2020-12-09 19:03:07,960-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5937, game_id:5551 between Jimmy Arias and Jean-Philippe Fleurian into the DB
+2020-12-09 19:03:08,135-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Adelaide between Sergi Bruguera and Michael Stich into the DB
+2020-12-09 19:03:08,158-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:03:08,160-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-sergi bruguera already exists in players table.
+2020-12-09 19:03:08,164-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5936, game_id:5552 between Sergi Bruguera and Michael Stich into the DB
+2020-12-09 19:03:17,056-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added michael stich into the DB
+2020-12-09 19:03:17,070-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5938, game_id:5552 between Sergi Bruguera and Michael Stich into the DB
+2020-12-09 19:03:17,210-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Adelaide between Thomas Muster and Mark Kratzmann into the DB
+2020-12-09 19:03:17,217-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:17,218-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-thomas muster already exists in players table.
+2020-12-09 19:03:17,218-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5934, game_id:5553 between Thomas Muster and Mark Kratzmann into the DB
+2020-12-09 19:03:26,665-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added mark kratzmann into the DB
+2020-12-09 19:03:26,680-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5939, game_id:5553 between Thomas Muster and Mark Kratzmann into the DB
+2020-12-09 19:03:26,816-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Adelaide between Jimmy Arias and Mark Koevermans into the DB
+2020-12-09 19:03:26,828-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:26,831-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jimmy arias already exists in players table.
+2020-12-09 19:03:26,837-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5935, game_id:5554 between Jimmy Arias and Mark Koevermans into the DB
+2020-12-09 19:03:33,447-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:226-Added mark koevermans into the DB
+2020-12-09 19:03:33,466-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5940, game_id:5554 between Jimmy Arias and Mark Koevermans into the DB
+2020-12-09 19:03:33,735-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:64-Added Score from round Quarter-Finals of Adelaide between Jean-Philippe Fleurian and Jerome Potier into the DB
+2020-12-09 19:03:33,743-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jean philippe already exists in players table.
+2020-12-09 19:03:33,744-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:265-jean philippe already exists in players table.
+2020-12-09 19:03:33,747-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:80-Added new row in games_players player_id:5937, game_id:5555 between Jean-Philippe Fleurian and Jerome Potier into the DB
+2020-12-09 19:17:01,450-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 19:17:06,020-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 19:17:06,101-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 19:17:06,301-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:566-This tournament: Adelaide - 1990 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 19:18:08,490-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 19:18:14,002-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 19:18:14,080-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 19:18:14,284-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:566-This tournament: Adelaide - 1990 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 19:19:48,098-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 19:19:52,936-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 19:19:53,020-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 19:19:53,218-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:566-This tournament: Adelaide - 1990 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 19:20:02,472-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Finals from tournament 1254 already exist in DB
+2020-12-09 19:20:02,695-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Semi-Finals from tournament 1254 already exist in DB
+2020-12-09 19:20:02,855-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Quarter-Finals from tournament 1254 already exist in DB
+2020-12-09 19:20:03,026-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 16 of Adelaide between Sergi Bruguera and Broderick Dyke into the DB
+2020-12-09 19:20:03,039-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-sergi bruguera already exists in players table.
+2020-12-09 19:20:03,040-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-sergi bruguera already exists in players table.
+2020-12-09 19:20:03,041-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5936, game_id:5556 between Sergi Bruguera and Broderick Dyke into the DB
+2020-12-09 19:20:09,274-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added broderick dyke into the DB
+2020-12-09 19:20:09,289-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5941, game_id:5556 between Sergi Bruguera and Broderick Dyke into the DB
+2020-12-09 19:20:09,436-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 16 from tournament 1254 already exist in DB
+2020-12-09 19:20:09,607-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 32 of Adelaide between Sergi Bruguera and Per Henricsson into the DB
+2020-12-09 19:20:09,615-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-sergi bruguera already exists in players table.
+2020-12-09 19:20:09,617-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-sergi bruguera already exists in players table.
+2020-12-09 19:20:09,619-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5936, game_id:5557 between Sergi Bruguera and Per Henricsson into the DB
+2020-12-09 19:20:16,059-WARNING-FILE:AtpClasses.py-FUNC:_set_player_turnedpro-LINE:329-couldn't find the date the player turned pro..
+2020-12-09 19:20:16,239-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added per henricsson into the DB
+2020-12-09 19:20:16,255-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5942, game_id:5557 between Sergi Bruguera and Per Henricsson into the DB
+2020-12-09 19:20:16,474-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 32 from tournament 1254 already exist in DB
+2020-12-09 19:20:16,617-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 19:20:16,828-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Wellington - 1990 and updated DB successfully!
+2020-12-09 19:20:22,922-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Finals of Wellington between Emilio Sanchez and Richey Reneberg into the DB
+2020-12-09 19:20:29,600-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added emilio sanchez into the DB
+2020-12-09 19:20:29,616-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5943, game_id:5558 between Emilio Sanchez and Richey Reneberg into the DB
+2020-12-09 19:20:35,547-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added richey reneberg into the DB
+2020-12-09 19:20:35,564-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5944, game_id:5558 between Emilio Sanchez and Richey Reneberg into the DB
+2020-12-09 19:20:35,884-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Semi-Finals of Wellington between Emilio Sanchez and Paolo Cane into the DB
+2020-12-09 19:20:35,892-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:35,893-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:35,894-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5943, game_id:5559 between Emilio Sanchez and Paolo Cane into the DB
+2020-12-09 19:20:42,334-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added paolo cane into the DB
+2020-12-09 19:20:42,350-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5945, game_id:5559 between Emilio Sanchez and Paolo Cane into the DB
+2020-12-09 19:20:42,497-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Semi-Finals from tournament 1255 already exist in DB
+2020-12-09 19:20:42,657-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Quarter-Finals of Wellington between Emilio Sanchez and Richard Fromberg into the DB
+2020-12-09 19:20:42,666-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:42,667-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:42,669-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5943, game_id:5560 between Emilio Sanchez and Richard Fromberg into the DB
+2020-12-09 19:20:48,670-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added richard fromberg into the DB
+2020-12-09 19:20:48,695-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5946, game_id:5560 between Emilio Sanchez and Richard Fromberg into the DB
+2020-12-09 19:20:48,936-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Quarter-Finals from tournament 1255 already exist in DB
+2020-12-09 19:20:49,092-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 16 of Wellington between Emilio Sanchez and Lars Jonsson into the DB
+2020-12-09 19:20:49,098-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:49,098-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:49,099-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5943, game_id:5561 between Emilio Sanchez and Lars Jonsson into the DB
+2020-12-09 19:20:56,279-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added lars jonsson into the DB
+2020-12-09 19:20:56,299-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5947, game_id:5561 between Emilio Sanchez and Lars Jonsson into the DB
+2020-12-09 19:20:56,479-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 16 from tournament 1255 already exist in DB
+2020-12-09 19:20:56,634-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 32 of Wellington between Emilio Sanchez and Steve Guy into the DB
+2020-12-09 19:20:56,641-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:56,642-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-emilio sanchez already exists in players table.
+2020-12-09 19:20:56,643-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5943, game_id:5562 between Emilio Sanchez and Steve Guy into the DB
+2020-12-09 19:21:01,771-WARNING-FILE:AtpClasses.py-FUNC:_set_player_turnedpro-LINE:329-couldn't find the date the player turned pro..
+2020-12-09 19:21:01,885-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added steve guy into the DB
+2020-12-09 19:21:01,905-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5948, game_id:5562 between Emilio Sanchez and Steve Guy into the DB
+2020-12-09 19:21:02,156-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 32 from tournament 1255 already exist in DB
+2020-12-09 19:21:02,303-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 19:21:02,494-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Sydney-1 - 1990 and updated DB successfully!
+2020-12-09 19:21:09,086-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Finals of Sydney-1 between Yannick Noah and Carl-Uwe Steeb into the DB
+2020-12-09 19:21:17,041-WARNING-FILE:AtpClasses.py-FUNC:_set_player_turnedpro-LINE:329-couldn't find the date the player turned pro..
+2020-12-09 19:21:17,184-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added yannick noah into the DB
+2020-12-09 19:21:17,203-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5949, game_id:5563 between Yannick Noah and Carl-Uwe Steeb into the DB
