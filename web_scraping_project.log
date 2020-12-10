@@ -353,3 +353,715 @@
 2020-12-09 19:21:17,041-WARNING-FILE:AtpClasses.py-FUNC:_set_player_turnedpro-LINE:329-couldn't find the date the player turned pro..
 2020-12-09 19:21:17,184-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added yannick noah into the DB
 2020-12-09 19:21:17,203-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5949, game_id:5563 between Yannick Noah and Carl-Uwe Steeb into the DB
+2020-12-09 12:36:19,879-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 12:36:29,516-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 12:36:29,596-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:30,821-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Adelaide - 1990 and updated DB successfully!
+2020-12-09 12:36:31,015-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:31,308-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Wellington - 1990 and updated DB successfully!
+2020-12-09 12:36:31,419-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:31,669-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Sydney-1 - 1990 and updated DB successfully!
+2020-12-09 12:36:31,767-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:32,075-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Auckland - 1990 and updated DB successfully!
+2020-12-09 12:36:32,163-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:32,415-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Australian Open - 1990 and updated DB successfully!
+2020-12-09 12:36:32,561-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:32,788-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Milan - 1990 and updated DB successfully!
+2020-12-09 12:36:32,884-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:33,115-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament San Francisco - 1990 and updated DB successfully!
+2020-12-09 12:36:33,220-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:33,447-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Guaruja - 1990 and updated DB successfully!
+2020-12-09 12:36:33,530-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:33,771-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Toronto-1 - 1990 and updated DB successfully!
+2020-12-09 12:36:33,852-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:34,082-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Brussels - 1990 and updated DB successfully!
+2020-12-09 12:36:34,230-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:34,486-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Philadelphia - 1990 and updated DB successfully!
+2020-12-09 12:36:34,572-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:34,788-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Stuttgart-1 - 1990 and updated DB successfully!
+2020-12-09 12:36:34,872-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:35,134-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Rotterdam - 1990 and updated DB successfully!
+2020-12-09 12:36:35,226-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:35,444-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Memphis - 1990 and updated DB successfully!
+2020-12-09 12:36:35,529-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:35,752-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Indian Wells - 1990 and updated DB successfully!
+2020-12-09 12:36:35,837-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:36,055-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Casablanca - 1990 and updated DB successfully!
+2020-12-09 12:36:36,260-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:36,467-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Miami - 1990 and updated DB successfully!
+2020-12-09 12:36:36,548-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:36,761-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Estoril - 1990 and updated DB successfully!
+2020-12-09 12:36:36,842-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:37,109-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Orlando - 1990 and updated DB successfully!
+2020-12-09 12:36:37,217-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:37,430-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Rio de Janeiro - 1990 and updated DB successfully!
+2020-12-09 12:36:37,512-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:37,721-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Tokyo-1 - 1990 and updated DB successfully!
+2020-12-09 12:36:37,790-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:37,981-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Barcelona - 1990 and updated DB successfully!
+2020-12-09 12:36:38,061-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:38,275-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Nice - 1990 and updated DB successfully!
+2020-12-09 12:36:38,384-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:38,599-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Seoul - 1990 and updated DB successfully!
+2020-12-09 12:36:38,683-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:38,897-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Monte Carlo - 1990 and updated DB successfully!
+2020-12-09 12:36:38,982-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:39,203-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Hong Kong - 1990 and updated DB successfully!
+2020-12-09 12:36:39,286-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:39,506-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Madrid - 1990 and updated DB successfully!
+2020-12-09 12:36:39,591-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:39,822-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Munich - 1990 and updated DB successfully!
+2020-12-09 12:36:39,913-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:40,170-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Singapore - 1990 and updated DB successfully!
+2020-12-09 12:36:40,258-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:40,496-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Hamburg - 1990 and updated DB successfully!
+2020-12-09 12:36:40,585-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:40,824-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Kiawah Island - 1990 and updated DB successfully!
+2020-12-09 12:36:40,914-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:41,185-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Rome - 1990 and updated DB successfully!
+2020-12-09 12:36:41,281-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:41,518-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Umag - 1990 and updated DB successfully!
+2020-12-09 12:36:41,605-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:41,888-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament World Team Cup - 1990 and updated DB successfully!
+2020-12-09 12:36:41,963-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:42,209-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Bologna - 1990 and updated DB successfully!
+2020-12-09 12:36:42,315-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:42,542-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Roland Garros - 1990 and updated DB successfully!
+2020-12-09 12:36:42,626-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:42,903-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament London / Queen's Club - 1990 and updated DB successfully!
+2020-12-09 12:36:42,987-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:43,190-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Florence - 1990 and updated DB successfully!
+2020-12-09 12:36:43,287-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:43,500-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Rosmalen - 1990 and updated DB successfully!
+2020-12-09 12:36:43,594-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:43,808-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Genoa - 1990 and updated DB successfully!
+2020-12-09 12:36:43,904-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:44,139-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Manchester - 1990 and updated DB successfully!
+2020-12-09 12:36:44,231-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:44,464-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Wimbledon - 1990 and updated DB successfully!
+2020-12-09 12:36:44,553-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:44,783-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Gstaad - 1990 and updated DB successfully!
+2020-12-09 12:36:44,870-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:45,103-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Bastad - 1990 and updated DB successfully!
+2020-12-09 12:36:45,190-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:45,429-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Newport - 1990 and updated DB successfully!
+2020-12-09 12:36:45,519-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:45,765-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Stuttgart-2 - 1990 and updated DB successfully!
+2020-12-09 12:36:45,884-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:46,402-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Washington - 1990 and updated DB successfully!
+2020-12-09 12:36:46,536-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:46,783-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Canada - 1990 and updated DB successfully!
+2020-12-09 12:36:46,880-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:47,118-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Hilversum - 1990 and updated DB successfully!
+2020-12-09 12:36:47,209-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:47,457-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Kitzbuhel - 1990 and updated DB successfully!
+2020-12-09 12:36:47,553-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:47,803-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Los Angeles - 1990 and updated DB successfully!
+2020-12-09 12:36:47,898-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:48,166-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament San Remo - 1990 and updated DB successfully!
+2020-12-09 12:36:48,268-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:48,493-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Cincinnati - 1990 and updated DB successfully!
+2020-12-09 12:36:48,628-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:48,973-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Prague - 1990 and updated DB successfully!
+2020-12-09 12:36:49,083-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:49,313-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Indianapolis - 1990 and updated DB successfully!
+2020-12-09 12:36:49,408-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:49,653-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament New Haven - 1990 and updated DB successfully!
+2020-12-09 12:36:49,777-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:50,015-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Long Island - 1990 and updated DB successfully!
+2020-12-09 12:36:50,108-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:50,351-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament San Marino - 1990 and updated DB successfully!
+2020-12-09 12:36:50,446-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:50,690-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Schenectady - 1990 and updated DB successfully!
+2020-12-09 12:36:50,784-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:51,040-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament US Open - 1990 and updated DB successfully!
+2020-12-09 12:36:51,134-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:51,385-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Bordeaux - 1990 and updated DB successfully!
+2020-12-09 12:36:51,480-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:51,729-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Geneva - 1990 and updated DB successfully!
+2020-12-09 12:36:51,825-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:52,076-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Basel - 1990 and updated DB successfully!
+2020-12-09 12:36:52,170-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:52,423-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Palermo - 1990 and updated DB successfully!
+2020-12-09 12:36:52,519-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:52,772-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Brisbane - 1990 and updated DB successfully!
+2020-12-09 12:36:52,867-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:53,243-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Sydney-2 - 1990 and updated DB successfully!
+2020-12-09 12:36:53,348-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:53,702-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Toulouse - 1990 and updated DB successfully!
+2020-12-09 12:36:53,814-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:54,099-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Athens - 1990 and updated DB successfully!
+2020-12-09 12:36:54,195-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:54,462-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Tokyo-2 - 1990 and updated DB successfully!
+2020-12-09 12:36:54,573-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:54,947-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Berlin - 1990 and updated DB successfully!
+2020-12-09 12:36:55,084-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:55,367-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Tel Aviv - 1990 and updated DB successfully!
+2020-12-09 12:36:55,465-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:55,746-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Lyon - 1990 and updated DB successfully!
+2020-12-09 12:36:55,835-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:56,072-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Vienna - 1990 and updated DB successfully!
+2020-12-09 12:36:56,159-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:56,394-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Stockholm - 1990 and updated DB successfully!
+2020-12-09 12:36:56,483-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:56,734-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Sao Paulo - 1990 and updated DB successfully!
+2020-12-09 12:36:56,842-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:57,074-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Masters 1000 Paris - 1990 and updated DB successfully!
+2020-12-09 12:36:57,300-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:57,548-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Moscow - 1990 and updated DB successfully!
+2020-12-09 12:36:57,649-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:57,913-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Wembley - 1990 and updated DB successfully!
+2020-12-09 12:36:58,018-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:58,300-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Itaparica - 1990 and updated DB successfully!
+2020-12-09 12:36:58,407-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:58,595-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Tour World Championship - 1990 and updated DB successfully!
+2020-12-09 12:36:58,693-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:58,960-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Tour World Doubles Championship - 1990 and updated DB successfully!
+2020-12-09 12:36:59,072-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:36:59,463-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Grand Slam Cup - 1990 and updated DB successfully!
+2020-12-09 12:36:59,505-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:618-Finished scraping https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs
+2020-12-09 12:36:59,505-INFO-FILE:main.py-FUNC:main-LINE:18-Finished Scraping successfully!
+2020-12-09 12:39:54,349-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 12:40:00,889-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 12:40:00,988-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:40:01,179-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament ATP Cup - 2020 and updated DB successfully!
+2020-12-09 12:40:01,198-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:162-Added Serbia into the DB
+2020-12-09 12:40:01,248-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:511-Updated champions table successfully!
+2020-12-09 12:40:01,348-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:40:01,567-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Doha - 2020 and updated DB successfully!
+2020-12-09 12:40:10,510-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added andrey rublev into the DB
+2020-12-09 12:40:10,547-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:493-Updated champions table successfully!
+2020-12-09 12:40:18,536-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added rohan bopanna into the DB
+2020-12-09 12:40:18,541-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:493-Updated champions table successfully!
+2020-12-09 12:40:25,750-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added wesley koolhof into the DB
+2020-12-09 12:40:25,758-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:493-Updated champions table successfully!
+2020-12-09 12:40:25,874-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:40:26,109-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Adelaide - 2020 and updated DB successfully!
+2020-12-09 12:40:26,112-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-andrey rublev already exists in players table.
+2020-12-09 12:40:26,114-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-andrey rublev already exists in players table.
+2020-12-09 12:40:26,127-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:493-Updated champions table successfully!
+2020-12-09 12:42:05,807-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 12:42:12,929-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 12:42:13,009-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:42:13,317-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:566-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 12:42:13,364-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:193-Team Serbia already exists in teams table.
+2020-12-09 12:42:13,378-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:154-Got id of team Serbia
+2020-12-09 12:42:13,440-INFO-FILE:AtpClasses.py-FUNC:check_champ_exists-LINE:178-Tournament 470 and winner Serbia already exist in DB
+2020-12-09 12:42:13,440-INFO-FILE:AtpClasses.py-FUNC:_save_into_table_champion-LINE:515-Team Serbia already saved as the winner in tournament ATP Cup.
+2020-12-09 12:42:59,702-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 12:43:05,875-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 12:43:05,978-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:43:06,259-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:566-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 12:43:37,163-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 12:43:43,475-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2019&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 12:43:43,562-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
+2020-12-09 12:43:43,930-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:531-Scraped tournament Doha - 2019 and updated DB successfully!
+2020-12-09 12:43:51,022-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Finals of Doha between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 12:44:02,150-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added roberto bautista into the DB
+2020-12-09 12:44:02,160-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:266, game_id:1 between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 12:44:10,573-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added tomas berdych into the DB
+2020-12-09 12:44:10,578-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:267, game_id:1 between Roberto Bautista Agut and Tomas Berdych into the DB
+2020-12-09 12:44:10,819-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Semi-Finals of Doha between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 12:44:10,823-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-roberto bautista already exists in players table.
+2020-12-09 12:44:10,823-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-roberto bautista already exists in players table.
+2020-12-09 12:44:10,841-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:266, game_id:2 between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 12:44:20,470-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added novak djokovic into the DB
+2020-12-09 12:44:20,476-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:268, game_id:2 between Roberto Bautista Agut and Novak Djokovic into the DB
+2020-12-09 12:44:20,625-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Semi-Finals from tournament 473 already exist in DB
+2020-12-09 12:44:20,796-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Quarter-Finals of Doha between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 12:44:20,801-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:20,802-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:20,804-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:268, game_id:3 between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 12:44:34,728-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added nikoloz basilashvili into the DB
+2020-12-09 12:44:34,773-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:269, game_id:3 between Novak Djokovic and Nikoloz Basilashvili into the DB
+2020-12-09 12:44:34,917-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Quarter-Finals from tournament 473 already exist in DB
+2020-12-09 12:44:35,091-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 16 of Doha between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 12:44:35,097-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:35,098-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:35,100-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:268, game_id:4 between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 12:44:42,791-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added marton fucsovics into the DB
+2020-12-09 12:44:42,797-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:270, game_id:4 between Novak Djokovic and Marton Fucsovics into the DB
+2020-12-09 12:44:43,074-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 16 from tournament 473 already exist in DB
+2020-12-09 12:44:43,309-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round Round Of 32 of Doha between Novak Djokovic and Damir Dzumhur into the DB
+2020-12-09 12:44:43,311-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:43,311-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:278-novak djokovic already exists in players table.
+2020-12-09 12:44:43,313-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:268, game_id:5 between Novak Djokovic and Damir Dzumhur into the DB
+2020-12-09 12:44:52,348-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added damir dzumhur into the DB
+2020-12-09 12:44:52,364-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:271, game_id:5 between Novak Djokovic and Damir Dzumhur into the DB
+2020-12-09 12:44:52,527-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:60-Round Round Of 32 from tournament 473 already exist in DB
+2020-12-09 12:44:52,717-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:76-Added Score from round 2nd Round Qualifying of Doha between Maximilian Marterer and Marco Trungelliti into the DB
+2020-12-09 12:45:02,493-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added maximilian marterer into the DB
+2020-12-09 12:45:02,496-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:272, game_id:6 between Maximilian Marterer and Marco Trungelliti into the DB
+2020-12-09 14:35:24,411-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 14:35:30,643-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:612-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 14:35:30,724-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:620-Scraping tournament of type: atpgs
+2020-12-09 14:35:31,220-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:556-Scraped tournament Brisbane - 2018 and updated DB successfully!
+2020-12-09 14:35:37,612-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:155-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-09 14:35:37,749-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:100-Added Score from round Finals of Brisbane between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-09 14:35:44,573-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:264-Added nick kyrgios into the DB
+2020-12-09 14:35:44,621-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:116-Added new row in games_players player_id:273, game_id:7 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-09 14:35:51,027-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:264-Added ryan harrison into the DB
+2020-12-09 14:35:51,032-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:116-Added new row in games_players player_id:274, game_id:7 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-09 14:35:51,241-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:155-Scrapping Semi-Finals between Nick Kyrgios and Grigor Dimitrov
+2020-12-09 14:35:51,247-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:100-Added Score from round Semi-Finals of Brisbane between Nick Kyrgios and Grigor Dimitrov into the DB
+2020-12-09 14:35:51,250-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:303-nick kyrgios already exists in players table.
+2020-12-09 14:35:51,251-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:303-nick kyrgios already exists in players table.
+2020-12-09 14:35:51,253-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:116-Added new row in games_players player_id:273, game_id:8 between Nick Kyrgios and Grigor Dimitrov into the DB
+2020-12-09 14:36:28,721-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 14:36:34,251-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:612-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 14:36:34,337-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:620-Scraping tournament of type: atpgs
+2020-12-09 14:36:34,664-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:591-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 14:36:40,097-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:155-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-09 14:36:40,099-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:84-Round Finals from tournament 474 already exist in DB
+2020-12-09 14:36:40,273-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:155-Scrapping Semi-Finals between Nick Kyrgios and Grigor Dimitrov
+2020-12-09 14:36:40,275-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:84-Round Semi-Finals from tournament 474 already exist in DB
+2020-12-09 14:36:40,441-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:155-Scrapping Quarter-Finals between Grigor Dimitrov and Kyle Edmund
+2020-12-09 14:36:40,465-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:100-Added Score from round Quarter-Finals of Brisbane between Grigor Dimitrov and Kyle Edmund into the DB
+2020-12-09 14:36:47,929-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:264-Added grigor dimitrov into the DB
+2020-12-09 14:36:47,979-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:116-Added new row in games_players player_id:275, game_id:9 between Grigor Dimitrov and Kyle Edmund into the DB
+2020-12-09 14:46:56,580-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 14:47:03,050-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:619-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2017&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 14:47:03,128-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:627-Scraping tournament of type: atpgs
+2020-12-09 14:47:03,550-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:563-Scraped tournament Brisbane - 2017 and updated DB successfully!
+2020-12-09 14:47:10,162-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Finals between Grigor Dimitrov and Kei Nishikori
+2020-12-09 14:48:04,912-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 14:48:10,727-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:620-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2017&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 14:48:10,808-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:628-Scraping tournament of type: atpgs
+2020-12-09 14:48:11,291-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:599-This tournament: Brisbane - 2017 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 14:48:17,447-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Finals between Grigor Dimitrov and Kei Nishikori
+2020-12-09 14:48:17,670-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Finals of Brisbane between Grigor Dimitrov and Kei Nishikori into the DB
+2020-12-09 14:48:17,718-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-grigor dimitrov already exists in players table.
+2020-12-09 14:48:17,719-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-grigor dimitrov already exists in players table.
+2020-12-09 14:48:17,742-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:275, game_id:10 between Grigor Dimitrov and Kei Nishikori into the DB
+2020-12-09 14:48:24,554-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:272-Added kei nishikori into the DB
+2020-12-09 14:48:24,560-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:276, game_id:10 between Grigor Dimitrov and Kei Nishikori into the DB
+2020-12-09 14:48:24,762-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Semi-Finals between Grigor Dimitrov and Milos Raonic
+2020-12-09 14:48:24,768-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Semi-Finals of Brisbane between Grigor Dimitrov and Milos Raonic into the DB
+2020-12-09 14:48:24,771-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-grigor dimitrov already exists in players table.
+2020-12-09 14:48:24,772-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-grigor dimitrov already exists in players table.
+2020-12-09 14:48:24,821-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:275, game_id:11 between Grigor Dimitrov and Milos Raonic into the DB
+2020-12-09 14:48:31,535-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:272-Added milos raonic into the DB
+2020-12-09 14:48:31,542-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:277, game_id:11 between Grigor Dimitrov and Milos Raonic into the DB
+2020-12-09 14:48:31,685-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Semi-Finals between Kei Nishikori and Stan Wawrinka
+2020-12-09 14:48:31,686-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semi-Finals from tournament 475 already exist in DB
+2020-12-09 14:48:31,840-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Quarter-Finals between Milos Raonic and Rafael Nadal
+2020-12-09 14:48:31,848-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Quarter-Finals of Brisbane between Milos Raonic and Rafael Nadal into the DB
+2020-12-09 14:48:31,851-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-milos raonic already exists in players table.
+2020-12-09 14:48:31,851-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:311-milos raonic already exists in players table.
+2020-12-09 14:48:31,854-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:277, game_id:12 between Milos Raonic and Rafael Nadal into the DB
+2020-12-09 15:04:27,170-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:04:32,850-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:621-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2017&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:04:32,938-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:629-Scraping tournament of type: atpgs
+2020-12-09 15:04:33,233-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:600-This tournament: Brisbane - 2017 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:04:38,616-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Finals between Grigor Dimitrov and Kei Nishikori
+2020-12-09 15:04:38,658-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Finals from tournament 475 already exist in DB
+2020-12-09 15:04:38,841-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Semi-Finals between Grigor Dimitrov and Milos Raonic
+2020-12-09 15:04:38,842-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semi-Finals from tournament 475 already exist in DB
+2020-12-09 15:04:39,057-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Quarter-Finals between Milos Raonic and Rafael Nadal
+2020-12-09 15:04:39,058-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarter-Finals from tournament 475 already exist in DB
+2020-12-09 15:04:39,227-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Round Of 16 between Milos Raonic and Diego Schwartzman
+2020-12-09 15:04:39,229-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Round Of 16 of Brisbane between Milos Raonic and Diego Schwartzman into the DB
+2020-12-09 15:04:39,291-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:312-milos raonic already exists in players table.
+2020-12-09 15:04:39,292-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:312-milos raonic already exists in players table.
+2020-12-09 15:04:39,293-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:277, game_id:13 between Milos Raonic and Diego Schwartzman into the DB
+2020-12-09 15:04:45,596-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:273-Added diego schwartzman into the DB
+2020-12-09 15:04:45,604-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:278, game_id:13 between Milos Raonic and Diego Schwartzman into the DB
+2020-12-09 15:04:45,859-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Round Of 16 between Stan Wawrinka and Viktor Troicki
+2020-12-09 15:04:45,865-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 475 already exist in DB
+2020-12-09 15:04:46,027-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Round Of 32 between Rafael Nadal and Alexandr Dolgopolov
+2020-12-09 15:04:46,029-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Round Of 32 of Brisbane between Rafael Nadal and Alexandr Dolgopolov into the DB
+2020-12-09 15:04:52,684-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:273-Added rafael nadal into the DB
+2020-12-09 15:04:52,688-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:279, game_id:14 between Rafael Nadal and Alexandr Dolgopolov into the DB
+2020-12-09 15:05:01,477-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:273-Added alexandr dolgopolov into the DB
+2020-12-09 15:05:01,485-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:280, game_id:14 between Rafael Nadal and Alexandr Dolgopolov into the DB
+2020-12-09 15:05:01,632-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping Round Of 32 between Lucas Pouille and Gilles Simon
+2020-12-09 15:05:01,633-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 475 already exist in DB
+2020-12-09 15:05:01,786-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:158-Scrapping 2nd Round Qualifying between Yoshihito Nishioka and Tim Smyczek
+2020-12-09 15:05:01,787-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round 2nd Round Qualifying of Brisbane between Yoshihito Nishioka and Tim Smyczek into the DB
+2020-12-09 15:05:09,438-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:273-Added yoshihito nishioka into the DB
+2020-12-09 15:05:09,443-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:281, game_id:15 between Yoshihito Nishioka and Tim Smyczek into the DB
+2020-12-09 15:11:17,656-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:11:23,383-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:621-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:11:23,457-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:629-Scraping tournament of type: atpgs
+2020-12-09 15:11:23,779-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:600-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:24:10,998-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:24:16,655-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:632-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:24:16,733-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:640-Scraping tournament of type: atpgs
+2020-12-09 15:24:17,001-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:611-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:24:40,627-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:24:46,562-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:632-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:24:46,648-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:640-Scraping tournament of type: atpgs
+2020-12-09 15:24:46,954-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:611-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:24:53,390-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:640-Scraping tournament of type: atpgs
+2020-12-09 15:24:53,614-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:611-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:24:59,849-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:169-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 15:24:59,877-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Final of Doha between Andrey Rublev and Corentin Moutet into the DB
+2020-12-09 15:24:59,991-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:323-andrey rublev already exists in players table.
+2020-12-09 15:24:59,992-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:323-andrey rublev already exists in players table.
+2020-12-09 15:25:00,017-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:263, game_id:16 between Andrey Rublev and Corentin Moutet into the DB
+2020-12-09 15:25:07,316-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:284-Added corentin moutet into the DB
+2020-12-09 15:25:07,320-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:282, game_id:16 between Andrey Rublev and Corentin Moutet into the DB
+2020-12-09 15:25:07,527-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:169-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 15:25:07,533-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Semifinals of Doha between Corentin Moutet and Stan Wawrinka into the DB
+2020-12-09 15:25:07,536-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:323-corentin moutet already exists in players table.
+2020-12-09 15:25:07,536-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:323-corentin moutet already exists in players table.
+2020-12-09 15:25:07,537-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:282, game_id:17 between Corentin Moutet and Stan Wawrinka into the DB
+2020-12-09 15:30:01,644-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:30:07,494-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:636-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:30:07,577-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping tournament of type: atpgs
+2020-12-09 15:30:07,922-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:615-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:30:14,224-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping tournament of type: atpgs
+2020-12-09 15:30:14,425-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:615-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:30:20,166-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:173-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 15:30:20,168-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 15:30:20,448-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:173-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 15:30:20,449-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 15:30:20,631-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:173-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 15:30:20,637-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Quarterfinals of Doha between Stan Wawrinka and Aljaz Bedene into the DB
+2020-12-09 15:40:47,998-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:40:58,263-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:635-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:40:58,349-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:643-Scraping tournament of type: atpgs
+2020-12-09 15:40:58,645-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:614-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:41:08,426-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:643-Scraping tournament of type: atpgs
+2020-12-09 15:41:08,631-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:614-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:44:17,109-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:44:22,663-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:641-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:44:22,739-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:649-Scraping tournament of type: atpgs
+2020-12-09 15:44:23,037-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:620-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:45:02,371-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:45:08,098-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:641-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:45:08,180-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:649-Scraping tournament of type: atpgs
+2020-12-09 15:45:08,463-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:620-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:45:14,745-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:649-Scraping tournament of type: atpgs
+2020-12-09 15:45:14,944-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:620-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:48:46,220-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:48:51,878-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:48:51,957-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:48:52,469-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:48:59,028-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:48:59,228-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:49:05,417-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 15:49:05,521-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 15:49:05,708-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 15:49:05,709-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 15:49:05,900-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 15:49:05,901-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 15:49:06,078-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 15:49:06,183-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Round Of 16 of Doha between Stan Wawrinka and Jeremy Chardy into the DB
+2020-12-09 15:50:30,620-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:50:37,037-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:50:37,114-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:50:37,388-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:50:55,870-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:51:01,922-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:51:02,040-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:51:02,323-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:51:08,646-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:51:08,881-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:53:22,606-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:53:32,432-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:53:32,544-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:53:32,787-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:53:40,238-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:53:40,441-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:53:47,843-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 15:53:47,869-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 15:53:48,053-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 15:53:48,054-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 15:53:48,224-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 15:53:48,225-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 15:53:48,396-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 15:53:48,397-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 15:53:48,586-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 15:53:48,716-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Round Of 32 of Doha between Laslo Djere and Lorenzo Sonego into the DB
+2020-12-09 15:53:54,159-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:54:02,572-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:644-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:54:02,645-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:54:02,816-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:54:11,251-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:652-Scraping tournament of type: atpgs
+2020-12-09 15:54:11,498-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:623-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:54:17,220-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 15:54:17,221-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 15:54:17,456-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 15:54:17,457-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 15:54:17,637-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 15:54:17,637-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 15:54:17,796-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 15:54:17,797-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 15:54:17,984-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 15:54:17,985-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 471 already exist in DB
+2020-12-09 15:54:18,197-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:181-Scrapping 2nd Round Qualifying between Marton Fucsovics and Jiri Vesely
+2020-12-09 15:54:18,199-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round 2nd Round Qualifying of Doha between Marton Fucsovics and Jiri Vesely into the DB
+2020-12-09 15:54:18,203-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:335-marton fucsovics already exists in players table.
+2020-12-09 15:54:18,204-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:335-marton fucsovics already exists in players table.
+2020-12-09 15:54:18,207-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:270, game_id:21 between Marton Fucsovics and Jiri Vesely into the DB
+2020-12-09 15:56:47,565-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 15:56:54,186-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:646-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 15:56:54,268-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:654-Scraping tournament of type: atpgs
+2020-12-09 15:56:54,417-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:625-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 15:57:03,545-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:654-Scraping tournament of type: atpgs
+2020-12-09 15:57:03,746-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:625-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:02:22,445-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:02:28,747-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:648-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:02:28,920-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping tournament of type: atpgs
+2020-12-09 16:02:29,115-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:627-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:02:38,578-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping tournament of type: atpgs
+2020-12-09 16:02:38,773-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:627-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:03:42,792-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:03:48,181-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:648-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:03:48,259-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping tournament of type: atpgs
+2020-12-09 16:03:48,398-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:627-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:03:56,920-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping tournament of type: atpgs
+2020-12-09 16:03:57,125-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:627-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:08:25,513-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:08:31,681-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:08:31,768-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:08:31,914-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:08:56,408-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:09:02,266-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:09:02,346-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:09:02,609-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:09:34,837-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:09:40,415-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:09:40,527-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:09:40,664-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:09:48,640-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:09:48,829-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:09:54,952-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 16:09:55,084-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 16:09:55,280-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 16:09:55,281-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 16:09:55,435-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 16:09:55,436-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 16:09:55,593-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 16:09:55,594-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 16:09:55,756-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 16:09:55,757-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 471 already exist in DB
+2020-12-09 16:09:55,950-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 2nd Round Qualifying between Marton Fucsovics and Jiri Vesely
+2020-12-09 16:09:55,951-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 2nd Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:09:56,125-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 1st Round Qualifying between Marton Fucsovics and Egor Gerasimov
+2020-12-09 16:09:56,132-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round 1st Round Qualifying of Doha between Marton Fucsovics and Egor Gerasimov into the DB
+2020-12-09 16:09:56,444-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:341-marton fucsovics already exists in players table.
+2020-12-09 16:09:56,445-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:341-marton fucsovics already exists in players table.
+2020-12-09 16:09:56,450-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:270, game_id:22 between Marton Fucsovics and Egor Gerasimov into the DB
+2020-12-09 16:12:22,238-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:12:27,504-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:12:27,616-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:12:27,987-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:12:36,357-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:12:36,546-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:15:24,766-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:15:31,674-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:15:31,753-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:15:31,893-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:15:41,132-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:15:41,345-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:15:47,082-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 16:15:47,089-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 16:15:47,257-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 16:15:47,258-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 16:15:47,425-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 16:15:47,426-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 16:15:47,684-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 16:15:47,685-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 16:15:47,864-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 16:15:47,865-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 471 already exist in DB
+2020-12-09 16:15:48,080-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 2nd Round Qualifying between Marton Fucsovics and Jiri Vesely
+2020-12-09 16:15:48,081-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 2nd Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:15:48,240-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 1st Round Qualifying between Marton Fucsovics and Egor Gerasimov
+2020-12-09 16:15:48,240-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 1st Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:15:48,407-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:15:48,616-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Adelaide - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:21:21,791-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:21:27,136-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:650-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:21:27,213-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:21:27,363-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:21:36,171-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:21:36,370-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:21:42,025-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 16:21:42,026-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 16:21:42,271-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 16:21:42,272-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 16:21:42,453-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 16:21:42,454-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 16:21:42,630-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 16:21:42,631-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 16:21:42,819-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 16:21:42,820-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 471 already exist in DB
+2020-12-09 16:21:43,006-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 2nd Round Qualifying between Marton Fucsovics and Jiri Vesely
+2020-12-09 16:21:43,007-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 2nd Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:21:43,165-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:187-Scrapping 1st Round Qualifying between Marton Fucsovics and Egor Gerasimov
+2020-12-09 16:21:43,166-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 1st Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:21:43,300-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:658-Scraping tournament of type: atpgs
+2020-12-09 16:21:43,501-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:629-This tournament: Adelaide - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:24:34,756-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:24:40,863-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:653-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:24:40,950-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:24:41,084-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:25:17,777-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:25:23,300-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:653-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:25:23,387-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:25:23,516-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:25:31,397-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:25:31,618-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:25:37,404-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-09 16:25:37,405-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Final from tournament 471 already exist in DB
+2020-12-09 16:25:37,610-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-09 16:25:37,611-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semifinals from tournament 471 already exist in DB
+2020-12-09 16:25:37,872-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-09 16:25:37,873-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarterfinals from tournament 471 already exist in DB
+2020-12-09 16:25:38,055-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-09 16:25:38,056-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 16 from tournament 471 already exist in DB
+2020-12-09 16:25:38,220-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Round Of 32 between Laslo Djere and Lorenzo Sonego
+2020-12-09 16:25:38,249-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Round Of 32 from tournament 471 already exist in DB
+2020-12-09 16:25:38,421-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping 2nd Round Qualifying between Marton Fucsovics and Jiri Vesely
+2020-12-09 16:25:38,421-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 2nd Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:25:38,614-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping 1st Round Qualifying between Marton Fucsovics and Egor Gerasimov
+2020-12-09 16:25:38,615-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round 1st Round Qualifying from tournament 471 already exist in DB
+2020-12-09 16:25:38,752-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:25:38,957-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: Adelaide - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:25:44,806-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:190-Scrapping Final between Andrey Rublev and Lloyd Harris
+2020-12-09 16:25:44,808-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Final of Adelaide between Andrey Rublev and Lloyd Harris into the DB
+2020-12-09 16:25:44,861-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:344-andrey rublev already exists in players table.
+2020-12-09 16:25:44,862-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:344-andrey rublev already exists in players table.
+2020-12-09 16:25:44,962-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:263, game_id:23 between Andrey Rublev and Lloyd Harris into the DB
+2020-12-09 16:26:25,198-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:26:31,064-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:653-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:26:31,139-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:26:31,279-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:26:39,929-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:661-Scraping tournament of type: atpgs
+2020-12-09 16:26:40,130-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:632-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:28:37,148-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:28:42,526-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:654-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:28:42,597-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:662-Scraping tournament of type: atpgs
+2020-12-09 16:28:42,725-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:633-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:31:36,888-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:31:42,345-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:654-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:31:42,421-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:662-Scraping tournament of type: atpgs
+2020-12-09 16:31:42,557-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:633-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:31:51,949-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:662-Scraping tournament of type: atpgs
+2020-12-09 16:31:52,151-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:633-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:32:58,074-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:33:04,386-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:655-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:33:04,461-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:663-Scraping tournament of type: atpgs
+2020-12-09 16:33:04,598-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:634-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:33:14,777-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:663-Scraping tournament of type: atpgs
+2020-12-09 16:33:14,981-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:634-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:34:28,072-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:34:34,354-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:34:34,418-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:34:34,551-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:36:50,403-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:36:55,831-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:36:55,909-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:36:56,165-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:37:04,306-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:37:04,489-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:39:40,298-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:39:45,769-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:39:45,849-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:39:46,095-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:39:54,633-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:39:54,826-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:41:16,002-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-09 16:41:22,064-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:656-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-09 16:41:22,139-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:41:22,269-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: ATP Cup - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-09 16:41:30,855-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:664-Scraping tournament of type: atpgs
+2020-12-09 16:41:31,052-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:635-This tournament: Doha - 2020 was already scraped before, and is '
+                                        already located in the DB
+2020-12-10 01:13:00,134-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-10 01:13:06,650-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:651-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2015&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-10 01:13:06,738-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:659-Scraping tournament of type: atpgs
+2020-12-10 01:13:07,137-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:595-Scraped tournament Brisbane - 2015 and updated DB successfully!
+2020-12-10 01:13:13,500-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Finals between Roger Federer and Milos Raonic
+2020-12-10 01:13:13,626-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Finals of Brisbane between Roger Federer and Milos Raonic into the DB
+2020-12-10 01:13:19,615-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:303-Added roger federer into the DB
+2020-12-10 01:13:19,758-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:283, game_id:24 between Roger Federer and Milos Raonic into the DB
+2020-12-10 01:13:19,772-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-milos raonic already exists in players table.
+2020-12-10 01:13:19,772-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-milos raonic already exists in players table.
+2020-12-10 01:13:19,774-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:277, game_id:24 between Roger Federer and Milos Raonic into the DB
+2020-12-10 01:13:19,947-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Semi-Finals between Roger Federer and Grigor Dimitrov
+2020-12-10 01:13:19,953-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Semi-Finals of Brisbane between Roger Federer and Grigor Dimitrov into the DB
+2020-12-10 01:13:19,955-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:20,051-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:20,109-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:283, game_id:25 between Roger Federer and Grigor Dimitrov into the DB
+2020-12-10 01:13:20,112-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-grigor dimitrov already exists in players table.
+2020-12-10 01:13:20,112-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-grigor dimitrov already exists in players table.
+2020-12-10 01:13:20,137-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:275, game_id:25 between Roger Federer and Grigor Dimitrov into the DB
+2020-12-10 01:13:20,284-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Semi-Finals between Milos Raonic and Kei Nishikori
+2020-12-10 01:13:20,285-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Semi-Finals from tournament 476 already exist in DB
+2020-12-10 01:13:20,445-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Quarter-Finals between Roger Federer and James Duckworth
+2020-12-10 01:13:20,452-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Quarter-Finals of Brisbane between Roger Federer and James Duckworth into the DB
+2020-12-10 01:13:20,454-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:20,455-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:20,456-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:283, game_id:26 between Roger Federer and James Duckworth into the DB
+2020-12-10 01:13:26,979-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:303-Added james duckworth into the DB
+2020-12-10 01:13:27,028-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:284, game_id:26 between Roger Federer and James Duckworth into the DB
+2020-12-10 01:13:27,182-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Quarter-Finals between Kei Nishikori and Bernard Tomic
+2020-12-10 01:13:27,183-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:87-Round Quarter-Finals from tournament 476 already exist in DB
+2020-12-10 01:13:27,358-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:188-Scrapping Round Of 16 between Roger Federer and John Millman
+2020-12-10 01:13:27,389-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:103-Added Score from round Round Of 16 of Brisbane between Roger Federer and John Millman into the DB
+2020-12-10 01:13:27,395-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:27,397-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:342-roger federer already exists in players table.
+2020-12-10 01:13:27,401-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:119-Added new row in games_players player_id:283, game_id:27 between Roger Federer and John Millman into the DB

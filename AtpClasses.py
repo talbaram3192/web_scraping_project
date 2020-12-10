@@ -2,6 +2,33 @@ from selenium import webdriver, common
 import mysql.connector
 import config
 import re
+import json
+
+
+class API():
+    def __init__(self):
+        self._conn = config.api_conn
+        self._rankings = None
+        self.player_1_id = None
+        self.player_2_id = None
+
+    def get_all_players(self):
+        """ Get rankings of all players- get their ID's"""
+        config.connect(self._conn)
+        res = self._conn.getresponse()
+        data = res.read()
+        self._rankings = json.loads(data.decode("utf-8"))
+
+    def last_meeting(self, player_1, player_2):
+        """ Get id's of two players, and then get details on their last meeting"""
+        self.get_all_players()
+        for i in self._rankings['rankings'][1]['player_rankings']:
+            if player_1.firstname in i['player']['name'] and player_1.lastname in i['player']['name']:
+                self.player_1_id = i['player']['id'].split(':')[2]
+            if player_2.firstname in i['player']['name'] and player_2.lastname in i['player']['name']:
+                self.player_2_id = i['player']['id'].split(':')[2]
+
+        #TODO: add details of the last meeting..
 
 
 class AtpScores:
@@ -108,6 +135,36 @@ class AtpScores:
         # Into game_players
         self._save_into_games_players(player)
 
+    def scrape_tournament_teams(self):
+        """ Extract tournament scores when it's a team tournament """
+        driver = webdriver.Chrome(config.PATH)
+        driver.get(self.url)
+        self._driver = driver
+        table = self._driver.find_element_by_id('scoresResultsContent')
+        lis = table.find_elements_by_tag_name('li')
+
+        for li in lis:
+
+            scores = li.find_elements_by_class_name('score-box-tie')
+            for score in scores:
+                teams = score.find_elements_by_tag_name('h2')
+                team_1 = teams[0].text
+                team_2 = teams[3].text
+                self.score = teams[1].text
+                score_1 = int(self.score.split('-')[0])
+                score_2 = int(self.score.split('-')[1])
+                if score_1 > score_2:
+                    self.winner = team_1
+                    self.loser = team_2
+                else:
+                    self.winner = team_2
+                    self.loser = team_1
+
+                print(team_1, team_2, self.winner)
+
+
+
+
     def scores_tournament_data(self, test=False):
         """
         Extract general information about tournament of a particular year from ATP
@@ -127,7 +184,14 @@ class AtpScores:
             for tr in tr_l:
                 self.reset()
                 self._set_scores_info(tr)
-                print(f"Scrapping {self.round} between {self.winner} and {self.loser}")
+                # print(f'winner- {self.winner.split()[0]}, loser- {self.loser.split()[0]}')
+                config.logging.info(f"Scrapping {self.round} between {self.winner} and {self.loser}")
+
+                # Get data of the last meeting between these two players through API call
+                # api = API()
+                # api.last_meeting(self.winner, self.loser)
+                #TODO- implement the api calls
+
                 # Save into games
                 if self._check_game_exist(): break
                 self._save_into_games()
@@ -594,7 +658,7 @@ class AtpScrapper:
             # Check if tournament exists in db:
             config.logging.info(f'Scraping tournament of type: {self.new_tourn_type}')
             self._set_tournament_detail(i)  # Set draw, single, double, surface and prize_money
-            self._set_url_scores(i)  # Set url of tournament scores WE DON'T USE IT YET
+            self._set_url_scores(i)  # Set url of tournament scores
             self._set_winner(i)  # Set winner_single, and winner_double, if they exist
             # Save tournament information if needed
             if not self._check_tournament_exist():
@@ -611,8 +675,12 @@ class AtpScrapper:
                         print(f"urls list ---- {self._url_winner}")
                         self._save_into_database(player=player)
             if score:
-                atpscore = AtpScores(self)
-                atpscore.scores_tournament_data()
+                if self.type == 'Team':
+                    atpscore = AtpScores(self)
+                    atpscore.scrape_tournament_teams()
+                else:
+                    atpscore = AtpScores(self)
+                    atpscore.scores_tournament_data()
             # if test: break
         self._driver.close()
         config.logging.info(f'Finished scraping {url}')
