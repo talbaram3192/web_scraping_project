@@ -45,3 +45,17 @@ class test:
     def reset(self):
         self.__init__(self.test)
 """
+
+def test_decorator(func):
+    def wrapper(*args):
+        try:
+            x = func(*args)
+        except:
+            x = 'None'
+            print(f'Error in {func.__name__}')
+    return wrapper
+
+@test_decorator
+def division(a,b):
+    print(a/b)
+    return a/b
