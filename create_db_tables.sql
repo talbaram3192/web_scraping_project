@@ -4,11 +4,20 @@ show databases;
 
 use web_scraping_project;
 
-SET SQL_SAFE_UPDATES = 0;
 
--- select * from champions;
+-- select * from teams;
 
--- delete from teams;
+select * from players where ranking_SGL != 0 order by ranking_DBL;
+
+-- SET SQL_SAFE_UPDATES = 0;
+
+delete from champions;
+delete from teams;
+delete from games_players;
+delete from games;
+delete from players;
+delete from tournaments;
+
 
 create table players(
 player_id int auto_increment primary key,

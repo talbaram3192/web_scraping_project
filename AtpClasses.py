@@ -41,6 +41,7 @@ class AtpScores:
         self.loser = None
         self.round = None
         self.url_players = []
+        self.teams = []
         self.url_detail = None
         self.id = None
         self._KO_count = 0
@@ -52,6 +53,7 @@ class AtpScores:
         self.winner = None
         self.loser = None
         self.url_players = []
+        self.teams = []
         self.url_detail = None
         self.id = None
         self._win = None
@@ -79,9 +81,34 @@ class AtpScores:
 
     def _check_game_exist(self):
         cursor = config.CON.cursor()
-        cursor.execute(''' SELECT game_id FROM games 
-                        WHERE tournament_id = %s AND round = %s ''',
-                       [self._tournament.id, self.round])
+        cursor.execute(''' SELECT g.game_ID FROM games g join games_players gp on g.game_ID = gp.game_id
+                            join players p on p.player_id = gp.player_id
+                                WHERE tournament_id = %s AND round = %s AND p.first_name = %s 
+                                AND p.last_name = %s ''',
+                       [self._tournament.id, self.round, self.winner.split()[0], self.winner.split()[1]])
+
+        # cursor.execute(''' SELECT game_id FROM games
+        #                 WHERE tournament_id = %s AND round = %s ''',
+        #                [self._tournament.id, self.round])
+        check_exists = cursor.fetchall()
+        if len(check_exists) > 0:
+            config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
+
+    def _check_game_exist_teams(self):
+        cursor = config.CON.cursor()
+        cursor.execute(''' SELECT g.game_ID FROM games g join games_players gp on g.game_ID = gp.game_id
+                            join teams t on t.team_id = gp.team_id
+                                WHERE tournament_id = %s AND round = %s AND t.name = %s ''',
+                       [self._tournament.id, self.round, self.winner])
+
+        # cursor.execute(''' SELECT game_id FROM games
+        #                 WHERE tournament_id = %s AND round = %s ''',
+        #                [self._tournament.id, self.round])
         check_exists = cursor.fetchall()
         if len(check_exists) > 0:
             config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
@@ -94,7 +121,6 @@ class AtpScores:
     def _save_into_games(self):
         cursor = config.CON.cursor()
         try:
-            # print(self._tournament.id)
 
             cursor.execute(''' insert into games (tournament_id,score,round)
                                 values(%s,%s,%s)''',
@@ -107,6 +133,21 @@ class AtpScores:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add score from round {self.round} of {self._tournament.name} "
                                  f"between {self.winner} and {self.loser} into the DB")
+        cursor.close()
+
+    def _save_into_games_teams(self, team):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into games_players (team_id, game_id, won)
+                                values(%s, %s, %s)''',
+                           [team.id, self.id,
+                            self._win])
+            config.logging.info(f"Added new row in games_players team_id:{team.id}, game_id:{self.id} "
+                                f"between {self.winner} and {self.loser} into the DB")
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f"Failed to add new row in games_players team_id:{team.id}, game_id:{self.id}")
+
         cursor.close()
 
     def _save_into_games_players(self, player):
@@ -122,48 +163,77 @@ class AtpScores:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add new row in games_players player_id:{player.id}, game_id:{self.id}"
                                  f" into the games_players table")
-           # print([player.id, self.id,
-           #                 self._win])
+
         cursor.close()
 
-    def _save_into_database(self, player):
+    def _save_into_database(self, player=None, team=None):
         # Input data into players table if needed
-        if player.check_player_exist(): # IN DB
-            player.get_from_table()
-        else: # not in DB
-            player.save_into_table()
-        # Into game_players
-        self._save_into_games_players(player)
+        if team:
+            if team.check_exist():  # IN DB
+                team.get_from_table()
+            else:  # not in DB
+                team.save_into_table()
+            # Into game_players
+            self._save_into_games_teams(team)
+        else:
+            if player.check_player_exist(): # IN DB
+                player.get_from_table()
+            else: # not in DB
+                player.save_into_table()
+            # Into game_players
+            self._save_into_games_players(player)
+
 
     def scrape_tournament_teams(self):
         """ Extract tournament scores when it's a team tournament """
         driver = webdriver.Chrome(config.PATH)
         driver.get(self.url)
         self._driver = driver
-        table = self._driver.find_element_by_id('scoresResultsContent')
-        lis = table.find_elements_by_tag_name('li')
 
-        for li in lis:
+        draws = self._driver.find_element_by_link_text('DRAWS')
+        draw_page = draws.get_attribute('href')
+        self._driver.close()
 
-            scores = li.find_elements_by_class_name('score-box-tie')
-            for score in scores:
-                teams = score.find_elements_by_tag_name('h2')
-                team_1 = teams[0].text
-                team_2 = teams[3].text
-                self.score = teams[1].text
-                score_1 = int(self.score.split('-')[0])
-                score_2 = int(self.score.split('-')[1])
-                if score_1 > score_2:
-                    self.winner = team_1
-                    self.loser = team_2
-                else:
-                    self.winner = team_2
-                    self.loser = team_1
+        driver = webdriver.Chrome(config.PATH)
+        driver.get(draw_page)
+        self._driver = driver
+        table = self._driver.find_element_by_class_name('atpcup-draw')
+        rounds = table.find_elements_by_class_name('tie-container')
+        for round in rounds:
+            self.reset()
+            round_list = round.text.split()
+            team1 = round_list[0]
+            team2 = round_list[2]
+            self.teams.append(team1)
+            self.teams.append(team2)
+            team1_score = int(round_list[1])
+            team2_score = int(round_list[3])
+            self.round = round.find_element_by_tag_name('h3').get_attribute('innerText')
+            self.score = ''.join(str(team1_score) + '-' + str(team2_score))
+            print(team1, team2, self.score, self.round)
+            if team1_score > team2_score:
+                self.winner = team1
+                self.loser = team2
+            else:
+                self.winner = team2
+                self.loser = team1
 
-                print(team_1, team_2, self.winner)
+            config.logging.info(f"Scrapping match round- {self.round}between {self.winner} and {self.loser}")
 
+            #save if game doesn't exist
+            if not self._check_game_exist_teams():
+                self._save_into_games()
+            # Save into games_players and players
+                for team in self.teams:
+                    new_team = AtpTeam(team)
+                    if team == self.winner:
+                        self._win = True
+                    else:
+                        self._win = False
 
+                    self._save_into_database(team=new_team)
 
+        self._driver.close()
 
     def scores_tournament_data(self, test=False):
         """
