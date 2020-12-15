@@ -2315,3 +2315,405 @@
 2020-12-12 14:54:03,247-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:412-novak djokovic already exists in players table.
 2020-12-12 14:54:03,247-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:412-novak djokovic already exists in players table.
 2020-12-12 14:54:03,248-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:160-Added new row in games_players player_id:320, game_id:101 between Novak Djokovic and Damir Dzumhur into the DB
+2020-12-14 22:06:42,009-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:06:49,634-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:737-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:06:49,729-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:745-Scraping tournament of type: atpgs
+2020-12-14 22:06:50,675-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:681-Scraped tournament Brisbane - 2018 and updated DB successfully!
+2020-12-14 22:06:57,582-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:273-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:16:46,113-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:16:51,959-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:737-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:16:52,041-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:745-Scraping tournament of type: atpgs
+2020-12-14 22:16:52,617-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:716-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:16:58,343-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:273-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:22:09,473-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:22:15,290-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:737-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:22:15,367-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:745-Scraping tournament of type: atpgs
+2020-12-14 22:22:15,789-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:716-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:22:21,856-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:273-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:28:44,307-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:28:51,387-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:739-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:28:51,466-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:747-Scraping tournament of type: atpgs
+2020-12-14 22:28:51,806-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:718-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:28:57,991-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:275-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:31:27,111-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:31:32,691-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:741-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:31:32,769-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:749-Scraping tournament of type: atpgs
+2020-12-14 22:31:33,289-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:720-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:31:39,067-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:277-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:33:07,341-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:33:13,628-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:742-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:33:13,710-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:750-Scraping tournament of type: atpgs
+2020-12-14 22:33:14,246-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:721-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:33:19,971-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:278-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:36:41,708-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:36:47,205-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:744-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:36:47,286-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:752-Scraping tournament of type: atpgs
+2020-12-14 22:36:47,739-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:723-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:36:53,402-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:280-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:38:30,792-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:38:36,272-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:743-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:38:36,352-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:751-Scraping tournament of type: atpgs
+2020-12-14 22:38:36,709-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:722-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:38:42,214-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:279-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:40:37,987-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 22:40:44,872-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:744-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 22:40:44,951-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:752-Scraping tournament of type: atpgs
+2020-12-14 22:40:45,383-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:723-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 22:40:53,145-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:280-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 22:40:56,253-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:151-Added Score from round Finals of Brisbane between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 22:41:03,457-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:396-Added nick kyrgios into the DB
+2020-12-14 22:41:03,933-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:182-Added new row in games_players player_id:329, game_id:102 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 22:41:11,186-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:396-Added ryan harrison into the DB
+2020-12-14 22:41:11,207-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:182-Added new row in games_players player_id:330, game_id:102 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 22:41:11,479-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:280-Scrapping Semi-Finals between Nick Kyrgios and Grigor Dimitrov
+2020-12-14 23:44:55,380-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 23:45:01,083-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:767-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 23:45:01,159-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:775-Scraping tournament of type: atpgs
+2020-12-14 23:45:01,549-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:711-Scraped tournament Brisbane - 2018 and updated DB successfully!
+2020-12-14 23:45:07,141-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 23:45:07,268-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Finals of Brisbane between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 23:45:08,517-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 103
+2020-12-14 23:45:14,701-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added nick kyrgios into the DB
+2020-12-14 23:45:14,708-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:331, game_id:103 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 23:45:20,475-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added ryan harrison into the DB
+2020-12-14 23:45:20,483-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:332, game_id:103 between Nick Kyrgios and Ryan Harrison into the DB
+2020-12-14 23:45:20,687-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semi-Finals between Nick Kyrgios and Grigor Dimitrov
+2020-12-14 23:45:20,694-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Finals of Brisbane between Nick Kyrgios and Grigor Dimitrov into the DB
+2020-12-14 23:45:23,344-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:311-ERROR- could not get players Nick Kyrgios and Grigor Dimitrov's last meeting.
+2020-12-14 23:45:23,346-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:45:23,347-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:45:23,353-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:331, game_id:104 between Nick Kyrgios and Grigor Dimitrov into the DB
+2020-12-14 23:45:29,183-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added grigor dimitrov into the DB
+2020-12-14 23:45:29,187-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:333, game_id:104 between Nick Kyrgios and Grigor Dimitrov into the DB
+2020-12-14 23:45:29,368-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semi-Finals between Ryan Harrison and Alex de Minaur
+2020-12-14 23:45:29,370-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Finals of Brisbane between Ryan Harrison and Alex de Minaur into the DB
+2020-12-14 23:45:29,584-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Ryan Harrison and Alex de Minaur's last meeting.
+2020-12-14 23:45:29,585-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ryan harrison already exists in players table.
+2020-12-14 23:45:29,586-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ryan harrison already exists in players table.
+2020-12-14 23:45:29,594-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:332, game_id:105 between Ryan Harrison and Alex de Minaur into the DB
+2020-12-14 23:45:35,887-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added alex de into the DB
+2020-12-14 23:45:35,895-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:334, game_id:105 between Ryan Harrison and Alex de Minaur into the DB
+2020-12-14 23:45:36,098-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Grigor Dimitrov and Kyle Edmund
+2020-12-14 23:45:36,104-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Grigor Dimitrov and Kyle Edmund into the DB
+2020-12-14 23:45:36,417-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Grigor Dimitrov and Kyle Edmund's last meeting.
+2020-12-14 23:45:36,418-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-grigor dimitrov already exists in players table.
+2020-12-14 23:45:36,419-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-grigor dimitrov already exists in players table.
+2020-12-14 23:45:36,420-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:333, game_id:106 between Grigor Dimitrov and Kyle Edmund into the DB
+2020-12-14 23:45:42,380-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added kyle edmund into the DB
+2020-12-14 23:45:42,385-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:335, game_id:106 between Grigor Dimitrov and Kyle Edmund into the DB
+2020-12-14 23:45:42,674-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Nick Kyrgios and Alexandr Dolgopolov
+2020-12-14 23:45:42,677-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Nick Kyrgios and Alexandr Dolgopolov into the DB
+2020-12-14 23:45:43,032-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Nick Kyrgios and Alexandr Dolgopolov's last meeting.
+2020-12-14 23:45:43,034-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:45:43,036-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:45:43,039-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:331, game_id:107 between Nick Kyrgios and Alexandr Dolgopolov into the DB
+2020-12-14 23:45:49,876-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added alexandr dolgopolov into the DB
+2020-12-14 23:45:49,880-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:336, game_id:107 between Nick Kyrgios and Alexandr Dolgopolov into the DB
+2020-12-14 23:45:50,046-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Alex de Minaur and Michael Mmoh
+2020-12-14 23:45:50,048-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Alex de Minaur and Michael Mmoh into the DB
+2020-12-14 23:45:50,394-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Alex de Minaur and Michael Mmoh's last meeting.
+2020-12-14 23:45:50,395-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-alex de already exists in players table.
+2020-12-14 23:45:50,395-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-alex de already exists in players table.
+2020-12-14 23:45:50,401-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:334, game_id:108 between Alex de Minaur and Michael Mmoh into the DB
+2020-12-14 23:45:55,982-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added michael mmoh into the DB
+2020-12-14 23:45:55,990-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:337, game_id:108 between Alex de Minaur and Michael Mmoh into the DB
+2020-12-14 23:45:56,167-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Ryan Harrison and Denis Istomin
+2020-12-14 23:45:56,193-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Ryan Harrison and Denis Istomin into the DB
+2020-12-14 23:46:06,981-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 109
+2020-12-14 23:46:06,985-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ryan harrison already exists in players table.
+2020-12-14 23:46:06,986-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ryan harrison already exists in players table.
+2020-12-14 23:46:06,990-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:332, game_id:109 between Ryan Harrison and Denis Istomin into the DB
+2020-12-14 23:50:39,568-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 23:50:45,761-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:767-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2018&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 23:50:45,851-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:775-Scraping tournament of type: atpgs
+2020-12-14 23:50:46,204-INFO-FILE:AtpClasses.py-FUNC:_check_tournament_exist-LINE:746-This tournament: Brisbane - 2018 was already scraped before, and is '
+                                        already located in the DB
+2020-12-14 23:50:52,090-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Finals between Nick Kyrgios and Ryan Harrison
+2020-12-14 23:50:52,359-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:137-Round Finals from tournament 493 already exist in DB
+2020-12-14 23:50:52,549-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semi-Finals between Nick Kyrgios and Grigor Dimitrov
+2020-12-14 23:50:52,549-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:137-Round Semi-Finals from tournament 493 already exist in DB
+2020-12-14 23:50:52,710-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Grigor Dimitrov and Kyle Edmund
+2020-12-14 23:50:52,711-INFO-FILE:AtpClasses.py-FUNC:_check_game_exist-LINE:137-Round Quarter-Finals from tournament 493 already exist in DB
+2020-12-14 23:50:52,863-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Grigor Dimitrov and John Millman
+2020-12-14 23:50:52,869-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Grigor Dimitrov and John Millman into the DB
+2020-12-14 23:50:53,386-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Grigor Dimitrov and John Millman's last meeting.
+2020-12-14 23:50:53,387-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-grigor dimitrov already exists in players table.
+2020-12-14 23:50:53,387-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-grigor dimitrov already exists in players table.
+2020-12-14 23:50:53,389-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:333, game_id:110 between Grigor Dimitrov and John Millman into the DB
+2020-12-14 23:50:59,967-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added john millman into the DB
+2020-12-14 23:51:00,020-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:338, game_id:110 between Grigor Dimitrov and John Millman into the DB
+2020-12-14 23:51:00,175-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Nick Kyrgios and Matthew Ebden
+2020-12-14 23:51:00,177-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Nick Kyrgios and Matthew Ebden into the DB
+2020-12-14 23:51:00,229-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Nick Kyrgios and Matthew Ebden's last meeting.
+2020-12-14 23:51:00,230-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:51:00,230-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-nick kyrgios already exists in players table.
+2020-12-14 23:51:00,231-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:331, game_id:111 between Nick Kyrgios and Matthew Ebden into the DB
+2020-12-14 23:51:06,891-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added matthew ebden into the DB
+2020-12-14 23:51:06,899-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:339, game_id:111 between Nick Kyrgios and Matthew Ebden into the DB
+2020-12-14 23:51:07,085-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Alex de Minaur and Milos Raonic
+2020-12-14 23:51:07,087-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Alex de Minaur and Milos Raonic into the DB
+2020-12-14 23:51:07,141-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Alex de Minaur and Milos Raonic's last meeting.
+2020-12-14 23:51:07,145-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-alex de already exists in players table.
+2020-12-14 23:51:07,147-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-alex de already exists in players table.
+2020-12-14 23:51:07,151-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:334, game_id:112 between Alex de Minaur and Milos Raonic into the DB
+2020-12-14 23:51:16,813-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added milos raonic into the DB
+2020-12-14 23:51:16,819-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:340, game_id:112 between Alex de Minaur and Milos Raonic into the DB
+2020-12-14 23:51:17,022-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Michael Mmoh and Mischa Zverev
+2020-12-14 23:51:17,025-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Michael Mmoh and Mischa Zverev into the DB
+2020-12-14 23:51:17,085-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Michael Mmoh and Mischa Zverev's last meeting.
+2020-12-14 23:51:17,085-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-michael mmoh already exists in players table.
+2020-12-14 23:51:17,086-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-michael mmoh already exists in players table.
+2020-12-14 23:51:17,087-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:337, game_id:113 between Michael Mmoh and Mischa Zverev into the DB
+2020-12-14 23:54:47,108-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-14 23:54:53,112-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:767-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2009&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-14 23:54:53,196-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:775-Scraping tournament of type: atpgs
+2020-12-14 23:54:53,646-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:711-Scraped tournament Brisbane - 2009 and updated DB successfully!
+2020-12-14 23:55:00,026-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Finals between Radek Stepanek and Fernando Verdasco
+2020-12-14 23:55:00,136-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Finals of Brisbane between Radek Stepanek and Fernando Verdasco into the DB
+2020-12-14 23:55:00,907-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Radek Stepanek and Fernando Verdasco's last meeting.
+2020-12-14 23:55:07,886-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added radek stepanek into the DB
+2020-12-14 23:55:07,989-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:341, game_id:114 between Radek Stepanek and Fernando Verdasco into the DB
+2020-12-14 23:55:14,740-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added fernando verdasco into the DB
+2020-12-14 23:55:14,745-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:342, game_id:114 between Radek Stepanek and Fernando Verdasco into the DB
+2020-12-14 23:55:14,988-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semi-Finals between Fernando Verdasco and Paul-Henri Mathieu
+2020-12-14 23:55:14,994-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Finals of Brisbane between Fernando Verdasco and Paul-Henri Mathieu into the DB
+2020-12-14 23:55:17,220-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Fernando Verdasco and Paul-Henri Mathieu's last meeting.
+2020-12-14 23:55:17,223-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:55:17,225-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:55:17,229-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:342, game_id:115 between Fernando Verdasco and Paul-Henri Mathieu into the DB
+2020-12-14 23:55:23,223-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added paul henri into the DB
+2020-12-14 23:55:23,228-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:343, game_id:115 between Fernando Verdasco and Paul-Henri Mathieu into the DB
+2020-12-14 23:55:23,376-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semi-Finals between Radek Stepanek and Richard Gasquet
+2020-12-14 23:55:23,382-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Finals of Brisbane between Radek Stepanek and Richard Gasquet into the DB
+2020-12-14 23:55:23,675-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Radek Stepanek and Richard Gasquet's last meeting.
+2020-12-14 23:55:23,677-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:55:23,679-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:55:23,688-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:341, game_id:116 between Radek Stepanek and Richard Gasquet into the DB
+2020-12-14 23:55:29,337-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added richard gasquet into the DB
+2020-12-14 23:55:29,344-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:344, game_id:116 between Radek Stepanek and Richard Gasquet into the DB
+2020-12-14 23:55:29,545-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Richard Gasquet and Jo-Wilfried Tsonga
+2020-12-14 23:55:29,548-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Richard Gasquet and Jo-Wilfried Tsonga into the DB
+2020-12-14 23:55:30,722-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 117
+2020-12-14 23:55:30,743-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-richard gasquet already exists in players table.
+2020-12-14 23:55:30,744-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-richard gasquet already exists in players table.
+2020-12-14 23:55:30,745-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:344, game_id:117 between Richard Gasquet and Jo-Wilfried Tsonga into the DB
+2020-12-14 23:55:36,635-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added jo wilfried into the DB
+2020-12-14 23:55:36,640-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:345, game_id:117 between Richard Gasquet and Jo-Wilfried Tsonga into the DB
+2020-12-14 23:55:36,789-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Fernando Verdasco and Florent Serra
+2020-12-14 23:55:36,791-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Fernando Verdasco and Florent Serra into the DB
+2020-12-14 23:55:37,250-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Fernando Verdasco and Florent Serra's last meeting.
+2020-12-14 23:55:37,251-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:55:37,251-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:55:37,257-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:342, game_id:118 between Fernando Verdasco and Florent Serra into the DB
+2020-12-14 23:55:43,938-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added florent serra into the DB
+2020-12-14 23:55:43,943-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:346, game_id:118 between Fernando Verdasco and Florent Serra into the DB
+2020-12-14 23:55:44,101-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Radek Stepanek and Robin Soderling
+2020-12-14 23:55:44,103-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Radek Stepanek and Robin Soderling into the DB
+2020-12-14 23:55:44,562-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Radek Stepanek and Robin Soderling's last meeting.
+2020-12-14 23:55:44,563-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:55:44,564-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:55:44,570-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:341, game_id:119 between Radek Stepanek and Robin Soderling into the DB
+2020-12-14 23:55:50,920-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added robin soderling into the DB
+2020-12-14 23:55:50,929-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:347, game_id:119 between Radek Stepanek and Robin Soderling into the DB
+2020-12-14 23:55:51,104-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarter-Finals between Paul-Henri Mathieu and Kei Nishikori
+2020-12-14 23:55:51,111-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Finals of Brisbane between Paul-Henri Mathieu and Kei Nishikori into the DB
+2020-12-14 23:56:01,565-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Paul-Henri Mathieu and Kei Nishikori's last meeting.
+2020-12-14 23:56:01,566-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-paul henri already exists in players table.
+2020-12-14 23:56:01,566-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-paul henri already exists in players table.
+2020-12-14 23:56:01,572-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:343, game_id:120 between Paul-Henri Mathieu and Kei Nishikori into the DB
+2020-12-14 23:56:08,228-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added kei nishikori into the DB
+2020-12-14 23:56:08,234-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:348, game_id:120 between Paul-Henri Mathieu and Kei Nishikori into the DB
+2020-12-14 23:56:08,477-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Jo-Wilfried Tsonga and Jarkko Nieminen
+2020-12-14 23:56:08,479-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Jo-Wilfried Tsonga and Jarkko Nieminen into the DB
+2020-12-14 23:56:09,004-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Jo-Wilfried Tsonga and Jarkko Nieminen's last meeting.
+2020-12-14 23:56:09,004-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-jo wilfried already exists in players table.
+2020-12-14 23:56:09,005-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-jo wilfried already exists in players table.
+2020-12-14 23:56:09,011-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:345, game_id:121 between Jo-Wilfried Tsonga and Jarkko Nieminen into the DB
+2020-12-14 23:56:15,911-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added jarkko nieminen into the DB
+2020-12-14 23:56:15,919-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:349, game_id:121 between Jo-Wilfried Tsonga and Jarkko Nieminen into the DB
+2020-12-14 23:56:16,090-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Fernando Verdasco and Mario Ancic
+2020-12-14 23:56:16,091-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Fernando Verdasco and Mario Ancic into the DB
+2020-12-14 23:56:16,437-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Fernando Verdasco and Mario Ancic's last meeting.
+2020-12-14 23:56:16,438-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:56:16,439-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-14 23:56:16,445-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:342, game_id:122 between Fernando Verdasco and Mario Ancic into the DB
+2020-12-14 23:56:23,432-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added mario ancic into the DB
+2020-12-14 23:56:23,438-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:350, game_id:122 between Fernando Verdasco and Mario Ancic into the DB
+2020-12-14 23:56:23,640-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Robin Soderling and Julien Benneteau
+2020-12-14 23:56:23,642-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Robin Soderling and Julien Benneteau into the DB
+2020-12-14 23:56:24,023-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Robin Soderling and Julien Benneteau's last meeting.
+2020-12-14 23:56:24,024-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-robin soderling already exists in players table.
+2020-12-14 23:56:24,025-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-robin soderling already exists in players table.
+2020-12-14 23:56:24,031-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:347, game_id:123 between Robin Soderling and Julien Benneteau into the DB
+2020-12-14 23:56:31,505-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added julien benneteau into the DB
+2020-12-14 23:56:31,514-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:351, game_id:123 between Robin Soderling and Julien Benneteau into the DB
+2020-12-14 23:56:31,664-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Kei Nishikori and Tomas Berdych
+2020-12-14 23:56:31,666-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Kei Nishikori and Tomas Berdych into the DB
+2020-12-14 23:56:32,106-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Kei Nishikori and Tomas Berdych's last meeting.
+2020-12-14 23:56:32,107-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-kei nishikori already exists in players table.
+2020-12-14 23:56:32,108-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-kei nishikori already exists in players table.
+2020-12-14 23:56:32,111-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:348, game_id:124 between Kei Nishikori and Tomas Berdych into the DB
+2020-12-14 23:56:38,969-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added tomas berdych into the DB
+2020-12-14 23:56:38,976-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:352, game_id:124 between Kei Nishikori and Tomas Berdych into the DB
+2020-12-14 23:56:39,152-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Richard Gasquet and Taylor Dent
+2020-12-14 23:56:39,158-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Richard Gasquet and Taylor Dent into the DB
+2020-12-14 23:56:39,664-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Richard Gasquet and Taylor Dent's last meeting.
+2020-12-14 23:56:39,698-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-richard gasquet already exists in players table.
+2020-12-14 23:56:39,699-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-richard gasquet already exists in players table.
+2020-12-14 23:56:39,706-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:344, game_id:125 between Richard Gasquet and Taylor Dent into the DB
+2020-12-14 23:56:46,357-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added taylor dent into the DB
+2020-12-14 23:56:46,368-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:353, game_id:125 between Richard Gasquet and Taylor Dent into the DB
+2020-12-14 23:56:46,529-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Radek Stepanek and Michael Llodra
+2020-12-14 23:56:46,531-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Radek Stepanek and Michael Llodra into the DB
+2020-12-14 23:56:57,185-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Radek Stepanek and Michael Llodra's last meeting.
+2020-12-14 23:56:57,187-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:56:57,188-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-radek stepanek already exists in players table.
+2020-12-14 23:56:57,305-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:341, game_id:126 between Radek Stepanek and Michael Llodra into the DB
+2020-12-14 23:57:06,092-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added michael llodra into the DB
+2020-12-14 23:57:06,099-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:354, game_id:126 between Radek Stepanek and Michael Llodra into the DB
+2020-12-14 23:57:06,240-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Paul-Henri Mathieu and Ernests Gulbis
+2020-12-14 23:57:06,243-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Paul-Henri Mathieu and Ernests Gulbis into the DB
+2020-12-14 23:57:06,858-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Paul-Henri Mathieu and Ernests Gulbis's last meeting.
+2020-12-14 23:57:06,859-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-paul henri already exists in players table.
+2020-12-14 23:57:06,860-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-paul henri already exists in players table.
+2020-12-14 23:57:06,867-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:343, game_id:127 between Paul-Henri Mathieu and Ernests Gulbis into the DB
+2020-12-14 23:57:13,483-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added ernests gulbis into the DB
+2020-12-14 23:57:13,489-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:355, game_id:127 between Paul-Henri Mathieu and Ernests Gulbis into the DB
+2020-12-14 23:57:13,650-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Florent Serra and Jurgen Melzer
+2020-12-14 23:57:13,652-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Brisbane between Florent Serra and Jurgen Melzer into the DB
+2020-12-14 23:57:14,476-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Couldn't find players last meeting. could not get players Florent Serra and Jurgen Melzer's last meeting.
+2020-12-14 23:57:14,477-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-florent serra already exists in players table.
+2020-12-14 23:57:14,478-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-florent serra already exists in players table.
+2020-12-14 23:57:14,485-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:346, game_id:128 between Florent Serra and Jurgen Melzer into the DB
+2020-12-14 23:57:22,869-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added jurgen melzer into the DB
+2020-12-14 23:57:22,876-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:356, game_id:128 between Florent Serra and Jurgen Melzer into the DB
+2020-12-14 23:57:23,068-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 32 between Ernests Gulbis and Novak Djokovic
+2020-12-14 23:57:23,075-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 32 of Brisbane between Ernests Gulbis and Novak Djokovic into the DB
+2020-12-14 23:57:23,633-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:311-ERROR- could not get players Ernests Gulbis and Novak Djokovic's last meeting.
+2020-12-14 23:57:23,635-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ernests gulbis already exists in players table.
+2020-12-14 23:57:23,636-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-ernests gulbis already exists in players table.
+2020-12-14 23:57:23,638-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:355, game_id:129 between Ernests Gulbis and Novak Djokovic into the DB
+2020-12-15 00:05:41,955-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-15 00:05:47,945-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:767-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=2020&tournamentType=atpgs. scraping <class 'filter'> tournaments.
+2020-12-15 00:05:48,022-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:775-Scraping tournament of type: atpgs
+2020-12-15 00:05:48,438-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:711-Scraped tournament ATP Cup - 2020 and updated DB successfully!
+2020-12-15 00:05:59,724-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Quarter-Finalbetween SRB and CAN
+2020-12-15 00:05:59,868-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Final of ATP Cup between SRB and CAN into the DB
+2020-12-15 00:05:59,873-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added SRB into the DB
+2020-12-15 00:05:59,903-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:57, game_id:130 between SRB and CAN into the DB
+2020-12-15 00:05:59,907-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added CAN into the DB
+2020-12-15 00:05:59,911-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:58, game_id:130 between SRB and CAN into the DB
+2020-12-15 00:05:59,948-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Quarter-Finalbetween AUS and GBR
+2020-12-15 00:05:59,951-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Final of ATP Cup between AUS and GBR into the DB
+2020-12-15 00:05:59,961-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added GBR into the DB
+2020-12-15 00:05:59,964-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:59, game_id:131 between AUS and GBR into the DB
+2020-12-15 00:05:59,971-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added AUS into the DB
+2020-12-15 00:05:59,974-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:60, game_id:131 between AUS and GBR into the DB
+2020-12-15 00:06:00,013-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Quarter-Finalbetween RUS and ARG
+2020-12-15 00:06:00,019-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Final of ATP Cup between RUS and ARG into the DB
+2020-12-15 00:06:00,025-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added ARG into the DB
+2020-12-15 00:06:00,030-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:61, game_id:132 between RUS and ARG into the DB
+2020-12-15 00:06:00,038-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added RUS into the DB
+2020-12-15 00:06:00,042-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:62, game_id:132 between RUS and ARG into the DB
+2020-12-15 00:06:00,112-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Quarter-Finalbetween ESP and BEL
+2020-12-15 00:06:00,114-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarter-Final of ATP Cup between ESP and BEL into the DB
+2020-12-15 00:06:00,121-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added BEL into the DB
+2020-12-15 00:06:00,124-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:63, game_id:133 between ESP and BEL into the DB
+2020-12-15 00:06:00,131-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:342-Added ESP into the DB
+2020-12-15 00:06:00,134-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:64, game_id:133 between ESP and BEL into the DB
+2020-12-15 00:06:00,182-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Semi-Finalbetween SRB and RUS
+2020-12-15 00:06:00,189-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Final of ATP Cup between SRB and RUS into the DB
+2020-12-15 00:06:00,193-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team SRB already exists in teams table.
+2020-12-15 00:06:00,193-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team SRB
+2020-12-15 00:06:00,195-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:57, game_id:134 between SRB and RUS into the DB
+2020-12-15 00:06:00,202-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team RUS already exists in teams table.
+2020-12-15 00:06:00,204-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team RUS
+2020-12-15 00:06:00,205-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:62, game_id:134 between SRB and RUS into the DB
+2020-12-15 00:06:00,254-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Semi-Finalbetween ESP and AUS
+2020-12-15 00:06:00,261-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semi-Final of ATP Cup between ESP and AUS into the DB
+2020-12-15 00:06:00,263-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team AUS already exists in teams table.
+2020-12-15 00:06:00,264-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team AUS
+2020-12-15 00:06:00,268-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:60, game_id:135 between ESP and AUS into the DB
+2020-12-15 00:06:00,271-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team ESP already exists in teams table.
+2020-12-15 00:06:00,272-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team ESP
+2020-12-15 00:06:00,276-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:64, game_id:135 between ESP and AUS into the DB
+2020-12-15 00:06:00,314-INFO-FILE:AtpClasses.py-FUNC:scrape_tournament_teams-LINE:260-Scrapping match round- Finalbetween SRB and ESP
+2020-12-15 00:06:00,318-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Final of ATP Cup between SRB and ESP into the DB
+2020-12-15 00:06:00,322-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team SRB already exists in teams table.
+2020-12-15 00:06:00,322-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team SRB
+2020-12-15 00:06:00,324-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:57, game_id:136 between SRB and ESP into the DB
+2020-12-15 00:06:00,329-INFO-FILE:AtpClasses.py-FUNC:check_exist-LINE:373-Team ESP already exists in teams table.
+2020-12-15 00:06:00,330-INFO-FILE:AtpClasses.py-FUNC:get_from_table-LINE:334-Got id of team ESP
+2020-12-15 00:06:00,331-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_teams-LINE:184-Added new row in games_players team_id:64, game_id:136 between SRB and ESP into the DB
+2020-12-15 00:06:00,573-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:775-Scraping tournament of type: atpgs
+2020-12-15 00:06:00,767-INFO-FILE:AtpClasses.py-FUNC:_save_into_table-LINE:711-Scraped tournament Doha - 2020 and updated DB successfully!
+2020-12-15 00:06:07,490-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Final between Andrey Rublev and Corentin Moutet
+2020-12-15 00:06:07,664-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Final of Doha between Andrey Rublev and Corentin Moutet into the DB
+2020-12-15 00:06:13,397-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 137
+2020-12-15 00:06:19,117-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added andrey rublev into the DB
+2020-12-15 00:06:19,141-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:357, game_id:137 between Andrey Rublev and Corentin Moutet into the DB
+2020-12-15 00:06:25,590-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added corentin moutet into the DB
+2020-12-15 00:06:25,645-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:358, game_id:137 between Andrey Rublev and Corentin Moutet into the DB
+2020-12-15 00:06:25,827-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semifinals between Corentin Moutet and Stan Wawrinka
+2020-12-15 00:06:25,828-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semifinals of Doha between Corentin Moutet and Stan Wawrinka into the DB
+2020-12-15 00:06:28,731-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 138
+2020-12-15 00:06:28,745-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-corentin moutet already exists in players table.
+2020-12-15 00:06:28,747-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-corentin moutet already exists in players table.
+2020-12-15 00:06:28,751-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:358, game_id:138 between Corentin Moutet and Stan Wawrinka into the DB
+2020-12-15 00:06:34,594-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added stan wawrinka into the DB
+2020-12-15 00:06:34,598-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:359, game_id:138 between Corentin Moutet and Stan Wawrinka into the DB
+2020-12-15 00:06:34,756-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Semifinals between Andrey Rublev and Miomir Kecmanovic
+2020-12-15 00:06:34,762-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Semifinals of Doha between Andrey Rublev and Miomir Kecmanovic into the DB
+2020-12-15 00:06:35,480-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 139
+2020-12-15 00:06:35,484-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-andrey rublev already exists in players table.
+2020-12-15 00:06:35,485-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-andrey rublev already exists in players table.
+2020-12-15 00:06:35,486-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:357, game_id:139 between Andrey Rublev and Miomir Kecmanovic into the DB
+2020-12-15 00:06:42,197-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added miomir kecmanovic into the DB
+2020-12-15 00:06:42,204-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:360, game_id:139 between Andrey Rublev and Miomir Kecmanovic into the DB
+2020-12-15 00:06:42,426-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarterfinals between Stan Wawrinka and Aljaz Bedene
+2020-12-15 00:06:42,433-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarterfinals of Doha between Stan Wawrinka and Aljaz Bedene into the DB
+2020-12-15 00:06:43,289-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 140
+2020-12-15 00:06:43,293-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-stan wawrinka already exists in players table.
+2020-12-15 00:06:43,293-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-stan wawrinka already exists in players table.
+2020-12-15 00:06:43,295-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:359, game_id:140 between Stan Wawrinka and Aljaz Bedene into the DB
+2020-12-15 00:06:51,497-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added aljaz bedene into the DB
+2020-12-15 00:06:51,505-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:361, game_id:140 between Stan Wawrinka and Aljaz Bedene into the DB
+2020-12-15 00:06:51,685-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarterfinals between Andrey Rublev and Pierre-Hugues Herbert
+2020-12-15 00:06:51,713-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarterfinals of Doha between Andrey Rublev and Pierre-Hugues Herbert into the DB
+2020-12-15 00:06:52,676-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 141
+2020-12-15 00:06:52,681-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-andrey rublev already exists in players table.
+2020-12-15 00:06:52,682-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-andrey rublev already exists in players table.
+2020-12-15 00:06:52,685-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:357, game_id:141 between Andrey Rublev and Pierre-Hugues Herbert into the DB
+2020-12-15 00:06:58,952-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added pierre hugues into the DB
+2020-12-15 00:06:58,957-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:362, game_id:141 between Andrey Rublev and Pierre-Hugues Herbert into the DB
+2020-12-15 00:06:59,179-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarterfinals between Miomir Kecmanovic and Marton Fucsovics
+2020-12-15 00:06:59,182-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarterfinals of Doha between Miomir Kecmanovic and Marton Fucsovics into the DB
+2020-12-15 00:06:59,900-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Miomir Kecmanovic and Marton Fucsovics's last meeting.
+2020-12-15 00:06:59,901-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-miomir kecmanovic already exists in players table.
+2020-12-15 00:06:59,901-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-miomir kecmanovic already exists in players table.
+2020-12-15 00:06:59,907-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:360, game_id:142 between Miomir Kecmanovic and Marton Fucsovics into the DB
+2020-12-15 00:07:05,857-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:419-Added marton fucsovics into the DB
+2020-12-15 00:07:05,865-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:363, game_id:142 between Miomir Kecmanovic and Marton Fucsovics into the DB
+2020-12-15 00:07:06,031-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Quarterfinals between Corentin Moutet and Fernando Verdasco
+2020-12-15 00:07:06,039-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Quarterfinals of Doha between Corentin Moutet and Fernando Verdasco into the DB
+2020-12-15 00:07:16,950-INFO-FILE:AtpClasses.py-FUNC:save_in_DB-LINE:43-Added last meeting details for game 143
+2020-12-15 00:07:16,953-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-corentin moutet already exists in players table.
+2020-12-15 00:07:16,953-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-corentin moutet already exists in players table.
+2020-12-15 00:07:16,954-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:358, game_id:143 between Corentin Moutet and Fernando Verdasco into the DB
+2020-12-15 00:07:16,957-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-15 00:07:16,958-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-fernando verdasco already exists in players table.
+2020-12-15 00:07:16,959-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:342, game_id:143 between Corentin Moutet and Fernando Verdasco into the DB
+2020-12-15 00:07:17,122-INFO-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:297-Scrapping Round Of 16 between Stan Wawrinka and Jeremy Chardy
+2020-12-15 00:07:17,129-INFO-FILE:AtpClasses.py-FUNC:_save_into_games-LINE:168-Added Score from round Round Of 16 of Doha between Stan Wawrinka and Jeremy Chardy into the DB
+2020-12-15 00:07:17,642-ERROR-FILE:AtpClasses.py-FUNC:scores_tournament_data-LINE:308-ERROR- Expecting value: line 1 column 1 (char 0). could not get players Stan Wawrinka and Jeremy Chardy's last meeting.
+2020-12-15 00:07:17,644-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-stan wawrinka already exists in players table.
+2020-12-15 00:07:17,646-INFO-FILE:AtpClasses.py-FUNC:check_player_exist-LINE:458-stan wawrinka already exists in players table.
+2020-12-15 00:07:17,655-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:199-Added new row in games_players player_id:359, game_id:144 between Stan Wawrinka and Jeremy Chardy into the DB

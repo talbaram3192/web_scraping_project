@@ -8,27 +8,72 @@ import json
 class API():
     def __init__(self):
         self._conn = config.api_conn
+        self._conn2 = None
         self._rankings = None
+        self._meetings = None
         self.player_1_id = None
         self.player_2_id = None
+        self.same_winner = None
+        self.round = None
+        self.tourn_name = None
+        self.venue = None
 
     def get_all_players(self):
         """ Get rankings of all players- get their ID's"""
         config.connect(self._conn)
         res = self._conn.getresponse()
         data = res.read()
-        self._rankings = json.loads(data.decode("utf-8"))
+        data_dec = json.loads(data.decode("utf-8"))
+        self._rankings = data_dec['rankings'][1]['player_rankings']
 
-    def last_meeting(self, player_1, player_2):
+    def getLastMeeting(self):
+        self._conn2 = config.api_conn2
+        config.connect2(self._conn2, self.player_1_id, self.player_2_id)
+        res2 = self._conn2.getresponse()
+        data2 = res2.read()
+        self._meetings = json.loads(data2.decode("utf-8"))
+
+    def save_in_DB(self, game_id):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into last_meeting (game_ID,round,tourn_name,venue,same_winner)
+                                        values(%s,%s,%s,%s,%s)''',
+                           [game_id, self.round, self.tourn_name, self.venue,
+                            self.same_winner])
+            config.logging.info(f"Added last meeting details for game {game_id}")
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f"{e}. Failed to add last meeting details for game {game_id}")
+        cursor.close()
+
+    def last_meeting(self, player_1, player_2, game_id):
         """ Get id's of two players, and then get details on their last meeting"""
         self.get_all_players()
-        for i in self._rankings['rankings'][1]['player_rankings']:
-            if player_1.firstname in i['player']['name'] and player_1.lastname in i['player']['name']:
+        for i in self._rankings:
+            if player_1.split()[0].lower() == i['player']['name'].split(',')[1].lower()[1:]\
+                    and player_1.split()[1].lower() == i['player']['name'].split(',')[0].lower():
                 self.player_1_id = i['player']['id'].split(':')[2]
-            if player_2.firstname in i['player']['name'] and player_2.lastname in i['player']['name']:
+            if player_2.split()[0].lower() == i['player']['name'].split(',')[1].lower()[1:]\
+                    and player_2.split()[1].lower() == i['player']['name'].split(',')[0].lower():
                 self.player_2_id = i['player']['id'].split(':')[2]
 
-        #TODO: add details of the last meeting..
+        if self.player_2_id != None and self.player_1_id != None:
+            self.getLastMeeting()
+            print(f'IDS- {self.player_1_id, self.player_2_id}')
+            self.round = self._meetings['last_meetings']['results'][0]['sport_event']['tournament_round']['name']
+            self.tourn_name = self._meetings['last_meetings']['results'][0]['sport_event']['season']['name']
+            self.venue = self._meetings['last_meetings']['results'][0]['sport_event_conditions']['venue']['name']
+            winner = self._meetings['last_meetings']['results'][0]['sport_event_status']['winner_id'].split(':')[2]
+
+            # Check if current winner won the last meeting as well
+            if winner == self.player_1_id:
+                self.same_winner = True
+            else:
+                self.same_winner = False
+
+            self.save_in_DB(game_id)
+        else:
+            raise ValueError("Couldn't find players last meeting")
 
 
 class AtpScores:
@@ -87,9 +132,6 @@ class AtpScores:
                                 AND p.last_name = %s ''',
                        [self._tournament.id, self.round, self.winner.split()[0], self.winner.split()[1]])
 
-        # cursor.execute(''' SELECT game_id FROM games
-        #                 WHERE tournament_id = %s AND round = %s ''',
-        #                [self._tournament.id, self.round])
         check_exists = cursor.fetchall()
         if len(check_exists) > 0:
             config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
@@ -106,9 +148,6 @@ class AtpScores:
                                 WHERE tournament_id = %s AND round = %s AND t.name = %s ''',
                        [self._tournament.id, self.round, self.winner])
 
-        # cursor.execute(''' SELECT game_id FROM games
-        #                 WHERE tournament_id = %s AND round = %s ''',
-        #                [self._tournament.id, self.round])
         check_exists = cursor.fetchall()
         if len(check_exists) > 0:
             config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
@@ -223,7 +262,7 @@ class AtpScores:
             #save if game doesn't exist
             if not self._check_game_exist_teams():
                 self._save_into_games()
-            # Save into games_players and players
+
                 for team in self.teams:
                     new_team = AtpTeam(team)
                     if team == self.winner:
@@ -231,6 +270,7 @@ class AtpScores:
                     else:
                         self._win = False
 
+                    # Save into games_players and teams
                     self._save_into_database(team=new_team)
 
         self._driver.close()
@@ -254,17 +294,23 @@ class AtpScores:
             for tr in tr_l:
                 self.reset()
                 self._set_scores_info(tr)
-                # print(f'winner- {self.winner.split()[0]}, loser- {self.loser.split()[0]}')
                 config.logging.info(f"Scrapping {self.round} between {self.winner} and {self.loser}")
-
-                # Get data of the last meeting between these two players through API call
-                # api = API()
-                # api.last_meeting(self.winner, self.loser)
-                #TODO- implement the api calls
 
                 # Save into games
                 if self._check_game_exist(): break
                 self._save_into_games()
+
+                # Get data of the last meeting between these two players through an API call
+                try:
+                    api = API()
+                    api.last_meeting(self.winner, self.loser, self.id)
+                except ValueError as v:
+                    config.logging.error(f"ERROR- {v}. could not get players {self.winner} and "
+                                         f"{self.loser}'s last meeting.")
+                except Exception:
+                    config.logging.error(f"ERROR- could not get players {self.winner} and "
+                                         f"{self.loser}'s last meeting.")
+
                 # Save into games_players and players
                 for url_player in self.url_players:
                     player = AtpPlayer(url_player[0]).get_player_info()

@@ -2,12 +2,10 @@ import mysql.connector
 import logging
 import http.client
 
-# CON = mysql.connector.connect(port='3306', user='root', password='sampras1', db='web_scraping_project')
+# SQL connector and selenium path
 CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455', db='web_scraping_project')
-
 PATH = 'C:\Program Files\chromedriver.exe' # For Windows
 # PATH = '/usr/bin/chromedriver' # For Linux
-
 
 # Logging configurations
 logging.basicConfig(filename='web_scraping_project.log',
@@ -16,12 +14,18 @@ logging.basicConfig(filename='web_scraping_project.log',
 
 # API configurations
 api_conn = http.client.HTTPSConnection("api.sportradar.us")
+api_conn2 = http.client.HTTPSConnection("api.sportradar.us")
+# API_KEY = 'fxrpme5netttrsrbqfde6pmr'
+API_KEY = 'running_without_api'
 
 
 def connect(conn):
-    conn.request("GET", "https://api.sportradar.com/tennis-t"
-                            "2/en/players/rankings.json?api_key=fejr9a3y47v6m574vf8ezgyd")
+    conn.request("GET",
+                 f"https://api.sportradar.com/tennis-t2/en/players/rankings.json?api_key={API_KEY}")
 
-# api_conn2.request("GET",
-#               f"/tennis-t2/en/players/sr:competitor:%s"
-#               f"/versus/sr:competitor:%s/matches.json?api_key=fejr9a3y47v6m574vf8ezgyd")
+
+def connect2(conn, player_id, player_id2):
+    conn.request("GET",
+              f"/tennis-t2/en/players/sr:competitor:{player_id}"
+              f"/versus/sr:competitor:{player_id2}/matches.json?api_key={API_KEY}")
+
