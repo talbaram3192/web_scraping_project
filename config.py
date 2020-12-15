@@ -15,6 +15,8 @@ logging.basicConfig(filename='web_scraping_project.log',
 # API configurations
 api_conn = http.client.HTTPSConnection("api.sportradar.us")
 api_conn2 = http.client.HTTPSConnection("api.sportradar.us")
+
+# Official API key here. Uncomment in order to use
 # API_KEY = 'fxrpme5netttrsrbqfde6pmr'
 API_KEY = 'running_without_api'
 
