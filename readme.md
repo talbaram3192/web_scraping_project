@@ -45,5 +45,5 @@ Where filter is the type of tournament to scrap. It can take :
 * XXI - XXI.
 
 With options:
-* - w : scrap winners information.
+* -w : scrap winners information.
 * -s : scrap score of each match in tournament and information about each player.
