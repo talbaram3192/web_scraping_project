@@ -353,6 +353,10 @@
 2020-12-09 19:21:17,041-WARNING-FILE:AtpClasses.py-FUNC:_set_player_turnedpro-LINE:329-couldn't find the date the player turned pro..
 2020-12-09 19:21:17,184-INFO-FILE:AtpClasses.py-FUNC:save_into_table-LINE:239-Added yannick noah into the DB
 2020-12-09 19:21:17,203-INFO-FILE:AtpClasses.py-FUNC:_save_into_games_players-LINE:92-Added new row in games_players player_id:5949, game_id:5563 between Yannick Noah and Carl-Uwe Steeb into the DB
+2020-12-17 21:49:47,686-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-17 21:50:10,638-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-17 21:50:18,466-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
+2020-12-17 21:50:21,359-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
 2020-12-09 12:36:19,879-INFO-FILE:main.py-FUNC:main-LINE:15-Started scraping!
 2020-12-09 12:36:29,516-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:587-Scraping results from year https://www.atptour.com/en/scores/results-archive?year=1990&tournamentType=atpgs. scraping <class 'filter'> tournaments.
 2020-12-09 12:36:29,596-INFO-FILE:AtpClasses.py-FUNC:tournament_data-LINE:595-Scraping tournament of type: atpgs
