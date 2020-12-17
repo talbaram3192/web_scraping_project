@@ -16,7 +16,6 @@ i = tr[0]
 """
 player_test = AtpPlayer(player_url_test)
 x = AtpScrapper(filtre)
-#print(urls[0])
 x.tournament_data(urls[0])
 score_test = AtpScores(score_url_test)
 score_test.scores_tournament_data()
