@@ -3,8 +3,7 @@ import logging
 import http.client
 
 # SQL connector and selenium path
-# CON = mysql.connector.connect(port='<PORT>', user='<USER>', password='<PASSWORD>', db='<DB>')
-CON = mysql.connector.connect(port='3307', user='root', password='Twtcmss2954455', db='web_scraping_project')
+CON = mysql.connector.connect(port='<PORT>', user='<USER>', password='<PASSWORD>', db='<DB>')
 PATH = 'C:\Program Files\chromedriver.exe' # For Windows
 # PATH = '/usr/bin/chromedriver' # For Linux
 
