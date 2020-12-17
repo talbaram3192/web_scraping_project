@@ -2,6 +2,78 @@ from selenium import webdriver, common
 import mysql.connector
 import config
 import re
+import json
+
+
+class API():
+    def __init__(self):
+        self._conn = config.api_conn
+        self._conn2 = None
+        self._rankings = None
+        self._meetings = None
+        self.player_1_id = None
+        self.player_2_id = None
+        self.same_winner = None
+        self.round = None
+        self.tourn_name = None
+        self.venue = None
+
+    def get_all_players(self):
+        """ Get rankings of all players- get their ID's"""
+        config.connect(self._conn)
+        res = self._conn.getresponse()
+        data = res.read()
+        data_dec = json.loads(data.decode("utf-8"))
+        self._rankings = data_dec['rankings'][1]['player_rankings']
+
+    def getLastMeeting(self):
+        self._conn2 = config.api_conn2
+        config.connect2(self._conn2, self.player_1_id, self.player_2_id)
+        res2 = self._conn2.getresponse()
+        data2 = res2.read()
+        self._meetings = json.loads(data2.decode("utf-8"))
+
+    def save_in_DB(self, game_id):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into last_meeting (game_ID,round,tourn_name,venue,same_winner)
+                                        values(%s,%s,%s,%s,%s)''',
+                           [game_id, self.round, self.tourn_name, self.venue,
+                            self.same_winner])
+            config.logging.info(f"Added last meeting details for game {game_id}")
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f"{e}. Failed to add last meeting details for game {game_id}")
+        cursor.close()
+
+    def last_meeting(self, player_1, player_2, game_id):
+        """ Get id's of two players, and then get details on their last meeting"""
+        self.get_all_players()
+        for i in self._rankings:
+            if player_1.split()[0].lower() == i['player']['name'].split(',')[1].lower()[1:]\
+                    and player_1.split()[1].lower() == i['player']['name'].split(',')[0].lower():
+                self.player_1_id = i['player']['id'].split(':')[2]
+            if player_2.split()[0].lower() == i['player']['name'].split(',')[1].lower()[1:]\
+                    and player_2.split()[1].lower() == i['player']['name'].split(',')[0].lower():
+                self.player_2_id = i['player']['id'].split(':')[2]
+
+        if self.player_2_id != None and self.player_1_id != None:
+            self.getLastMeeting()
+            print(f'IDS- {self.player_1_id, self.player_2_id}')
+            self.round = self._meetings['last_meetings']['results'][0]['sport_event']['tournament_round']['name']
+            self.tourn_name = self._meetings['last_meetings']['results'][0]['sport_event']['season']['name']
+            self.venue = self._meetings['last_meetings']['results'][0]['sport_event_conditions']['venue']['name']
+            winner = self._meetings['last_meetings']['results'][0]['sport_event_status']['winner_id'].split(':')[2]
+
+            # Check if current winner won the last meeting as well
+            if winner == self.player_1_id:
+                self.same_winner = True
+            else:
+                self.same_winner = False
+
+            self.save_in_DB(game_id)
+        else:
+            raise ValueError("Couldn't find players last meeting")
 
 
 class AtpScores:
@@ -14,6 +86,7 @@ class AtpScores:
         self.loser = None
         self.round = None
         self.url_players = []
+        self.teams = []
         self.url_detail = None
         self.id = None
         self._KO_count = 0
@@ -25,6 +98,7 @@ class AtpScores:
         self.winner = None
         self.loser = None
         self.url_players = []
+        self.teams = []
         self.url_detail = None
         self.id = None
         self._win = None
@@ -52,9 +126,28 @@ class AtpScores:
 
     def _check_game_exist(self):
         cursor = config.CON.cursor()
-        cursor.execute(''' SELECT game_id FROM games 
-                        WHERE tournament_id = %s AND round = %s ''',
-                       [self._tournament.id, self.round])
+        cursor.execute(''' SELECT g.game_ID FROM games g join games_players gp on g.game_ID = gp.game_id
+                            join players p on p.player_id = gp.player_id
+                                WHERE tournament_id = %s AND round = %s AND p.first_name = %s 
+                                AND p.last_name = %s ''',
+                       [self._tournament.id, self.round, self.winner.split()[0], self.winner.split()[1]])
+
+        check_exists = cursor.fetchall()
+        if len(check_exists) > 0:
+            config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
+            cursor.close()
+            return True
+        else:
+            cursor.close()
+            return False
+
+    def _check_game_exist_teams(self):
+        cursor = config.CON.cursor()
+        cursor.execute(''' SELECT g.game_ID FROM games g join games_players gp on g.game_ID = gp.game_id
+                            join teams t on t.team_id = gp.team_id
+                                WHERE tournament_id = %s AND round = %s AND t.name = %s ''',
+                       [self._tournament.id, self.round, self.winner])
+
         check_exists = cursor.fetchall()
         if len(check_exists) > 0:
             config.logging.info(f'Round {self.round} from tournament {self._tournament.id} already exist in DB')
@@ -67,7 +160,6 @@ class AtpScores:
     def _save_into_games(self):
         cursor = config.CON.cursor()
         try:
-            # print(self._tournament.id)
 
             cursor.execute(''' insert into games (tournament_id,score,round)
                                 values(%s,%s,%s)''',
@@ -80,6 +172,21 @@ class AtpScores:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add score from round {self.round} of {self._tournament.name} "
                                  f"between {self.winner} and {self.loser} into the DB")
+        cursor.close()
+
+    def _save_into_games_teams(self, team):
+        cursor = config.CON.cursor()
+        try:
+            cursor.execute(''' insert into games_players (team_id, game_id, won)
+                                values(%s, %s, %s)''',
+                           [team.id, self.id,
+                            self._win])
+            config.logging.info(f"Added new row in games_players team_id:{team.id}, game_id:{self.id} "
+                                f"between {self.winner} and {self.loser} into the DB")
+            config.CON.commit()
+        except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
+            config.logging.error(f"Failed to add new row in games_players team_id:{team.id}, game_id:{self.id}")
+
         cursor.close()
 
     def _save_into_games_players(self, player):
@@ -95,18 +202,78 @@ class AtpScores:
         except (mysql.connector.IntegrityError, mysql.connector.DataError) as e:
             config.logging.error(f"Failed to add new row in games_players player_id:{player.id}, game_id:{self.id}"
                                  f" into the games_players table")
-           # print([player.id, self.id,
-           #                 self._win])
+
         cursor.close()
 
-    def _save_into_database(self, player):
+    def _save_into_database(self, player=None, team=None):
         # Input data into players table if needed
-        if player.check_player_exist(): # IN DB
-            player.get_from_table()
-        else: # not in DB
-            player.save_into_table()
-        # Into game_players
-        self._save_into_games_players(player)
+        if team:
+            if team.check_exist():  # IN DB
+                team.get_from_table()
+            else:  # not in DB
+                team.save_into_table()
+            # Into game_players
+            self._save_into_games_teams(team)
+        else:
+            if player.check_player_exist(): # IN DB
+                player.get_from_table()
+            else: # not in DB
+                player.save_into_table()
+            # Into game_players
+            self._save_into_games_players(player)
+
+
+    def scrape_tournament_teams(self):
+        """ Extract tournament scores when it's a team tournament """
+        driver = webdriver.Chrome(config.PATH)
+        driver.get(self.url)
+        self._driver = driver
+
+        draws = self._driver.find_element_by_link_text('DRAWS')
+        draw_page = draws.get_attribute('href')
+        self._driver.close()
+
+        driver = webdriver.Chrome(config.PATH)
+        driver.get(draw_page)
+        self._driver = driver
+        table = self._driver.find_element_by_class_name('atpcup-draw')
+        rounds = table.find_elements_by_class_name('tie-container')
+        for round in rounds:
+            self.reset()
+            round_list = round.text.split()
+            team1 = round_list[0]
+            team2 = round_list[2]
+            self.teams.append(team1)
+            self.teams.append(team2)
+            team1_score = int(round_list[1])
+            team2_score = int(round_list[3])
+            self.round = round.find_element_by_tag_name('h3').get_attribute('innerText')
+            self.score = ''.join(str(team1_score) + '-' + str(team2_score))
+            print(team1, team2, self.score, self.round)
+            if team1_score > team2_score:
+                self.winner = team1
+                self.loser = team2
+            else:
+                self.winner = team2
+                self.loser = team1
+
+            config.logging.info(f"Scrapping match round- {self.round}between {self.winner} and {self.loser}")
+
+            #save if game doesn't exist
+            if not self._check_game_exist_teams():
+                self._save_into_games()
+
+                for team in self.teams:
+                    new_team = AtpTeam(team)
+                    if team == self.winner:
+                        self._win = True
+                    else:
+                        self._win = False
+
+                    # Save into games_players and teams
+                    self._save_into_database(team=new_team)
+
+        self._driver.close()
 
     def scores_tournament_data(self, test=False):
         """
@@ -127,10 +294,23 @@ class AtpScores:
             for tr in tr_l:
                 self.reset()
                 self._set_scores_info(tr)
-                print(f"Scrapping {self.round} between {self.winner} and {self.loser}")
+                config.logging.info(f"Scrapping {self.round} between {self.winner} and {self.loser}")
+
                 # Save into games
                 if self._check_game_exist(): break
                 self._save_into_games()
+
+                # Get data of the last meeting between these two players through an API call
+                try:
+                    api = API()
+                    api.last_meeting(self.winner, self.loser, self.id)
+                except ValueError as v:
+                    config.logging.error(f"ERROR- {v}. could not get players {self.winner} and "
+                                         f"{self.loser}'s last meeting.")
+                except Exception:
+                    config.logging.error(f"ERROR- could not get players {self.winner} and "
+                                         f"{self.loser}'s last meeting.")
+
                 # Save into games_players and players
                 for url_player in self.url_players:
                     player = AtpPlayer(url_player[0]).get_player_info()
@@ -594,7 +774,7 @@ class AtpScrapper:
             # Check if tournament exists in db:
             config.logging.info(f'Scraping tournament of type: {self.new_tourn_type}')
             self._set_tournament_detail(i)  # Set draw, single, double, surface and prize_money
-            self._set_url_scores(i)  # Set url of tournament scores WE DON'T USE IT YET
+            self._set_url_scores(i)  # Set url of tournament scores
             self._set_winner(i)  # Set winner_single, and winner_double, if they exist
             # Save tournament information if needed
             if not self._check_tournament_exist():
@@ -611,8 +791,12 @@ class AtpScrapper:
                         print(f"urls list ---- {self._url_winner}")
                         self._save_into_database(player=player)
             if score:
-                atpscore = AtpScores(self)
-                atpscore.scores_tournament_data()
+                if self.type == 'Team':
+                    atpscore = AtpScores(self)
+                    atpscore.scrape_tournament_teams()
+                else:
+                    atpscore = AtpScores(self)
+                    atpscore.scores_tournament_data()
             # if test: break
         self._driver.close()
         config.logging.info(f'Finished scraping {url}')

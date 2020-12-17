@@ -4,11 +4,22 @@ show databases;
 
 use web_scraping_project;
 
+
+select * from teams;
+
+select first_name from players where ranking_SGL != 0 order by ranking_SGL;
+
 SET SQL_SAFE_UPDATES = 0;
 
--- select * from champions;
+delete from champions;
+delete from teams;
+delete from games_players;
+delete from games;
+delete from players;
+delete from tournaments;
+delete from last_meeting;
 
--- delete from teams;
+
 
 create table players(
 player_id int auto_increment primary key,
@@ -54,6 +65,17 @@ round varchar(25),
 foreign key (tournament_id) references tournaments(tournament_id)
 on delete cascade
 );
+
+create table last_meeting(
+game_ID int,
+round varchar(25),
+tourn_name varchar(50),
+venue varchar(50),
+same_winner boolean,
+foreign key (game_ID) references games(game_ID)
+on delete cascade
+);
+
 
 create table games_players(
 player_id int,
