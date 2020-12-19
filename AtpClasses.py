@@ -81,6 +81,7 @@ class AtpScores:
         self._driver = None
         self._tournament = tournament
         self.url = tournament.url_score
+        self.doubles_scores_url = self.url + '?matchType=doubles'  # url for double's scores
         self.score = None
         self.winner = None
         self.winner2 = None
@@ -106,7 +107,7 @@ class AtpScores:
         self.url_detail = None
         self.id = None
         self._win = None
-        self.doubles_scores_url = None
+      #  self.doubles_scores_url = None
 
     def _set_round(self, selenium_object):
         """ Scrap data about the score from selenium object ('head')"""
@@ -302,6 +303,8 @@ class AtpScores:
     def scores_tournament_doubles(self, test=False):
         """ Extract Double's scores from tournament """
         driver = webdriver.Chrome(config.PATH)
+        self.doubles_scores_url = self.url + '?matchType=doubles'
+        print(self.doubles_scores_url)
         driver.get(self.doubles_scores_url)
         self._driver = driver
         table = self._driver.find_element_by_class_name('day-table')
@@ -314,6 +317,7 @@ class AtpScores:
             for tr in tr_l:
                 self.reset()
                 self._set_scores_info_doubles(tr)
+                if self.winner is None: break
                 config.logging.info(f"Scrapping {self.round} between {self.winner} and {self.loser}")
 
                 # Save into games
@@ -334,8 +338,8 @@ class AtpScores:
         Extract general information about tournament of a particular year from ATP
         """
         driver = webdriver.Chrome(config.PATH)
+        print(self.doubles_scores_url)
         driver.get(self.url)
-        self.doubles_scores_url = self.url+'?matchType=doubles' # url for double's scores
         self._driver = driver
         table = self._driver.find_element_by_class_name('day-table')
         tbody = table.find_elements_by_tag_name('tbody')
@@ -374,8 +378,12 @@ class AtpScores:
         self._driver.close()
 
         # Get double's scores
-        self.scores_tournament_doubles()
-
+        try:
+            self.scores_tournament_doubles()
+        except:
+            self._driver.close()
+            config.logging.error(f"ERROR- could not get double scores for tournament {self._tournament.name} "
+                                 f"{self._tournament.year} {self.winner}.")
 
 class AtpTeam:
     def __init__(self, team_name):
@@ -845,10 +853,18 @@ class AtpScrapper:
             if score:
                 if self.type == 'Team':
                     atpscore = AtpScores(self)
-                    atpscore.scrape_tournament_teams()
+                    try :
+                        atpscore.scrape_tournament_teams()
+                    except common.exceptions.NoSuchElementException:
+                        atpscore._driver.close()
+                        config.logging.error(f"ERROR ! Cannot get {self.name} {self.year} team info.")
                 else:
                     atpscore = AtpScores(self)
-                    atpscore.scores_tournament_data()
+                    try :
+                        atpscore.scores_tournament_data()
+                    except common.exceptions.NoSuchElementException:
+                        atpscore._driver.close()
+                        config.logging.error(f"ERROR ! Cannot get {self.name} {self.year} score info.")
             if test: break
         self._driver.close()
         config.logging.info(f'Finished scraping {url}')
