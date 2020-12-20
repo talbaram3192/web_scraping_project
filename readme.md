@@ -24,17 +24,16 @@ If not, go to https://chromedriver.chromium.org/getting-started.
     ```
 
 ## Usage
-
-From the folder containing ATP scraper, for instance to scrape atpgs tournaments between
-2010 and 2015 with winners information  :
-
-    python main.py 2010 2015 -w
-    
 Scraper usage :
 
-    python main.py start_year end_year filter --winner --score
-    
+    python main.py <start_year> <end_year> <filter> --winner --score
 
+Example- to scrape atpgs tournaments between
+2010 and 2015 with all of the champions information, we'll use :
+
+    python main.py 2010 2015 -w
+      
+    
 Where filter is the type of tournament to scrap. It can take :
 * atpgs - ATP Tour & Grand Slams. (default)
 * gs - Grand Slams.
@@ -45,5 +44,17 @@ Where filter is the type of tournament to scrap. It can take :
 * XXI - XXI.
 
 With options:
-* -w : scrap winners information.
+* -w : scrap champions information.
 * -s : scrap score of each match in tournament and information about each player.
+
+API usage :
+
+There is also an option to use API calls in order to enrich the dataset even more
+ (via https://developer.sportradar.com/ API). Using this service the scrapper adds data regarding the last
+ meeting of two opponents.
+ <br>
+ This data relates only to active players.
+ 
+ * To use the api, go to this link: https://developer.sportradar.com/docs/read/Home#getting-started and get 
+ an API key for the tennis-vs services. Paste your API key in the config file. 
+ 

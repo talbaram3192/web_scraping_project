@@ -3,12 +3,9 @@ import logging
 import http.client
 
 # SQL connector and selenium path
-CON = mysql.connector.connect(port='3306', user='root', password='sampras1', db='web_scraping_project')
-#PATH = 'C:\Program Files\chromedriver.exe' # For Windows
-PATH = '/usr/bin/chromedriver' # For Linux
-
-# USER_AGENT = """Mozilla/5.0 (Windows NT 10.0; Win64; x64)
-#  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36"""
+CON = mysql.connector.connect(port='<PORT>', user='<USER>', password='<PASSWORD>', db='DB')
+PATH = 'C:\Program Files\chromedriver.exe' # For Windows
+# PATH = '/usr/bin/chromedriver' # For Linux
 
 # Logging configurations
 logging.basicConfig(filename='web_scraping_project.log',
@@ -20,7 +17,7 @@ api_conn = http.client.HTTPSConnection("api.sportradar.us")
 api_conn2 = http.client.HTTPSConnection("api.sportradar.us")
 
 # API key:
-#API_KEY = 'h4xjymppg7yfak8xcnjpt6e3'
+API_KEY = '<YOUR-API-KEY>'
 
 
 def connect(conn):

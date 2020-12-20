@@ -107,7 +107,6 @@ class AtpScores:
         self.url_detail = None
         self.id = None
         self._win = None
-      #  self.doubles_scores_url = None
 
     def _set_round(self, selenium_object):
         """ Scrap data about the score from selenium object ('head')"""
@@ -304,7 +303,6 @@ class AtpScores:
         """ Extract Double's scores from tournament """
         driver = webdriver.Chrome(config.PATH)
         self.doubles_scores_url = self.url + '?matchType=doubles'
-        print(self.doubles_scores_url)
         driver.get(self.doubles_scores_url)
         self._driver = driver
         table = self._driver.find_element_by_class_name('day-table')
@@ -338,7 +336,6 @@ class AtpScores:
         Extract general information about tournament of a particular year from ATP
         """
         driver = webdriver.Chrome(config.PATH)
-        print(self.doubles_scores_url)
         driver.get(self.url)
         self._driver = driver
         table = self._driver.find_element_by_class_name('day-table')
@@ -384,6 +381,7 @@ class AtpScores:
             self._driver.close()
             config.logging.error(f"ERROR- could not get double scores for tournament {self._tournament.name} "
                                  f"{self._tournament.year} {self.winner}.")
+
 
 class AtpTeam:
     def __init__(self, team_name):
@@ -642,22 +640,7 @@ class AtpScrapper:
 
     def _connexion(self, url):
         """ return a selenium object containing the page of the input url."""
-        # user_agent = config.USER_AGENT
-        # options = webdriver.ChromeOptions()
-        # options.headless = True
-        # options.add_argument(f'user-agent={user_agent}')
-        # options.add_argument("--window-size=1280,800")
-        # options.add_argument('--ignore-certificate-errors')
-        # options.add_argument('--allow-running-insecure-content')
-        # options.add_argument("--disable-extensions")
-        # options.add_argument("--proxy-server='direct://'")
-        # options.add_argument("--proxy-bypass-list=*")
-        # options.add_argument("--start-maximized")
-        # options.add_argument('--disable-gpu')
-        # options.add_argument('--disable-dev-shm-usage')
-        # options.add_argument('--no-sandbox')
-        # options.add_argument('--disable-blink-features=AutomationControlled')
-        # driver = webdriver.Chrome(executable_path=config.PATH, options=options)
+
         driver = webdriver.Chrome(config.PATH)
         driver.get(url)
         year = re.findall(r'year=([0-9]{4})', url)[0]

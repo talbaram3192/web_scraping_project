@@ -5,19 +5,19 @@ show databases;
 use web_scraping_project;
 
 
-select * from teams;
+select * from players;
 
 select first_name from players where ranking_SGL != 0 order by ranking_SGL;
 
 SET SQL_SAFE_UPDATES = 0;
 
-delete from champions;
-delete from teams;
-delete from games_players;
-delete from games;
-delete from players;
-delete from tournaments;
-delete from last_meeting;
+-- delete from champions;
+-- delete from teams;
+-- delete from games_players;
+-- delete from games;
+-- delete from players;
+-- delete from tournaments;
+-- delete from last_meeting;
 
 
 
@@ -52,9 +52,7 @@ date date,
 SGL_draw int,
 DBL_draw int,
 surface varchar(20),
-prize_money int,
-single_winner varchar(40),
-double_winner varchar(40)
+prize_money int
 );
 
 create table games(
